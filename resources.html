@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Teaching - Ezekiel TANO</title>
+  <title>Ezekiel TANO - Home</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
@@ -15,7 +15,7 @@
     }
 
     header {
-      background-color: #004d26;
+      background-color: #2c6aa0;
       color: white;
       padding: 20px;
       text-align: center;
@@ -40,66 +40,102 @@
       text-decoration: underline;
     }
 
-    main {
+    main.content {
       padding: 40px;
-      max-width: 800px;
-      margin: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 60px;
+    }
+
+    .left-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      max-width: 300px;
+      width: 100%;
+    }
+
+    .photo-container {
+      text-align: center;
+      width: 100%;
+    }
+
+    .photo-container img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .address {
+      margin-top: 10px;
+      font-style: italic;
+      font-size: 0.9em;
+      color: #444;
+      text-align: center;
+    }
+
+    .right-column {
       display: flex;
       flex-direction: column;
       gap: 30px;
+      width: 600px;
     }
 
-    section {
+    .about, .skills, .contact {
       background-color: #ffffff;
-      padding: 20px 25px;
+      padding: 20px;
       border-radius: 10px;
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      width: 100%;
     }
 
     h2 {
-      color: #004d26;
-      border-bottom: 2px solid #004d26;
+      color: #2c6aa0;
+      border-bottom: 2px solid #5aa9e6;
       padding-bottom: 5px;
       margin-bottom: 15px;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 10px;
+      font-size: 1.4em;
     }
 
     p {
-      line-height: 1.6;
       text-align: justify;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      main.content {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .left-column,
+      .right-column {
+        width: 90%;
+      }
+
+      header {
+        padding-bottom: 60px;
+      }
     }
   </style>
 </head>
-<body>
-  <header>
-    <h1> Resources</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="teaching.html">Teaching</a>
-      <a href="research.html">Research</a>
-      <a href="resources.html">Ressources</a>
-    </nav>
-  </header>
+
 
   <main>
 
          <section>
       <h2>Usefull links and resources</h2>
       <p>
-       <li> Find Economic Articles with Data. Very good for research</li>  👉 <a href="https://ejd.econ.mathematik.uni-ulm.de/" target="_blank" style="color: #004d26; font-weight: bold;">[Link]</a>
+       <li> Find Economic Articles with Data. Very good for research</li>  👉 <a href="https://ejd.econ.mathematik.uni-ulm.de/" target="_blank" style="color: #2c6aa0; font-weight: bold;">[Link]</a>
 </p>
 <p>
-   <li>Sites for downloading the files, codes, and videos for econometrics models.</li>  👉 <a href="https://sites.google.com/site/econometricsacademy/econometrics-models/count-data-models?authuser=0" target="_blank" style="color: #004d26; font-weight: bold;">[Link]</a>
+   <li>Sites for downloading the files, codes, and videos for econometrics models.</li>  👉 <a href="https://sites.google.com/site/econometricsacademy/econometrics-models/count-data-models?authuser=0" target="_blank" style="color: #2c6aa0; font-weight: bold;">[Link]</a>
       </p>
 <p>
-   <li>Learn to use the software R.</li>  👉 <a href="https://sites.google.com/site/rgraphiques/" target="_blank" style="color: #004d26; font-weight: bold;">[Link]</a>
+   <li>Learn to use the software R.</li>  👉 <a href="https://sites.google.com/site/rgraphiques/" target="_blank" style="color: #2c6aa0; font-weight: bold;">[Link]</a>
       </p>
 
     </section>
