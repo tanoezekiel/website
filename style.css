@@ -14,8 +14,8 @@ header {
   text-align: center;
   background-color: #ffffff;
   padding: 30px 10px;
-  color: #1c4e2b;
-  border-bottom: 3px solid #2e8b57;
+  color: #2c6aa0;
+  border-bottom: 3px solid #5aa9e6;
 }
 
 h1 {
@@ -29,7 +29,7 @@ h1 {
   flex-direction: row;
   justify-content: center;
   padding: 40px;
-  gap: 60px; /* plus d’espace entre les colonnes */
+  gap: 60px;
 }
 
 /* ----- Colonne gauche (photo + contact) ----- */
@@ -79,8 +79,8 @@ h1 {
 
 /* ----- Titres secondaires ----- */
 h2 {
-  color: #1c4e2b;
-  border-bottom: 2px solid #2e8b57;
+  color: #2c6aa0;
+  border-bottom: 2px solid #5aa9e6;
   padding-bottom: 5px;
   margin-bottom: 15px;
   font-size: 1.4em;
@@ -106,5 +106,4 @@ h2 {
   header {
     padding-bottom: 60px;
   }
-
 }
