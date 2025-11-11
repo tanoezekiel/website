@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Mes Travaux - Ezekiel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Mes travaux</h1>
+    <nav>
+      <a href="index.html">Présentation</a>
+      <a href="travaux.html">Travaux</a>
+      <a href="enseignements.html">Enseignements</a>
+    </nav>
+  </header>
+  <main>
+    <h2>Liste de mes travaux</h2>
+    <ul>
+      <li>Analyse de données agricoles en Éthiopie (2025)</li>
+      <li>Modélisation climatique avec ERA5</li>
+      <li>Article sur l'impact des températures sur les cultures</li>
+    </ul>
+  </main>
+</body>
+</html>
