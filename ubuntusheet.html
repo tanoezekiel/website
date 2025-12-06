@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Feuille protégée</title>
+
+<!-- Désactiver la sélection de texte -->
+<style>
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin: 0;
+  padding: 0;
+  background: #f7f7f7;
+}
+
+/* Style de l'iframe protégée */
+iframe {
+  width: 100vw;
+  height: 100vh;
+  border: none;
+}
+</style>
+
+<!-- Désactiver clic droit + copier/coller -->
+<script>
+// Désactive clic droit
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+// Désactive copier / couper / coller
+document.addEventListener('copy', e => e.preventDefault());
+document.addEventListener('cut', e => e.preventDefault());
+document.addEventListener('paste', e => e.preventDefault());
+
+// Désactive CTRL+C, CTRL+U, CTRL+S, etc.
+document.onkeydown = function(e) {
+    if (e.ctrlKey && 
+       (e.key === 'u' || e.key === 's' || e.key === 'c' || e.key === 'p')) {
+        return false;
+    }
+};
+</script>
+</head>
+
+<body>
+
+<!-- Ton tableau Google Sheets en lecture protégée -->
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTI54j9vufr2v1IMfZjnErmK6BgZX2Grap0fTOISWVWP-sY57t2Dg7-hGfzmyX8hmh0oqgpOqhvJ9ii/pubhtml?gid=404370836&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+
+</body>
+</html>
