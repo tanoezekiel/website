@@ -1,0 +1,3522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Contact Ezekiel TANO for research collaborations, academic seminars, teaching opportunities, policy projects, and quantitative economic analysis.">
+
+  <meta
+    name="keywords"
+    content="Ezekiel TANO, economist, development economics, applied econometrics, contact, research collaboration, PhD economics">
+
+  <meta name="author" content="Ezekiel TANO">
+
+  <title>
+    Contact | Ezekiel TANO
+  </title>
+
+  <!-- Font Awesome icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@700&display=swap"
+    rel="stylesheet">
+
+  <style>
+
+    /* ==================================================
+       CONTACT PAGE VARIABLES (style compact)
+    ================================================== */
+
+    :root {
+      --primary: #003366;
+      --primary-dark: #022746;
+      --secondary: #087caf;
+      --secondary-light: #e8f2fa;
+      --accent: #c89b3c;
+      --white: #ffffff;
+      --light: #f4f7fa;
+      --light-blue: #eef5fa;
+      --text: #27323b;
+      --muted: #64727d;
+      --border: #dbe4ea;
+      --success: #237a45;
+      --error: #b42318;
+      --shadow: 0 10px 28px rgba(0, 51, 102, 0.08);
+      --shadow-large: 0 20px 50px rgba(0, 51, 102, 0.14);
+      --radius: 12px;
+      --transition: 0.3s ease;
+    }
+
+    /* ==================================================
+       GENERAL RESET
+    ================================================== */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background-color: var(--light);
+      font-family: "Inter", Arial, sans-serif;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 30px 0;
+    }
+
+    .section-alt {
+      background-color: var(--light);
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 16px;
+    }
+
+    .section-heading.center {
+      margin-right: auto;
+      margin-left: auto;
+      text-align: center;
+    }
+
+    .section-kicker {
+      display: inline-block;
+      margin-bottom: 4px;
+      color: var(--secondary);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      position: relative;
+      margin: 0 0 10px;
+      color: var(--primary);
+      font-family: "Merriweather", Georgia, serif;
+      font-size: clamp(26px, 3.2vw, 34px);
+      line-height: 1.25;
+    }
+
+    .section-heading.center .section-title::after {
+      display: block;
+      width: 50px;
+      height: 3px;
+      margin: 10px auto 0;
+      background-color: var(--secondary);
+      border-radius: 999px;
+      content: "";
+    }
+
+    .section-heading:not(.center) .section-title::after {
+      display: block;
+      width: 50px;
+      height: 3px;
+      margin-top: 10px;
+      background-color: var(--secondary);
+      border-radius: 999px;
+      content: "";
+    }
+
+    .section-description {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* ==================================================
+       ACCESSIBILITY
+    ================================================== */
+
+    .skip-link {
+      position: fixed;
+      top: -100px;
+      left: 20px;
+      z-index: 9999;
+      padding: 11px 16px;
+      color: var(--white);
+      background-color: var(--primary);
+      border-radius: 5px;
+      font-weight: 700;
+      font-size: 13px;
+      transition: top var(--transition);
+    }
+
+    .skip-link:focus {
+      top: 20px;
+    }
+
+    :focus-visible {
+      outline: 3px solid rgba(8, 124, 175, 0.5);
+      outline-offset: 3px;
+    }
+
+    /* ==================================================
+       HEADER (style Contact)
+    ================================================== */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 76px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+    }
+
+    .brand-mark {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 44px;
+      height: 44px;
+      color: var(--white);
+      background:
+        linear-gradient(
+          135deg,
+          var(--primary),
+          var(--secondary)
+        );
+      border-radius: 10px;
+      font-family: "Merriweather", Georgia, serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.3;
+    }
+
+    .brand-name {
+      color: var(--primary);
+      font-size: 17px;
+      font-weight: 800;
+    }
+
+    .brand-title {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .nav-links a {
+      display: inline-flex;
+      padding: 10px 12px;
+      color: #3d4c58;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 700;
+      transition:
+        color var(--transition),
+        background-color var(--transition);
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--primary);
+      background-color: var(--secondary-light);
+    }
+
+    .menu-button {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      width: 44px;
+      height: 44px;
+      color: var(--primary);
+      background-color: var(--secondary-light);
+      border: 0;
+      border-radius: 8px;
+      font-size: 20px;
+    }
+
+    /* ==================================================
+       HERO (compact, aligné à gauche)
+    ================================================== */
+
+    .contact-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 35px 0 30px;
+      color: var(--white);
+      background:
+        linear-gradient(
+          125deg,
+          rgba(2, 39, 70, 0.98),
+          rgba(0, 81, 125, 0.95)
+        );
+    }
+
+    .contact-hero::before {
+      position: absolute;
+      top: -100px;
+      right: -80px;
+      width: 300px;
+      height: 300px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+      content: "";
+    }
+
+    .contact-hero::after {
+      position: absolute;
+      bottom: -150px;
+      left: -80px;
+      width: 350px;
+      height: 350px;
+      border: 70px solid rgba(255, 255, 255, 0.03);
+      border-radius: 50%;
+      content: "";
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      padding: 5px 12px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .hero-title {
+      margin: 0 0 8px;
+      color: var(--white);
+      font-family: "Merriweather", Georgia, serif;
+      font-size: clamp(30px, 3.8vw, 42px);
+      line-height: 1.15;
+    }
+
+    .hero-text {
+      margin: 0 0 14px;
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      min-height: 38px;
+      padding: 8px 16px;
+      border: 2px solid transparent;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 800;
+      transition:
+        transform var(--transition),
+        color var(--transition),
+        background-color var(--transition),
+        border-color var(--transition);
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-light {
+      color: var(--primary);
+      background-color: var(--white);
+      border-color: var(--white);
+    }
+
+    .button-light:hover {
+      color: var(--white);
+      background-color: transparent;
+    }
+
+    .button-outline-light {
+      color: var(--white);
+      background-color: transparent;
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .button-outline-light:hover {
+      color: var(--primary);
+      background-color: var(--white);
+      border-color: var(--white);
+    }
+
+    /* ==================================================
+       CARD (style compact)
+    ================================================== */
+
+    .card {
+      background: var(--white);
+      padding: 18px 22px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      margin-bottom: 14px;
+    }
+
+    .card:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ==================================================
+       QUICK CONTACT CARDS
+    ================================================== */
+
+    .quick-contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .contact-card {
+      display: flex;
+      gap: 14px;
+      min-height: 100%;
+      padding: 18px 20px;
+      background-color: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition);
+    }
+
+    .contact-card:hover {
+      transform: translateY(-4px);
+      border-color: #b8cfdd;
+      box-shadow: var(--shadow-large);
+    }
+
+    .contact-icon {
+      display: inline-flex;
+      flex: 0 0 auto;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      color: var(--secondary);
+      background-color: var(--secondary-light);
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .contact-card h3 {
+      margin: 0 0 4px;
+      color: var(--primary);
+      font-size: 15px;
+      font-family: "Merriweather", Georgia, serif;
+    }
+
+    .contact-card p,
+    .contact-card a {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-card a:hover {
+      color: var(--secondary);
+    }
+
+    /* ==================================================
+       CONTACT MAIN AREA
+    ================================================== */
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    .contact-form-card,
+    .contact-side-card {
+      background-color: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .contact-form-card {
+      padding: 24px 26px;
+    }
+
+    .contact-form-card h2,
+    .contact-side-card h2 {
+      margin: 0 0 6px;
+      color: var(--primary);
+      font-size: 22px;
+      font-family: "Merriweather", Georgia, serif;
+    }
+
+    .form-intro {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      color: #344651;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .required {
+      color: var(--error);
+    }
+
+    .form-control {
+      width: 100%;
+      min-height: 40px;
+      padding: 10px 12px;
+      color: var(--text);
+      background-color: #fbfcfd;
+      border: 1px solid #cfdbe3;
+      border-radius: 6px;
+      outline: none;
+      font-size: 13px;
+      transition:
+        border-color var(--transition),
+        box-shadow var(--transition),
+        background-color var(--transition);
+    }
+
+    textarea.form-control {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .form-control:focus {
+      background-color: var(--white);
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 4px rgba(8, 124, 175, 0.11);
+    }
+
+    .form-control.invalid {
+      border-color: var(--error);
+      box-shadow: 0 0 0 4px rgba(180, 35, 24, 0.08);
+    }
+
+    .field-error {
+      display: none;
+      color: var(--error);
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .field-error.visible {
+      display: block;
+    }
+
+    .form-help {
+      margin: 0;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .character-count {
+      align-self: flex-end;
+      margin-top: -3px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .privacy-check {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+
+    .privacy-check input {
+      flex: 0 0 auto;
+      width: 15px;
+      height: 15px;
+      margin-top: 3px;
+      accent-color: var(--secondary);
+    }
+
+    .privacy-check label {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .form-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .submit-button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 7px;
+      min-height: 40px;
+      padding: 10px 17px;
+      color: var(--white);
+      background-color: var(--primary);
+      border: 2px solid var(--primary);
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 800;
+      transition:
+        transform var(--transition),
+        background-color var(--transition),
+        border-color var(--transition);
+    }
+
+    .submit-button:hover {
+      transform: translateY(-2px);
+      background-color: var(--secondary);
+      border-color: var(--secondary);
+    }
+
+    .reset-button {
+      min-height: 40px;
+      padding: 10px 16px;
+      color: var(--primary);
+      background-color: var(--white);
+      border: 1px solid #bdced9;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      transition:
+        color var(--transition),
+        background-color var(--transition);
+    }
+
+    .reset-button:hover {
+      background-color: var(--secondary-light);
+    }
+
+    .form-status {
+      display: none;
+      margin-top: 14px;
+      padding: 12px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .form-status.success {
+      display: block;
+      color: var(--success);
+      background-color: #eaf7ef;
+      border: 1px solid #bbdfc7;
+    }
+
+    .form-status.error {
+      display: block;
+      color: var(--error);
+      background-color: #fff0ee;
+      border: 1px solid #efc0bb;
+    }
+
+    /* ==================================================
+       CONTACT SIDEBAR
+    ================================================== */
+
+    .contact-sidebar {
+      display: grid;
+      gap: 16px;
+    }
+
+    .contact-side-card {
+      padding: 20px 22px;
+    }
+
+    .side-card-description {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .contact-method-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .contact-method {
+      display: flex;
+      gap: 11px;
+      align-items: flex-start;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contact-method:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .contact-method i {
+      width: 18px;
+      margin-top: 3px;
+      color: var(--secondary);
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .contact-method strong {
+      display: block;
+      margin-bottom: 2px;
+      color: var(--primary);
+      font-size: 13px;
+    }
+
+    .contact-method span,
+    .contact-method a {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .response-time {
+      padding: 14px 16px;
+      color: #4a5b66;
+      background-color: var(--light-blue);
+      border-left: 4px solid var(--secondary);
+      border-radius: 6px;
+      font-size: 12px;
+    }
+
+    .response-time strong {
+      color: var(--primary);
+    }
+
+    .social-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 10px;
+      color: var(--primary);
+      background-color: var(--light-blue);
+      border: 1px solid #cedfe9;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      transition:
+        color var(--transition),
+        background-color var(--transition);
+    }
+
+    .social-link:hover {
+      color: var(--white);
+      background-color: var(--secondary);
+    }
+
+    /* ==================================================
+       COLLABORATION
+    ================================================== */
+
+    .collaboration-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(260px, 0.75fr);
+      gap: 30px;
+      align-items: center;
+    }
+
+    .collaboration-text h2 {
+      margin: 0 0 12px;
+      color: var(--primary);
+      font-family: "Merriweather", Georgia, serif;
+      font-size: clamp(26px, 3.2vw, 34px);
+      line-height: 1.3;
+    }
+
+    .collaboration-text p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .interest-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .interest-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 12px;
+      color: var(--primary);
+      background-color: var(--white);
+      border: 1px solid #c8dce8;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      transition: all var(--transition);
+    }
+
+    .interest-tag:hover {
+      background-color: var(--secondary-light);
+      transform: translateY(-2px);
+    }
+
+    .interest-tag i {
+      color: var(--secondary);
+      font-size: 10px;
+    }
+
+    .collaboration-card {
+      padding: 24px 26px;
+      color: var(--white);
+      background:
+        linear-gradient(
+          145deg,
+          var(--primary),
+          #075f8c
+        );
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-large);
+    }
+
+    .collaboration-card i {
+      margin-bottom: 14px;
+      color: #a9ddf4;
+      font-size: 28px;
+    }
+
+    .collaboration-card h3 {
+      margin: 0 0 8px;
+      color: var(--white);
+      font-size: 20px;
+      font-family: "Merriweather", Georgia, serif;
+    }
+
+    .collaboration-card p {
+      margin: 0 0 16px;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 13px;
+    }
+
+    /* ==================================================
+       ACADEMIC PROFILES
+    ================================================== */
+
+    .profile-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .academic-profile {
+      display: flex;
+      flex-direction: column;
+      min-height: 180px;
+      padding: 20px 22px;
+      background-color: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+    }
+
+    .academic-profile:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-large);
+    }
+
+    .academic-profile-icon {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 44px;
+      height: 44px;
+      margin-bottom: 14px;
+      color: var(--secondary);
+      background-color: var(--secondary-light);
+      border-radius: 9px;
+      font-size: 18px;
+    }
+
+    .academic-profile h3 {
+      margin: 0 0 6px;
+      color: var(--primary);
+      font-size: 16px;
+      font-family: "Merriweather", Georgia, serif;
+    }
+
+    .academic-profile p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .academic-profile a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: auto;
+      color: var(--secondary);
+      font-size: 12px;
+      font-weight: 800;
+      transition: color var(--transition);
+    }
+
+    .academic-profile a:hover {
+      color: var(--primary);
+    }
+
+    /* ==================================================
+       LOCATION
+    ================================================== */
+
+    .location-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .location-details {
+      padding: 24px 26px;
+      color: var(--white);
+      background:
+        linear-gradient(
+          145deg,
+          var(--primary-dark),
+          var(--primary)
+        );
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-large);
+    }
+
+    .location-details h2 {
+      margin: 0 0 10px;
+      color: var(--white);
+      font-size: 24px;
+      font-family: "Merriweather", Georgia, serif;
+    }
+
+    .location-details>p {
+      margin: 0 0 18px;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 13px;
+    }
+
+    .location-item {
+      display: flex;
+      gap: 11px;
+      margin-bottom: 14px;
+    }
+
+    .location-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .location-item i {
+      width: 20px;
+      margin-top: 4px;
+      color: #9fd6ef;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .location-item strong {
+      display: block;
+      margin-bottom: 1px;
+      color: var(--white);
+      font-size: 13px;
+    }
+
+    .location-item span {
+      color: rgba(255, 255, 255, 0.73);
+      font-size: 12px;
+    }
+
+    .map-container {
+      min-height: 320px;
+      overflow: hidden;
+      background-color: #dbe5eb;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 320px;
+      border: 0;
+    }
+
+    /* ==================================================
+       FAQ
+    ================================================== */
+
+    .faq-list {
+      display: grid;
+      gap: 10px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      overflow: hidden;
+      background-color: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 4px 14px rgba(0, 51, 102, 0.05);
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      width: 100%;
+      padding: 14px 18px;
+      color: var(--primary);
+      background-color: transparent;
+      border: 0;
+      font-weight: 800;
+      font-size: 14px;
+      text-align: left;
+      font-family: "Inter", Arial, sans-serif;
+      transition: background-color var(--transition);
+    }
+
+    .faq-question:hover {
+      background-color: var(--secondary-light);
+    }
+
+    .faq-question i {
+      flex: 0 0 auto;
+      color: var(--secondary);
+      font-size: 14px;
+      transition: transform var(--transition);
+    }
+
+    .faq-item.active .faq-question i {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition:
+        max-height 0.35s ease,
+        padding 0.35s ease;
+    }
+
+    .faq-answer p {
+      margin: 0;
+      padding: 0 18px 16px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* ==================================================
+       CTA
+    ================================================== */
+
+    .contact-cta {
+      position: relative;
+      overflow: hidden;
+      color: var(--white);
+      background:
+        linear-gradient(
+          120deg,
+          var(--primary),
+          var(--secondary)
+        );
+      text-align: center;
+      padding: 40px 0;
+    }
+
+    .contact-cta::before,
+    .contact-cta::after {
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.06);
+      border-radius: 50%;
+      content: "";
+    }
+
+    .contact-cta::before {
+      top: -120px;
+      left: -80px;
+      width: 330px;
+      height: 330px;
+    }
+
+    .contact-cta::after {
+      right: -120px;
+      bottom: -170px;
+      width: 420px;
+      height: 420px;
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .cta-content h2 {
+      margin: 0 0 12px;
+      color: var(--white);
+      font-family: "Merriweather", Georgia, serif;
+      font-size: clamp(28px, 4vw, 38px);
+    }
+
+    .cta-content p {
+      margin: 0 auto 20px;
+      color: rgba(255, 255, 255, 0.84);
+      font-size: 15px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* ==================================================
+       FOOTER
+    ================================================== */
+
+    .site-footer {
+      padding: 35px 0 16px;
+      color: #dce7ef;
+      background-color: var(--primary-dark);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 0.8fr;
+      gap: 32px;
+      margin-bottom: 24px;
+    }
+
+    .footer-column h3 {
+      margin: 0 0 10px;
+      color: var(--white);
+      font-size: 16px;
+      font-family: "Merriweather", Georgia, serif;
+    }
+
+    .footer-column p {
+      margin: 0;
+      color: #bed0dc;
+      font-size: 13px;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 6px;
+    }
+
+    .footer-links a {
+      color: #bed0dc;
+      font-size: 13px;
+      transition: color var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--white);
+    }
+
+    .footer-social {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .footer-social a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 34px;
+      height: 34px;
+      color: var(--white);
+      background-color: rgba(255, 255, 255, 0.08);
+      border-radius: 6px;
+      transition: background-color var(--transition);
+    }
+
+    .footer-social a:hover {
+      background-color: var(--secondary);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      padding-top: 14px;
+      color: #91a7b7;
+      border-top: 1px solid rgba(255, 255, 255, 0.13);
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .footer-bottom p {
+      margin: 0;
+    }
+
+    /* ==================================================
+       BACK TO TOP
+    ================================================== */
+
+    .back-to-top {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 900;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 38px;
+      height: 38px;
+      color: var(--white);
+      background-color: var(--primary);
+      border: 0;
+      border-radius: 8px;
+      box-shadow: 0 6px 20px rgba(0, 51, 102, 0.25);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(15px);
+      transition:
+        opacity var(--transition),
+        visibility var(--transition),
+        transform var(--transition),
+        background-color var(--transition);
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .back-to-top:hover {
+      background-color: var(--secondary);
+    }
+
+    /* ==================================================
+       REVEAL ANIMATIONS
+    ================================================== */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ==================================================
+       RESPONSIVE
+    ================================================== */
+
+    @media (max-width: 1050px) {
+
+      .nav-links {
+        position: fixed;
+        top: 76px;
+        right: 0;
+        bottom: 0;
+        width: min(340px, 88%);
+        padding: 25px;
+        background-color: var(--white);
+        box-shadow: -15px 20px 35px rgba(0, 51, 102, 0.14);
+        flex-direction: column;
+        align-items: stretch;
+        transform: translateX(110%);
+        transition: transform var(--transition);
+      }
+
+      .nav-links.open {
+        transform: translateX(0);
+      }
+
+      .nav-links a {
+        width: 100%;
+        padding: 12px 14px;
+      }
+
+      .menu-button {
+        display: inline-flex;
+      }
+
+      .quick-contact-grid,
+      .profile-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .contact-layout,
+      .collaboration-grid,
+      .location-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .location-details {
+        order: 1;
+      }
+
+      .map-container {
+        order: 2;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+    }
+
+    @media (max-width: 760px) {
+
+      .section {
+        padding: 25px 0;
+      }
+
+      .contact-hero {
+        padding: 30px 0 25px;
+      }
+
+      .quick-contact-grid,
+      .profile-grid,
+      .form-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-form-card {
+        padding: 18px 16px;
+      }
+
+      .form-group.full {
+        grid-column: auto;
+      }
+
+      .social-list {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+
+    }
+
+    @media (max-width: 520px) {
+
+      .container {
+        width: min(100% - 24px, 1180px);
+      }
+
+      .brand-title {
+        display: none;
+      }
+
+      .hero-title {
+        font-size: 26px;
+      }
+
+      .hero-text {
+        font-size: 13px;
+      }
+
+      .hero-actions,
+      .cta-buttons,
+      .form-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .button,
+      .submit-button,
+      .reset-button {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .contact-card {
+        padding: 14px 16px;
+      }
+
+      .contact-side-card,
+      .collaboration-card,
+      .location-details {
+        padding: 18px 16px;
+      }
+
+      .back-to-top {
+        right: 12px;
+        bottom: 12px;
+      }
+
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">
+    Skip to main content
+  </a>
+
+  <!-- ==================================================
+       NAVIGATION
+  =================================================== -->
+
+  <header class="site-header">
+
+    <div class="container">
+
+      <nav class="navbar" aria-label="Main navigation">
+
+        <a class="brand" href="index.html">
+
+          <span class="brand-mark">
+            ET
+          </span>
+
+          <span class="brand-text">
+
+            <span class="brand-name">
+              Ezekiel TANO
+            </span>
+
+            <span class="brand-title">
+              Economist and Researcher
+            </span>
+
+          </span>
+
+        </a>
+
+        <button
+          class="menu-button"
+          id="menuButton"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="navigationLinks">
+
+          <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+        <ul class="nav-links" id="navigationLinks">
+
+          <li>
+            <a href="index.html">
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a href="research.html">
+              Research
+            </a>
+          </li>
+
+    
+          <li>
+            <a href="teaching.html">
+              Teaching
+            </a>
+          </li>
+
+          <li>
+            <a href="projects.html">
+              Projects
+            </a>
+          </li>
+
+      
+
+          <li>
+            <a class="active" href="contact.html" aria-current="page">
+              Contact
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+  <main id="main-content">
+
+    <!-- ==================================================
+         HERO (compact, aligné à gauche)
+    =================================================== -->
+
+    <section class="contact-hero">
+
+      <div class="container">
+
+        <div class="hero-content">
+
+          <span class="hero-eyebrow">
+
+            <i class="fa-regular fa-paper-plane"></i>
+
+            Contact and collaboration
+
+          </span>
+
+          <h1 class="hero-title">
+            Let us start a meaningful conversation.
+          </h1>
+
+          <p class="hero-text">
+            I welcome messages concerning research collaboration, academic
+            seminars, teaching opportunities, economic-policy projects,
+            quantitative analysis, mentoring, and professional initiatives.
+          </p>
+
+          <div class="hero-actions">
+
+            <a
+              class="button button-light"
+              href="mailto:ezekieltano5@gmail.com">
+
+              <i class="fa-regular fa-envelope"></i>
+
+              Email me
+
+            </a>
+
+            <a
+              class="button button-outline-light"
+              href="documents/CV_Ezekiel_TANO.pdf"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              <i class="fa-regular fa-file-pdf"></i>
+
+              View my CV
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ==================================================
+         QUICK CONTACT INFORMATION
+    =================================================== -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="section-heading center reveal">
+
+          <span class="section-kicker">
+            Contact information
+          </span>
+
+          <h2 class="section-title">
+            The best ways to reach me
+          </h2>
+
+          <p class="section-description">
+            For detailed inquiries, please include your institution, the
+            purpose of your message, and any relevant deadlines.
+          </p>
+
+        </div>
+
+        <div class="quick-contact-grid">
+
+          <article class="contact-card reveal">
+
+            <span class="contact-icon">
+              <i class="fa-regular fa-envelope"></i>
+            </span>
+
+            <div>
+
+              <h3>
+                Email
+              </h3>
+
+              <a href="mailto:ezekieltano5@gmail.com">
+                ezekieltano5@gmail.com
+              </a>
+
+            </div>
+
+          </article>
+
+          <article class="contact-card reveal">
+
+            <span class="contact-icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </span>
+
+            <div>
+
+              <h3>
+                Location
+              </h3>
+
+              <p>
+                Sherbrooke, Québec, Canada
+              </p>
+
+            </div>
+
+          </article>
+
+          <article class="contact-card reveal">
+
+            <span class="contact-icon">
+              <i class="fa-solid fa-building-columns"></i>
+            </span>
+
+            <div>
+
+              <h3>
+                University
+              </h3>
+
+              <p>
+                Université de Sherbrooke
+              </p>
+
+            </div>
+
+          </article>
+
+          <article class="contact-card reveal">
+
+            <span class="contact-icon">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </span>
+
+            <div>
+
+              <h3>
+                Academic status
+              </h3>
+
+              <p>
+                PhD Student in Economics
+              </p>
+
+            </div>
+
+          </article>
+
+          <article class="contact-card reveal">
+
+            <span class="contact-icon">
+              <i class="fa-solid fa-language"></i>
+            </span>
+
+            <div>
+
+              <h3>
+                Languages
+              </h3>
+
+              <p>
+                French and English
+              </p>
+
+            </div>
+
+          </article>
+
+          <article class="contact-card reveal">
+
+            <span class="contact-icon">
+              <i class="fa-regular fa-clock"></i>
+            </span>
+
+            <div>
+
+              <h3>
+                Typical response
+              </h3>
+
+              <p>
+                Within three to five working days
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ==================================================
+         FORM AND CONTACT SIDEBAR
+    =================================================== -->
+
+    <section class="section section-alt" id="contact-form-section">
+
+      <div class="container">
+
+        <div class="contact-layout">
+
+          <!-- CONTACT FORM -->
+
+          <div class="contact-form-card reveal">
+
+            <h2>
+              Send a message
+            </h2>
+
+            <p class="form-intro">
+              Complete the form below. After validation, your email application
+              will open with the message already prepared.
+            </p>
+
+            <form id="contactForm" novalidate>
+
+              <div class="form-grid">
+
+                <div class="form-group">
+
+                  <label for="firstName">
+                    First name
+                    <span class="required">*</span>
+                  </label>
+
+                  <input
+                    class="form-control"
+                    id="firstName"
+                    name="firstName"
+                    type="text"
+                    autocomplete="given-name"
+                    maxlength="70"
+                    required>
+
+                  <span class="field-error" id="firstNameError">
+                    Please enter your first name.
+                  </span>
+
+                </div>
+
+                <div class="form-group">
+
+                  <label for="lastName">
+                    Last name
+                    <span class="required">*</span>
+                  </label>
+
+                  <input
+                    class="form-control"
+                    id="lastName"
+                    name="lastName"
+                    type="text"
+                    autocomplete="family-name"
+                    maxlength="70"
+                    required>
+
+                  <span class="field-error" id="lastNameError">
+                    Please enter your last name.
+                  </span>
+
+                </div>
+
+                <div class="form-group">
+
+                  <label for="email">
+                    Email address
+                    <span class="required">*</span>
+                  </label>
+
+                  <input
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    maxlength="150"
+                    required>
+
+                  <span class="field-error" id="emailError">
+                    Please enter a valid email address.
+                  </span>
+
+                </div>
+
+                <div class="form-group">
+
+                  <label for="institution">
+                    Institution or organization
+                  </label>
+
+                  <input
+                    class="form-control"
+                    id="institution"
+                    name="institution"
+                    type="text"
+                    autocomplete="organization"
+                    maxlength="150">
+
+                </div>
+
+                <div class="form-group">
+
+                  <label for="category">
+                    Inquiry category
+                    <span class="required">*</span>
+                  </label>
+
+                  <select
+                    class="form-control"
+                    id="category"
+                    name="category"
+                    required>
+
+                    <option value="">
+                      Select a category
+                    </option>
+
+                    <option value="Research collaboration">
+                      Research collaboration
+                    </option>
+
+                    <option value="Academic seminar">
+                      Academic seminar or conference
+                    </option>
+
+                    <option value="Teaching opportunity">
+                      Teaching opportunity
+                    </option>
+
+                    <option value="PhD and academic inquiry">
+                      PhD and academic inquiry
+                    </option>
+
+                    <option value="Policy project">
+                      Policy-oriented project
+                    </option>
+
+                    <option value="Quantitative analysis">
+                      Quantitative analysis
+                    </option>
+
+                    <option value="Mentoring">
+                      Student mentoring
+                    </option>
+
+                    <option value="Media request">
+                      Media or interview request
+                    </option>
+
+                    <option value="Other">
+                      Other
+                    </option>
+
+                  </select>
+
+                  <span class="field-error" id="categoryError">
+                    Please select an inquiry category.
+                  </span>
+
+                </div>
+
+                <div class="form-group">
+
+                  <label for="subject">
+                    Subject
+                    <span class="required">*</span>
+                  </label>
+
+                  <input
+                    class="form-control"
+                    id="subject"
+                    name="subject"
+                    type="text"
+                    maxlength="160"
+                    required>
+
+                  <span class="field-error" id="subjectError">
+                    Please enter a clear subject.
+                  </span>
+
+                </div>
+
+                <div class="form-group full">
+
+                  <label for="message">
+                    Message
+                    <span class="required">*</span>
+                  </label>
+
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    name="message"
+                    maxlength="2000"
+                    required
+                    placeholder="Please briefly introduce yourself and explain the purpose of your message."></textarea>
+
+                  <span class="field-error" id="messageError">
+                    Please enter a message of at least 20 characters.
+                  </span>
+
+                  <span class="character-count" id="characterCount">
+                    0 / 2000
+                  </span>
+
+                </div>
+
+                <div class="form-group full">
+
+                  <div class="privacy-check">
+
+                    <input
+                      id="privacy"
+                      name="privacy"
+                      type="checkbox"
+                      required>
+
+                    <label for="privacy">
+                      I understand that this form prepares an email in my
+                      default email application and does not store my
+                      information on this website.
+                      <span class="required">*</span>
+                    </label>
+
+                  </div>
+
+                  <span class="field-error" id="privacyError">
+                    Please confirm that you understand how the form works.
+                  </span>
+
+                </div>
+
+                <div class="form-group full">
+
+                  <div class="form-actions">
+
+                    <button class="submit-button" type="submit">
+
+                      <i class="fa-regular fa-paper-plane"></i>
+
+                      Prepare email
+
+                    </button>
+
+                    <button
+                      class="reset-button"
+                      id="resetForm"
+                      type="reset">
+                      Clear form
+                    </button>
+
+                  </div>
+
+                  <p class="form-help">
+                    Your email client must be configured on your device for the
+                    automatic email window to open.
+                  </p>
+
+                  <div
+                    class="form-status"
+                    id="formStatus"
+                    role="status"
+                    aria-live="polite"></div>
+
+                </div>
+
+              </div>
+
+            </form>
+
+          </div>
+
+          <!-- SIDEBAR -->
+
+          <aside class="contact-sidebar">
+
+            <article class="contact-side-card reveal">
+
+              <h2>
+                Direct contact
+              </h2>
+
+              <p class="side-card-description">
+                Email remains the most reliable channel for academic and
+                professional inquiries.
+              </p>
+
+              <div class="contact-method-list">
+
+                <div class="contact-method">
+
+                  <i class="fa-regular fa-envelope"></i>
+
+                  <div>
+
+                    <strong>
+                      Main email
+                    </strong>
+
+                    <a href="mailto:ezekieltano5@gmail.com">
+                      ezekieltano5@gmail.com
+                    </a>
+
+                  </div>
+
+                </div>
+
+                <div class="contact-method">
+
+                  <i class="fa-solid fa-building-columns"></i>
+
+                  <div>
+
+                    <strong>
+                      Academic affiliation
+                    </strong>
+
+                    <span>
+                      Université de Sherbrooke
+                    </span>
+
+                  </div>
+
+                </div>
+
+                <div class="contact-method">
+
+                  <i class="fa-solid fa-earth-africa"></i>
+
+                  <div>
+
+                    <strong>
+                      Geographic focus
+                    </strong>
+
+                    <span>
+                      Africa, Europe, and Canada
+                    </span>
+
+                  </div>
+
+                </div>
+
+                <div class="contact-method">
+
+                  <i class="fa-solid fa-video"></i>
+
+                  <div>
+
+                    <strong>
+                      Online meetings
+                    </strong>
+
+                    <span>
+                      Available by prior appointment
+                    </span>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </article>
+
+            <article class="contact-side-card reveal">
+
+              <h2>
+                Response time
+              </h2>
+
+              <p class="side-card-description">
+                Messages containing sufficient context are easier to assess and
+                answer promptly.
+              </p>
+
+              <div class="response-time">
+
+                <strong>
+                  Expected response:
+                </strong>
+
+                approximately three to five working days. Urgent deadlines
+                should be clearly indicated in the subject line.
+
+              </div>
+
+            </article>
+
+                     </aside>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ==================================================
+         RESEARCH COLLABORATION
+    =================================================== -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="collaboration-grid">
+
+          <div class="collaboration-text reveal">
+
+            <span class="section-kicker">
+              Research collaboration
+            </span>
+
+            <h2>
+              Areas in which collaboration is especially welcome
+            </h2>
+
+            <p>
+              I am interested in empirical and policy-oriented research that
+              combines strong economic questions, careful data construction,
+              credible quantitative methods, and practical relevance.
+            </p>
+
+            <div class="interest-tags">
+
+              <span class="interest-tag">
+                <i class="fa-solid fa-circle"></i>
+                Development Economics
+              </span>
+
+              <span class="interest-tag">
+                <i class="fa-solid fa-circle"></i>
+                Applied Econometrics
+              </span>
+
+              <span class="interest-tag">
+                <i class="fa-solid fa-circle"></i>
+                Macroeconomics
+              </span>
+
+             
+              <span class="interest-tag">
+                <i class="fa-solid fa-circle"></i>
+                Public Policy
+              </span>
+
+          
+
+            </div>
+
+          </div>
+
+          <aside class="collaboration-card reveal">
+
+            <i class="fa-solid fa-people-group"></i>
+
+            <h3>
+              Have a research idea?
+            </h3>
+
+            <p>
+              A useful first message should explain the research question,
+              intended contribution, available data, expected role, timeline,
+              and current stage of the project.
+            </p>
+
+            <a
+              class="button button-light"
+              href="#contact-form-section">
+
+              Discuss a project
+
+              <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+          </aside>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ==================================================
+         ACADEMIC PROFILES
+    =================================================== -->
+
+    <section class="section section-alt" id="academic-profiles">
+
+      <div class="container">
+
+        <div class="section-heading center reveal">
+
+          <span class="section-kicker">
+            Academic presence
+          </span>
+
+          <h2 class="section-title">
+            Professional and research profiles
+          </h2>
+
+          <p class="section-description">
+            Keep only the platforms for which you have an active and complete
+            public profile.
+          </p>
+
+        </div>
+
+        <div class="profile-grid">
+
+          <article class="academic-profile reveal">
+
+            <span class="academic-profile-icon">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </span>
+
+            <h3>
+              LinkedIn
+            </h3>
+
+            <p>
+              Education, professional experience, research activities, and
+              academic news.
+            </p>
+
+            <a
+              href="https://www.linkedin.com/in/your-profile"
+              target="_blank"
+              rel="noopener noreferrer">
+              View profile
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+          </article>
+
+          <article class="academic-profile reveal">
+
+            <span class="academic-profile-icon">
+              <i class="fa-brands fa-google-scholar"></i>
+            </span>
+
+            <h3>
+              Google Scholar
+            </h3>
+
+            <p>
+              Research papers, citations, academic outputs, and publication
+              information.
+            </p>
+
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer">
+              View profile
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+          </article>
+
+          <article class="academic-profile reveal">
+
+            <span class="academic-profile-icon">
+              <i class="fa-brands fa-orcid"></i>
+            </span>
+
+            <h3>
+              ORCID
+            </h3>
+
+            <p>
+              Persistent researcher identifier and verified academic record.
+            </p>
+
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer">
+              View profile
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+          </article>
+
+          <article class="academic-profile reveal">
+
+            <span class="academic-profile-icon">
+              <i class="fa-brands fa-researchgate"></i>
+            </span>
+
+            <h3>
+              ResearchGate
+            </h3>
+
+            <p>
+              Research networking, project dissemination, and academic
+              documents.
+            </p>
+
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer">
+              View profile
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+          </article>
+
+          <article class="academic-profile reveal">
+
+            <span class="academic-profile-icon">
+              <i class="fa-brands fa-github"></i>
+            </span>
+
+            <h3>
+              GitHub
+            </h3>
+
+            <p>
+              Research code, quantitative projects, data analysis, and
+              reproducible materials.
+            </p>
+
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer">
+              View profile
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+          </article>
+
+          <article class="academic-profile reveal">
+
+            <span class="academic-profile-icon">
+              <i class="fa-solid fa-file-lines"></i>
+            </span>
+
+            <h3>
+              Curriculum Vitae
+            </h3>
+
+            <p>
+              Education, research, teaching, experience, skills, and selected
+              projects.
+            </p>
+
+            <a
+              href="documents/CV_Ezekiel_TANO.pdf"
+              target="_blank"
+              rel="noopener noreferrer">
+              View CV
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ==================================================
+         LOCATION
+    =================================================== -->
+
+    <section class="section" id="location">
+
+      <div class="container">
+
+        <div class="location-layout">
+
+          <div class="location-details reveal">
+
+            <h2>
+              Academic location
+            </h2>
+
+            <p>
+              Based in Sherbrooke, Québec, with availability for online
+              collaboration and selected academic travel.
+            </p>
+
+            <div class="location-item">
+
+              <i class="fa-solid fa-location-dot"></i>
+
+              <div>
+
+                <strong>
+                  City
+                </strong>
+
+                <span>
+                  Sherbrooke, Québec, Canada
+                </span>
+
+              </div>
+
+            </div>
+
+            <div class="location-item">
+
+              <i class="fa-solid fa-building-columns"></i>
+
+              <div>
+
+                <strong>
+                  Institution
+                </strong>
+
+                <span>
+                  Université de Sherbrooke
+                </span>
+
+              </div>
+
+            </div>
+
+            <div class="location-item">
+
+              <i class="fa-solid fa-globe"></i>
+
+              <div>
+
+                <strong>
+                  Collaboration format
+                </strong>
+
+                <span>
+                  In person and remotely
+                </span>
+
+              </div>
+
+            </div>
+
+            <div class="location-item">
+
+              <i class="fa-solid fa-plane"></i>
+
+              <div>
+
+                <strong>
+                  Academic travel
+                </strong>
+
+                <span>
+                  Conferences and seminars by prior arrangement
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="map-container reveal">
+
+            <iframe
+              title="Map showing Sherbrooke, Quebec, Canada"
+              src="https://www.google.com/maps?q=Universit%C3%A9%20de%20Sherbrooke%2C%20Qu%C3%A9bec%2C%20Canada&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
+            </iframe>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ==================================================
+         FAQ
+    =================================================== -->
+
+    <section class="section section-alt" id="faq">
+
+      <div class="container">
+
+        <div class="section-heading center reveal">
+
+          <span class="section-kicker">
+            Frequently asked questions
+          </span>
+
+          <h2 class="section-title">
+            Before sending your message
+          </h2>
+
+          <p class="section-description">
+            These answers provide general guidance on research, seminars,
+            mentoring, teaching, and professional requests.
+          </p>
+
+        </div>
+
+        <div class="faq-list">
+
+          <article class="faq-item reveal">
+
+            <button
+              class="faq-question"
+              type="button"
+              aria-expanded="false">
+
+              Are you open to research collaborations?
+
+              <i class="fa-solid fa-chevron-down"></i>
+
+            </button>
+
+            <div class="faq-answer">
+
+              <p>
+                Yes. I particularly welcome well-defined projects connected to
+                development economics, applied econometrics, macroeconomics,
+                sovereign debt, climate economics, agricultural economics,
+                public policy, or quantitative risk analysis.
+              </p>
+
+            </div>
+
+          </article>
+
+          <article class="faq-item reveal">
+
+            <button
+              class="faq-question"
+              type="button"
+              aria-expanded="false">
+
+              Are you available for seminars or conference presentations?
+
+              <i class="fa-solid fa-chevron-down"></i>
+
+            </button>
+
+            <div class="faq-answer">
+
+              <p>
+                Academic seminar and conference invitations are welcome.
+                Please provide the event title, institution, audience, proposed
+                topic, format, date, location, and any travel or funding
+                arrangements.
+              </p>
+
+            </div>
+
+          </article>
+
+          <article class="faq-item reveal">
+
+            <button
+              class="faq-question"
+              type="button"
+              aria-expanded="false">
+
+              May students contact you for academic advice?
+
+              <i class="fa-solid fa-chevron-down"></i>
+
+            </button>
+
+            <div class="faq-answer">
+
+              <p>
+                Students may contact me with concise and specific questions.
+                However, I may not be able to provide extensive individual
+                supervision or review complete applications without a prior
+                arrangement.
+              </p>
+
+            </div>
+
+          </article>
+
+          <article class="faq-item reveal">
+
+            <button
+              class="faq-question"
+              type="button"
+              aria-expanded="false">
+
+              Are you open to teaching opportunities?
+
+              <i class="fa-solid fa-chevron-down"></i>
+
+            </button>
+
+            <div class="faq-answer">
+
+              <p>
+                Yes, depending on academic commitments and scheduling. Relevant
+                areas include economics, econometrics, statistics, mathematics
+                for economists, public policy, development economics, and
+                quantitative methods.
+              </p>
+
+            </div>
+
+          </article>
+
+          <article class="faq-item reveal">
+
+            <button
+              class="faq-question"
+              type="button"
+              aria-expanded="false">
+
+              Are you available for consulting projects?
+
+              <i class="fa-solid fa-chevron-down"></i>
+
+            </button>
+
+            <div class="faq-answer">
+
+              <p>
+                Selected research, policy, data-analysis, and quantitative
+                assignments may be considered when they are compatible with my
+                academic obligations and institutional requirements.
+              </p>
+
+            </div>
+
+          </article>
+
+          <article class="faq-item reveal">
+
+            <button
+              class="faq-question"
+              type="button"
+              aria-expanded="false">
+
+              How quickly do you respond?
+
+              <i class="fa-solid fa-chevron-down"></i>
+
+            </button>
+
+            <div class="faq-answer">
+
+              <p>
+                I generally aim to respond within three to five working days.
+                Complex requests may require additional time. Messages with no
+                clear purpose or insufficient context may not receive an
+                immediate response.
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ==================================================
+         CTA
+    =================================================== -->
+
+    <section class="contact-cta">
+
+      <div class="container">
+
+        <div class="cta-content reveal">
+
+          <h2>
+            Let us work together.
+          </h2>
+
+          <p>
+            I am always pleased to discuss promising research ideas, academic
+            events, teaching opportunities, policy projects, and initiatives
+            with meaningful social or economic impact.
+          </p>
+
+          <div class="cta-buttons">
+
+            <a
+              class="button button-light"
+              href="mailto:ezekieltano5@gmail.com">
+
+              <i class="fa-regular fa-envelope"></i>
+
+              Send an email
+
+            </a>
+
+            <a
+              class="button button-outline-light"
+              href="documents/CV_Ezekiel_TANO.pdf"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              <i class="fa-regular fa-file-pdf"></i>
+
+              Download CV
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ==================================================
+       FOOTER
+  =================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-column">
+
+          <h3>
+            Ezekiel TANO
+          </h3>
+
+          <p>
+            Economist and PhD student working on development economics,
+            applied econometrics, macroeconomics, sovereign debt, climate
+            economics, public policy, and quantitative analysis.
+          </p>
+
+          <div class="footer-social">
+
+            <a
+              href="https://www.linkedin.com/in/your-profile"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Google Scholar">
+              <i class="fa-brands fa-google-scholar"></i>
+            </a>
+
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="ORCID">
+              <i class="fa-brands fa-orcid"></i>
+            </a>
+
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="footer-column">
+
+          <h3>
+            Navigation
+          </h3>
+
+          <div class="footer-links">
+
+            <a href="index.html">
+              Home
+            </a>
+
+            <a href="research.html">
+              Research
+            </a>
+
+            <a href="publications.html">
+              Publications
+            </a>
+
+            <a href="teaching.html">
+              Teaching
+            </a>
+
+            <a href="projects.html">
+              Projects
+            </a>
+
+            <a href="cv.html">
+              CV
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="footer-column">
+
+          <h3>
+            Contact
+          </h3>
+
+          <div class="footer-links">
+
+            <a href="news.html">
+              News
+            </a>
+
+            <a href="contact.html">
+              Contact page
+            </a>
+
+            <a href="mailto:ezekieltano5@gmail.com">
+              Email
+            </a>
+
+            <a href="#academic-profiles">
+              Academic profiles
+            </a>
+
+            <a href="#location">
+              Location
+            </a>
+
+            <a
+              href="documents/CV_Ezekiel_TANO.pdf"
+              target="_blank"
+              rel="noopener noreferrer">
+              Download CV
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <p>
+          &copy; <span id="currentYear">2026</span> Ezekiel TANO.
+          All rights reserved.
+        </p>
+
+        <p>
+          Last updated:
+          <span id="lastUpdated">
+            2026
+          </span>
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- BACK TO TOP -->
+
+  <button
+    class="back-to-top"
+    id="backToTop"
+    type="button"
+    aria-label="Back to top">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+  </button>
+
+  <!-- ==================================================
+       JAVASCRIPT
+  =================================================== -->
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+
+      /*
+      ====================================================
+      SETTINGS TO CUSTOMIZE
+      ====================================================
+      */
+
+      const recipientEmail = "ezekieltano5@gmail.com";
+
+      /*
+      ====================================================
+      MOBILE NAVIGATION
+      ====================================================
+      */
+
+      const menuButton = document.getElementById("menuButton");
+      const navigationLinks = document.getElementById("navigationLinks");
+
+      menuButton.addEventListener("click", function() {
+
+        const isOpen = navigationLinks.classList.toggle("open");
+
+        document.body.classList.toggle("menu-open", isOpen);
+
+        menuButton.setAttribute(
+          "aria-expanded",
+          String(isOpen)
+        );
+
+        menuButton.innerHTML = isOpen ?
+          '<i class="fa-solid fa-xmark"></i>' :
+          '<i class="fa-solid fa-bars"></i>';
+
+        menuButton.setAttribute(
+          "aria-label",
+          isOpen ?
+          "Close navigation menu" :
+          "Open navigation menu"
+        );
+
+      });
+
+      navigationLinks.querySelectorAll("a").forEach(function(link) {
+
+        link.addEventListener("click", function() {
+
+          navigationLinks.classList.remove("open");
+          document.body.classList.remove("menu-open");
+
+          menuButton.setAttribute("aria-expanded", "false");
+          menuButton.setAttribute(
+            "aria-label",
+            "Open navigation menu"
+          );
+
+          menuButton.innerHTML =
+            '<i class="fa-solid fa-bars"></i>';
+
+        });
+
+      });
+
+      /*
+      ====================================================
+      CONTACT FORM
+      ====================================================
+      */
+
+      const contactForm = document.getElementById("contactForm");
+      const resetFormButton = document.getElementById("resetForm");
+      const messageField = document.getElementById("message");
+      const characterCount = document.getElementById("characterCount");
+      const formStatus = document.getElementById("formStatus");
+
+      const fields = {
+        firstName: {
+          element: document.getElementById("firstName"),
+          error: document.getElementById("firstNameError")
+        },
+        lastName: {
+          element: document.getElementById("lastName"),
+          error: document.getElementById("lastNameError")
+        },
+        email: {
+          element: document.getElementById("email"),
+          error: document.getElementById("emailError")
+        },
+        category: {
+          element: document.getElementById("category"),
+          error: document.getElementById("categoryError")
+        },
+        subject: {
+          element: document.getElementById("subject"),
+          error: document.getElementById("subjectError")
+        },
+        message: {
+          element: document.getElementById("message"),
+          error: document.getElementById("messageError")
+        },
+        privacy: {
+          element: document.getElementById("privacy"),
+          error: document.getElementById("privacyError")
+        }
+      };
+
+      function isValidEmail(email) {
+
+        const emailPattern =
+          /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        return emailPattern.test(email);
+
+      }
+
+      function showFieldError(fieldName) {
+
+        const field = fields[fieldName];
+
+        field.error.classList.add("visible");
+
+        if (field.element.type !== "checkbox") {
+          field.element.classList.add("invalid");
+        }
+
+      }
+
+      function hideFieldError(fieldName) {
+
+        const field = fields[fieldName];
+
+        field.error.classList.remove("visible");
+
+        if (field.element.type !== "checkbox") {
+          field.element.classList.remove("invalid");
+        }
+
+      }
+
+      function validateForm() {
+
+        let isValid = true;
+
+        const firstName =
+          fields.firstName.element.value.trim();
+
+        const lastName =
+          fields.lastName.element.value.trim();
+
+        const email =
+          fields.email.element.value.trim();
+
+        const category =
+          fields.category.element.value;
+
+        const subject =
+          fields.subject.element.value.trim();
+
+        const message =
+          fields.message.element.value.trim();
+
+        if (firstName.length < 2) {
+          showFieldError("firstName");
+          isValid = false;
+        } else {
+          hideFieldError("firstName");
+        }
+
+        if (lastName.length < 2) {
+          showFieldError("lastName");
+          isValid = false;
+        } else {
+          hideFieldError("lastName");
+        }
+
+        if (!isValidEmail(email)) {
+          showFieldError("email");
+          isValid = false;
+        } else {
+          hideFieldError("email");
+        }
+
+        if (!category) {
+          showFieldError("category");
+          isValid = false;
+        } else {
+          hideFieldError("category");
+        }
+
+        if (subject.length < 4) {
+          showFieldError("subject");
+          isValid = false;
+        } else {
+          hideFieldError("subject");
+        }
+
+        if (message.length < 20) {
+          showFieldError("message");
+          isValid = false;
+        } else {
+          hideFieldError("message");
+        }
+
+        if (!fields.privacy.element.checked) {
+          showFieldError("privacy");
+          isValid = false;
+        } else {
+          hideFieldError("privacy");
+        }
+
+        return isValid;
+
+      }
+
+      contactForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        formStatus.className = "form-status";
+        formStatus.textContent = "";
+
+        if (!validateForm()) {
+
+          formStatus.className = "form-status error";
+
+          formStatus.textContent =
+            "Please correct the highlighted fields before continuing.";
+
+          const firstInvalidField =
+            contactForm.querySelector(".invalid");
+
+          if (firstInvalidField) {
+            firstInvalidField.focus();
+          }
+
+          return;
+
+        }
+
+        const firstName =
+          fields.firstName.element.value.trim();
+
+        const lastName =
+          fields.lastName.element.value.trim();
+
+        const senderEmail =
+          fields.email.element.value.trim();
+
+        const institution =
+          document.getElementById("institution").value.trim();
+
+        const category =
+          fields.category.element.value;
+
+        const subject =
+          fields.subject.element.value.trim();
+
+        const message =
+          fields.message.element.value.trim();
+
+        const completeSubject =
+          "[" + category + "] " + subject;
+
+        const emailBody = [
+          "Dear Mr. Tano,",
+          "",
+          message,
+          "",
+          "--------------------------------",
+          "CONTACT INFORMATION",
+          "--------------------------------",
+          "Name: " + firstName + " " + lastName,
+          "Email: " + senderEmail,
+          "Institution: " + (institution || "Not specified"),
+          "Inquiry category: " + category,
+          "",
+          "Kind regards,",
+          firstName + " " + lastName
+        ].join("\n");
+
+        const mailtoLink =
+          "mailto:" +
+          recipientEmail +
+          "?subject=" +
+          encodeURIComponent(completeSubject) +
+          "&body=" +
+          encodeURIComponent(emailBody);
+
+        formStatus.className = "form-status success";
+
+        formStatus.textContent =
+          "Your message has been prepared. Your email application should now open.";
+
+        window.location.href = mailtoLink;
+
+      });
+
+      /*
+      Remove field errors while users correct their answers.
+      */
+
+      Object.keys(fields).forEach(function(fieldName) {
+
+        const field = fields[fieldName].element;
+
+        const eventName =
+          field.type === "checkbox" ||
+          field.tagName === "SELECT" ?
+          "change" :
+          "input";
+
+        field.addEventListener(eventName, function() {
+          hideFieldError(fieldName);
+        });
+
+      });
+
+      /*
+      Message character counter.
+      */
+
+      messageField.addEventListener("input", function() {
+
+        characterCount.textContent =
+          messageField.value.length + " / 2000";
+
+      });
+
+      /*
+      Reset form display.
+      */
+
+      resetFormButton.addEventListener("click", function() {
+
+        window.setTimeout(function() {
+
+          Object.keys(fields).forEach(function(fieldName) {
+            hideFieldError(fieldName);
+          });
+
+          characterCount.textContent = "0 / 2000";
+          formStatus.className = "form-status";
+          formStatus.textContent = "";
+
+        }, 0);
+
+      });
+
+      /*
+      ====================================================
+      FAQ ACCORDION
+      ====================================================
+      */
+
+      const faqItems = document.querySelectorAll(".faq-item");
+
+      faqItems.forEach(function(item) {
+
+        const question = item.querySelector(".faq-question");
+        const answer = item.querySelector(".faq-answer");
+
+        question.addEventListener("click", function() {
+
+          const isActive = item.classList.contains("active");
+
+          faqItems.forEach(function(otherItem) {
+
+            otherItem.classList.remove("active");
+
+            const otherQuestion =
+              otherItem.querySelector(".faq-question");
+
+            const otherAnswer =
+              otherItem.querySelector(".faq-answer");
+
+            otherQuestion.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+            otherAnswer.style.maxHeight = null;
+
+          });
+
+          if (!isActive) {
+
+            item.classList.add("active");
+
+            question.setAttribute(
+              "aria-expanded",
+              "true"
+            );
+
+            answer.style.maxHeight =
+              answer.scrollHeight + "px";
+
+          }
+
+        });
+
+      });
+
+      /*
+      ====================================================
+      SCROLL REVEAL
+      ====================================================
+      */
+
+      const revealElements =
+        document.querySelectorAll(".reveal");
+
+      if ("IntersectionObserver" in window) {
+
+        const revealObserver =
+          new IntersectionObserver(
+            function(entries, observer) {
+
+              entries.forEach(function(entry) {
+
+                if (entry.isIntersecting) {
+
+                  entry.target.classList.add("visible");
+
+                  observer.unobserve(entry.target);
+
+                }
+
+              });
+
+            }, {
+              threshold: 0.12
+            }
+          );
+
+        revealElements.forEach(function(element) {
+          revealObserver.observe(element);
+        });
+
+      } else {
+
+        revealElements.forEach(function(element) {
+          element.classList.add("visible");
+        });
+
+      }
+
+      /*
+      ====================================================
+      BACK TO TOP
+      ====================================================
+      */
+
+      const backToTop =
+        document.getElementById("backToTop");
+
+      function updateBackToTopVisibility() {
+
+        if (window.scrollY > 400) {
+          backToTop.classList.add("visible");
+        } else {
+          backToTop.classList.remove("visible");
+        }
+
+      }
+
+      window.addEventListener(
+        "scroll",
+        updateBackToTopVisibility, {
+          passive: true
+        }
+      );
+
+      backToTop.addEventListener("click", function() {
+
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+
+      });
+
+      /*
+      ====================================================
+      AUTOMATIC YEAR
+      ====================================================
+      */
+
+      const currentYear =
+        new Date().getFullYear();
+
+      document.getElementById("currentYear").textContent =
+        currentYear;
+
+      document.getElementById("lastUpdated").textContent =
+        currentYear;
+
+    });
+
+  </script>
+
+</body>
+
+</html>

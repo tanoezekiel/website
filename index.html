@@ -1,189 +1,1851 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <title>Welcome to my personal Website! - Home</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Academic website of Ezekiel TANO, PhD student in Economics at Université de Sherbrooke. Research interests include development economics, applied econometrics, public policy, labor economics, and macroeconomics.">
+
+  <meta
+    name="keywords"
+    content="Ezekiel TANO, economist, development economics, applied econometrics, PhD economics, Université de Sherbrooke, research, public policy">
+
+  <meta name="author" content="Ezekiel TANO">
+
+  <title>Ezekiel TANO | PhD Student in Economics</title>
+
+  <!-- Font Awesome icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@700&display=swap"
+    rel="stylesheet">
+
   <style>
+
+    /* ==================================================
+       VARIABLES (style Contact compact)
+    ================================================== */
+
+    :root {
+      --primary: #003366;
+      --primary-dark: #022746;
+      --secondary: #087caf;
+      --secondary-light: #e8f2fa;
+      --accent: #c89b3c;
+      --white: #ffffff;
+      --light: #f4f7fa;
+      --light-blue: #eef5fa;
+      --text: #27323b;
+      --muted: #64727d;
+      --border: #dbe4ea;
+      --shadow: 0 10px 28px rgba(0, 51, 102, 0.08);
+      --shadow-large: 0 20px 50px rgba(0, 51, 102, 0.14);
+      --radius: 12px;
+      --transition: 0.3s ease;
+    }
+
+    /* ==================================================
+       RESET & BASE
+    ================================================== */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      font-size: 16px;
-      line-height: 2.5;
-      color: #222;
+      color: var(--text);
+      background-color: var(--light);
+      font-family: "Inter", Arial, sans-serif;
+      line-height: 1.7;
+      font-size: 15px;
     }
 
-    header {
-      background-color: #2c6aa0;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      position: relative;
+    body.menu-open {
+      overflow: hidden;
     }
 
-    nav {
-      position: absolute;
-      top: 8px;
-      right: 10px;
+    img {
+      max-width: 100%;
+      display: block;
     }
 
-    nav a {
-      color: white;
+    a {
+      color: inherit;
       text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-      font-size:20px;
     }
 
-    nav a:hover {
+    button {
+      cursor: pointer;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    /* ==================================================
+       ACCESSIBILITY
+    ================================================== */
+
+    .skip-link {
+      position: fixed;
+      top: -100px;
+      left: 20px;
+      z-index: 9999;
+      padding: 11px 16px;
+      color: var(--white);
+      background-color: var(--primary);
+      border-radius: 5px;
+      font-weight: 700;
+      font-size: 13px;
+      transition: top var(--transition);
+    }
+
+    .skip-link:focus {
+      top: 20px;
+    }
+
+    :focus-visible {
+      outline: 3px solid rgba(8, 124, 175, 0.5);
+      outline-offset: 3px;
+    }
+
+    /* ==================================================
+       HEADER (style Contact)
+    ================================================== */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 76px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+    }
+
+    .brand-mark {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 44px;
+      height: 44px;
+      color: var(--white);
+      background:
+        linear-gradient(
+          135deg,
+          var(--primary),
+          var(--secondary)
+        );
+      border-radius: 10px;
+      font-family: "Merriweather", Georgia, serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.3;
+    }
+
+    .brand-name {
+      color: var(--primary);
+      font-size: 17px;
+      font-weight: 800;
+    }
+
+    .brand-title {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .nav-links a {
+      display: inline-flex;
+      padding: 10px 12px;
+      color: #3d4c58;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 700;
+      transition:
+        color var(--transition),
+        background-color var(--transition);
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--primary);
+      background-color: var(--secondary-light);
+    }
+
+    .menu-button {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      width: 44px;
+      height: 44px;
+      color: var(--primary);
+      background-color: var(--secondary-light);
+      border: 0;
+      border-radius: 8px;
+      font-size: 20px;
+    }
+
+    /* ==================================================
+       INTRODUCTION BANNER (compact avec citation)
+    ================================================== */
+
+    .intro-banner {
+      background:
+        linear-gradient(
+          135deg,
+          rgba(0, 51, 102, 0.97),
+          rgba(0, 105, 153, 0.93)
+        );
+      color: var(--white);
+      padding: 28px 25px;
+      text-align: center;
+    }
+
+    .intro-banner p {
+      max-width: 900px;
+      margin: 0 auto;
+      font-size: 15px;
+      line-height: 1.8;
+      letter-spacing: 0.02em;
+    }
+
+    .intro-banner i {
+      margin: 0 4px;
+      opacity: 0.7;
+      font-size: 7px;
+    }
+
+    /* ==================================================
+       NAVIGATION INTERNE (comme sur Teaching)
+    ================================================== */
+
+    .home-navigation {
+      background-color: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .home-navigation-inner {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 14px 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .home-navigation a {
+      display: inline-block;
+      padding: 6px 13px;
+      color: var(--primary);
+      background-color: var(--secondary-light);
+      border: 1px solid #cbdfea;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      transition:
+        background-color var(--transition),
+        color var(--transition),
+        transform var(--transition);
+    }
+
+    .home-navigation a:hover {
+      color: var(--white);
+      background-color: var(--secondary);
+      transform: translateY(-2px);
+    }
+
+    /* ==================================================
+       MAIN LAYOUT
+    ================================================== */
+
+    .home-container {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 40px 0 50px;
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      gap: 35px;
+      align-items: start;
+    }
+
+    /* ==================================================
+       PROFILE SIDEBAR
+    ================================================== */
+
+    .profile-sidebar {
+      position: sticky;
+      top: 130px;
+    }
+
+    .profile-card {
+      background-color: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .profile-photo {
+      width: 180px;
+      height: 220px;
+      margin: 0 auto 16px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: var(--radius);
+      border: 4px solid var(--white);
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.16);
+    }
+
+    .profile-card h2 {
+      margin: 0 0 6px;
+      color: var(--primary);
+      font-size: 22px;
+      font-family: "Merriweather", Georgia, serif;
+      line-height: 1.3;
+    }
+
+    .profile-title {
+      margin: 0;
+      color: var(--text);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .profile-institution {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .profile-location {
+      margin: 3px 0 16px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .profile-buttons {
+      display: grid;
+      gap: 8px;
+      margin: 16px 0 18px;
+    }
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      min-height: 38px;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 13px;
+      border: 2px solid transparent;
+      transition:
+        transform var(--transition),
+        background-color var(--transition),
+        color var(--transition),
+        border-color var(--transition);
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      background-color: var(--secondary);
+      color: var(--white);
+      border-color: var(--secondary);
+    }
+
+    .button-primary:hover {
+      background-color: var(--primary);
+      border-color: var(--primary);
+      color: var(--white);
+    }
+
+    .button-secondary {
+      background-color: var(--secondary-light);
+      color: var(--primary);
+      border-color: #c9ddea;
+    }
+
+    .button-secondary:hover {
+      background-color: #dcebf5;
+      color: var(--primary);
+      border-color: var(--secondary);
+    }
+
+    .profile-links {
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      text-align: left;
+    }
+
+    .profile-links h3 {
+      margin: 0 0 10px;
+      color: var(--primary);
+      font-size: 15px;
+      font-family: "Merriweather", Georgia, serif;
+    }
+
+    .profile-links ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .profile-links li {
+      margin-bottom: 8px;
+      overflow-wrap: anywhere;
+    }
+
+    .profile-links a {
+      font-weight: 600;
+      color: var(--secondary);
+      font-size: 13px;
+      transition: color var(--transition);
+    }
+
+    .profile-links a:hover {
+      color: var(--primary);
       text-decoration: underline;
     }
 
-    main.content {
-      padding: 40px;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      gap: 60px;
+    .profile-links a i {
+      width: 18px;
+      color: var(--primary);
     }
 
-    .left-column {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;
-      max-width: 300px;
-      width: 100%;
+    /* ==================================================
+       MAIN CONTENT
+    ================================================== */
+
+    .home-content {
+      min-width: 0;
     }
 
-    .photo-container {
-      text-align: center;
-      width: 100%;
+    .content-section {
+      margin-bottom: 22px;
+      padding: 24px 26px;
+      background-color: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      scroll-margin-top: 130px;
     }
 
-    .photo-container img {
-      width: 100%;
-      border-radius: 8px;
-      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+    .content-section h2 {
+      margin: 0 0 14px;
+      padding-bottom: 8px;
+      color: var(--primary);
+      font-size: 23px;
+      font-family: "Merriweather", Georgia, serif;
+      border-bottom: 3px solid var(--secondary);
     }
 
-    .address {
-      margin-top: 10px;
-      font-style: italic;
-      font-size: 0.9em;
-      color: #444;
-      text-align: center;
-    }
-
-    .right-column {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      width: 600px;
-    }
-
-    .about, .skills, .contact {
-      background-color: #ffffff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-      width: 100%;
-    }
-
-    h2 {
-      color: #2c6aa0;
-      border-bottom: 2px solid #5aa9e6;
-      padding-bottom: 5px;
-      margin-bottom: 15px;
-      font-size: 1.4em;
-    }
-
-    p {
+    .content-section p {
+      margin: 0 0 12px;
+      font-size: 14px;
       text-align: justify;
-      line-height: 1.6;
     }
 
-    @media (max-width: 768px) {
-      main.content {
+    .content-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ==================================================
+       ABOUT
+    ================================================== */
+
+    .about-introduction {
+      font-size: 16px;
+      color: #27313a;
+    }
+
+    .text-link {
+      color: var(--secondary);
+      font-weight: 700;
+      font-size: 13px;
+      transition: color var(--transition);
+    }
+
+    .text-link:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
+    /* ==================================================
+       RESEARCH INTERESTS
+    ================================================== */
+
+    .interests {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .interests span {
+      display: inline-block;
+      padding: 6px 14px;
+      background-color: var(--secondary-light);
+      color: var(--primary);
+      border: 1px solid #c7ddea;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      transition: all var(--transition);
+    }
+
+    .interests span:hover {
+      background-color: var(--primary);
+      color: var(--white);
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    /* ==================================================
+       CURRENT POSITIONS
+    ================================================== */
+
+    .position-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .position-card {
+      padding: 16px 18px;
+      background-color: #fbfcfd;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--secondary);
+      border-radius: 8px;
+      transition: all var(--transition);
+    }
+
+    .position-card:hover {
+      box-shadow: var(--shadow);
+      transform: translateY(-2px);
+    }
+
+    .position-card h3 {
+      margin: 0 0 4px;
+      color: var(--primary);
+      font-size: 16px;
+      font-family: "Merriweather", Georgia, serif;
+    }
+
+    .position-card p {
+      margin: 2px 0;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: justify;
+    }
+
+    /* ==================================================
+       FEATURED RESEARCH
+    ================================================== */
+
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .research-preview {
+      display: flex;
+      flex-direction: column;
+      padding: 18px 20px;
+      background-color: #fbfcfd;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: all var(--transition);
+    }
+
+    .research-preview:hover {
+      box-shadow: var(--shadow);
+      transform: translateY(-2px);
+    }
+
+    .research-preview h3 {
+      margin: 0 0 8px;
+      color: var(--primary);
+      font-size: 16px;
+      font-family: "Merriweather", Georgia, serif;
+      line-height: 1.4;
+    }
+
+    .research-preview p {
+      flex-grow: 1;
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: justify;
+    }
+
+    .research-preview a {
+      font-weight: 700;
+      color: var(--secondary);
+      font-size: 12px;
+      transition: color var(--transition);
+    }
+
+    .research-preview a:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
+    /* ==================================================
+       NEWS (intégrée avec Read More)
+    ================================================== */
+
+    .news-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .news-list li {
+      display: grid;
+      grid-template-columns: 65px 1fr;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .news-list li:first-child {
+      padding-top: 0;
+    }
+
+    .news-list li:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .news-date {
+      color: var(--secondary);
+      font-weight: 700;
+      font-size: 13px;
+      padding-top: 2px;
+    }
+
+    .news-content {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .news-content strong {
+      color: var(--text);
+    }
+
+    .news-content p {
+      text-align: justify;
+    }
+
+    /* ==================================================
+       NEWS READ MORE
+    ================================================== */
+
+    .news-full-content {
+      display: none;
+      margin-top: 8px;
+      padding: 12px 16px;
+      background: var(--light);
+      border-radius: 6px;
+      border-left: 3px solid var(--secondary);
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .news-full-content p {
+      margin-bottom: 8px;
+      text-align: justify;
+    }
+
+    .news-full-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .news-full-content strong {
+      color: var(--primary);
+    }
+
+    .news-read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 6px;
+      padding: 4px 12px;
+      color: var(--secondary);
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+
+    .news-read-more:hover {
+      background: var(--secondary-light);
+      border-color: var(--secondary);
+    }
+
+    .section-footer {
+      margin-top: 16px;
+    }
+
+    /* ==================================================
+       REVEAL ANIMATIONS (style Teaching)
+    ================================================== */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Staggered delay pour les éléments en grille */
+    .position-grid .reveal:nth-child(1) { transition-delay: 0.05s; }
+    .position-grid .reveal:nth-child(2) { transition-delay: 0.10s; }
+
+    .research-grid .reveal:nth-child(1) { transition-delay: 0.05s; }
+    .research-grid .reveal:nth-child(2) { transition-delay: 0.10s; }
+    .research-grid .reveal:nth-child(3) { transition-delay: 0.15s; }
+    .research-grid .reveal:nth-child(4) { transition-delay: 0.20s; }
+
+    .news-list .reveal:nth-child(1) { transition-delay: 0.05s; }
+    .news-list .reveal:nth-child(2) { transition-delay: 0.10s; }
+    .news-list .reveal:nth-child(3) { transition-delay: 0.15s; }
+    .news-list .reveal:nth-child(4) { transition-delay: 0.20s; }
+
+    /* ==================================================
+       FOOTER (style Contact avec centrage)
+    ================================================== */
+
+    .site-footer {
+      padding: 35px 0 16px;
+      color: #dce7ef;
+      background-color: var(--primary-dark);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 0.8fr;
+      gap: 32px;
+      margin-bottom: 24px;
+    }
+
+    .footer-column h3 {
+      margin: 0 0 10px;
+      color: var(--white);
+      font-size: 16px;
+      font-family: "Merriweather", Georgia, serif;
+    }
+
+    .footer-column p {
+      margin: 0;
+      color: #bed0dc;
+      font-size: 13px;
+      text-align: justify;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 6px;
+    }
+
+    .footer-links a {
+      color: #bed0dc;
+      font-size: 13px;
+      transition: color var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--white);
+    }
+
+    .footer-social {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .footer-social a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 34px;
+      height: 34px;
+      color: var(--white);
+      background-color: rgba(255, 255, 255, 0.08);
+      border-radius: 6px;
+      transition: background-color var(--transition);
+    }
+
+    .footer-social a:hover {
+      background-color: var(--secondary);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      padding-top: 14px;
+      color: #91a7b7;
+      border-top: 1px solid rgba(255, 255, 255, 0.13);
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .footer-bottom p {
+      margin: 0;
+    }
+
+    /* ==================================================
+       RESPONSIVE DESIGN
+    ================================================== */
+
+    @media (max-width: 1050px) {
+
+      .nav-links {
+        position: fixed;
+        top: 76px;
+        right: 0;
+        bottom: 0;
+        width: min(340px, 88%);
+        padding: 25px;
+        background-color: var(--white);
+        box-shadow: -15px 20px 35px rgba(0, 51, 102, 0.14);
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
+        transform: translateX(110%);
+        transition: transform var(--transition);
+      }
+
+      .nav-links.open {
+        transform: translateX(0);
+      }
+
+      .nav-links a {
+        width: 100%;
+        padding: 12px 14px;
+      }
+
+      .menu-button {
+        display: inline-flex;
+      }
+
+      .home-container {
+        grid-template-columns: 1fr;
+        max-width: 760px;
+      }
+
+      .profile-sidebar {
+        position: static;
+      }
+
+      .profile-card {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .position-grid,
+      .research-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+    }
+
+    @media (max-width: 760px) {
+
+      .home-container {
+        padding: 30px 0 40px;
+      }
+
+      .content-section {
         padding: 20px;
       }
 
-      .left-column,
-      .right-column {
-        width: 90%;
+      .content-section h2 {
+        font-size: 20px;
       }
 
-      header {
-        padding-bottom: 60px;
+      .news-list li {
+        grid-template-columns: 1fr;
+        gap: 4px;
       }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
     }
+
+    @media (max-width: 520px) {
+
+      .container {
+        width: min(100% - 24px, 1180px);
+      }
+
+      .brand-title {
+        display: none;
+      }
+
+      .brand-name {
+        font-size: 15px;
+      }
+
+      .intro-banner {
+        padding: 20px 16px;
+      }
+
+      .intro-banner p {
+        font-size: 13px;
+      }
+
+      .profile-photo {
+        width: 160px;
+        height: 200px;
+      }
+
+      .profile-card {
+        padding: 16px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+    /* ==================================================
+       ACCESSIBILITÉ
+    ================================================== */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+
+    }
+
   </style>
+
 </head>
 
 <body>
-  <header>
-    <h1> Welcome to my personal Website!</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="research.html">Research Experiences</a>
-      <a href="teaching.html">Teaching Experiences</a>
-      <a href="resources.html">Usefuls Links</a>
-    </nav>
+
+  <!-- ==================================================
+       SKIP LINK
+  ================================================== -->
+
+  <a class="skip-link" href="#main-content">
+    Skip to main content
+  </a>
+
+  <!-- ==================================================
+       HEADER (style Contact)
+  ================================================== -->
+
+  <header class="site-header">
+
+    <div class="container">
+
+      <nav class="navbar" aria-label="Main navigation">
+
+        <a class="brand" href="index.html">
+
+          <span class="brand-mark">
+            ET
+          </span>
+
+          <span class="brand-text">
+
+            <span class="brand-name">
+              Ezekiel TANO
+            </span>
+
+            <span class="brand-title">
+              Economist and Researcher
+            </span>
+
+          </span>
+
+        </a>
+
+        <button
+          class="menu-button"
+          id="menuButton"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="navigationLinks">
+
+          <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+        <ul class="nav-links" id="navigationLinks">
+
+          <li>
+            <a class="active" href="index.html" aria-current="page">
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a href="research.html">
+              Research
+            </a>
+          </li>
+
+    
+          <li>
+            <a href="teaching.html">
+              Teaching
+            </a>
+          </li>
+
+          <li>
+            <a href="projects.html">
+              Projects
+            </a>
+          </li>
+
+          <li>
+            <a href="contact.html">
+              Contact
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
   </header>
 
-  <main class="content">
-    <!-- Colonne gauche -->
-    <div class="left-column">
-      <div class="photo-container">
-        <img src="images/photo.jpg" alt="Ezekiel TANO" />
-        <p class="address">
-<h2>Address</h2>
-          Paris, France
+  <!-- ==================================================
+       INTRODUCTION BANNER
+  ================================================== -->
+
+  <section class="intro-banner" aria-labelledby="banner-title">
+
+    <p id="banner-title">
+      <i class="fa-solid fa-quote-left" style="opacity:0.5; font-size:14px;"></i>
+      <strong>
+        Bienvenue sur mon site — Welcome to my academic homepage.
+      </strong>
+      <i class="fa-solid fa-quote-right" style="opacity:0.5; font-size:14px;"></i>
+    </p>
+
+  </section>
+
+  <!-- ==================================================
+       NAVIGATION INTERNE (comme sur Teaching)
+  ================================================== -->
+
+  <nav class="home-navigation" aria-label="Sections">
+
+    <div class="home-navigation-inner">
+
+      <a href="#about">About</a>
+
+      <a href="#interests">Interests</a>
+
+      <a href="#positions">Positions</a>
+
+      <a href="#research">Research</a>
+
+      <a href="#news">News</a>
+
+    </div>
+
+  </nav>
+
+  <!-- ==================================================
+       MAIN CONTENT
+  ================================================== -->
+
+  <main class="home-container" id="main-content">
+
+    <!-- ================================================
+         PROFIL SIDEBAR
+    ================================================ -->
+
+    <aside class="profile-sidebar" aria-label="Profile information">
+
+      <div class="profile-card reveal">
+
+        <img
+          class="profile-photo"
+          src="images/photo.jpg"
+          alt="Portrait of Ezekiel TANO, PhD student in Economics"
+          loading="lazy">
+
+        <h2>Ezekiel TANO</h2>
+
+        <p class="profile-title">
+          PhD Student in Economics
         </p>
+
+        <p class="profile-institution">
+          Université de Sherbrooke
+        </p>
+
+        <p class="profile-location">
+          Sherbrooke, Québec, Canada
+        </p>
+
+        <div class="profile-buttons">
+
+          <a
+            class="button button-primary"
+            href="documents/TANO_Ezékiel_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            <i class="fa-regular fa-file-pdf" aria-hidden="true"></i>
+
+            Download CV
+
+          </a>
+
+          <a
+            class="button button-secondary"
+            href="contact.html">
+
+            <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+
+            Contact Me
+
+          </a>
+
+        </div>
+
+        <div class="profile-links">
+
+          <h3>Academic profiles</h3>
+
+          <ul>
+            <li>
+              <a href="mailto:ezekieltano5@gmail.com" aria-label="Email Ezekiel TANO">
+                <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                Email
+              </a>
+            </li>
+
+            <li>
+              <a href="https://linkedin.com/in/ezekieltano" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                LinkedIn
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/tanoezekiel" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+                GitHub
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
       </div>
 
-      <div class="contact">
-        <h2>Contacts</h2>
-        <p>You can reach me via:</p>
-        <ul>
-          <li>Email: <a href="mailto:ezekieltano5@gmail.com">ezekieltano5@gmail.com</a></li>
-          <li>LinkedIn: <a href="https://linkedin.com/in/ezekieltano" target="_blank">Ezékiel TANO</a></li>
-          <li>GitHub: <a href="https://github.com/tanoezekiel" target="_blank">github.com/tanoezekiel</a></li>
-          <li>Facebook: <a href="https://facebook.com/Ezekiel TANO" target="_blank">Ezékiel Tano</a></li>
+    </aside>
+
+    <!-- ================================================
+         CONTENU PRINCIPAL
+    ================================================ -->
+
+    <div class="home-content">
+
+      <!-- ==============================================
+           ABOUT
+      ============================================== -->
+
+      <section class="content-section reveal" id="about" aria-labelledby="about-title">
+
+        <h2 id="about-title" class="reveal">About Me</h2>
+
+        <p class="about-introduction reveal">
+          I am a PhD student in Economics at the Université de Sherbrooke.
+          My research interests lie at the intersection of development
+          economics, applied econometrics, labor economics, public policy,
+          macroeconomics, and development finance.
+        </p>
+
+        <p class="reveal">
+          Before joining the Université de Sherbrooke, I earned a Master's
+          degree in Public Policy and Development from the Paris School of
+          Economics and an engineering degree in Statistics and Economics
+          from ENSEA Abidjan.
+        </p>
+
+        <p class="reveal">
+          I also serve as a Research Assistant to Dr. Gomez Agou, contributing
+          to research on sovereign debt sustainability, post-HIPC debt
+          dynamics, youth employment, structural transformation, and
+          quantitative methods for development policy.
+        </p>
+
+        <p class="reveal">
+          My broader research agenda seeks to understand how public policy,
+          institutions, human capital, and structural transformation can
+          support inclusive and sustainable development, particularly in
+          Sub-Saharan Africa.
+        </p>
+
+        <p class="reveal">
+          <a class="text-link" href="cv.html">
+            Learn more about my academic background →
+          </a>
+        </p>
+
+      </section>
+
+      <!-- ==============================================
+           RESEARCH INTERESTS
+      ============================================== -->
+
+      <section class="content-section reveal" id="interests" aria-labelledby="interests-title">
+
+        <h2 id="interests-title" class="reveal">Research Interests</h2>
+
+        <div class="interests reveal">
+
+          <span>Development Economics</span>
+
+          <span>Applied Econometrics</span>
+
+          <span>Labor Economics</span>
+
+          <span>Public Policy</span>
+
+          <span>Macroeconomics</span>
+
+        </div>
+
+      </section>
+
+      <!-- ==============================================
+           CURRENT POSITIONS
+      ============================================== -->
+
+      <section class="content-section reveal" id="positions" aria-labelledby="positions-title">
+
+        <h2 id="positions-title" class="reveal">Current Positions</h2>
+
+        <div class="position-grid">
+
+          <article class="position-card reveal">
+
+            <h3>PhD Student in Economics</h3>
+
+            <p>Université de Sherbrooke</p>
+
+            <p>Sherbrooke, Québec, Canada</p>
+
+          </article>
+
+          <article class="position-card reveal">
+
+            <h3>Research Assistant</h3>
+
+            <p>Research collaboration with Dr. Gomez Agou</p>
+
+            <p>
+              Sovereign debt, youth employment, and development policy
+            </p>
+
+          </article>
+
+        </div>
+
+      </section>
+
+      <!-- ==============================================
+           FEATURED RESEARCH
+      ============================================== -->
+
+      <section class="content-section reveal" id="research" aria-labelledby="research-title">
+
+        <h2 id="research-title" class="reveal">Featured Research</h2>
+
+        <div class="research-grid">
+
+          <article class="research-preview reveal">
+
+            <h3>
+              Growth, Structural Transformation, and Quality Employment
+            </h3>
+
+            <p>
+              This research examines the conditions under which economic growth
+              generates productive and high-quality employment in Sub-Saharan
+              Africa.
+            </p>
+
+            <a href="research.html" aria-label="Read more about Growth, Structural Transformation, and Quality Employment">
+              Read more <span aria-hidden="true">→</span>
+            </a>
+
+          </article>
+
+          <article class="research-preview reveal">
+
+            <h3>
+              Sovereign Debt Sustainability in Post-HIPC Countries
+            </h3>
+
+            <p>
+              This project studies why debt vulnerabilities can re-emerge after
+              debt relief and examines the roles of growth, demographics, fiscal
+              capacity, and debt-service pressures.
+            </p>
+
+            <a href="research.html" aria-label="Read more about Sovereign Debt Sustainability">
+              Read more <span aria-hidden="true">→</span>
+            </a>
+
+          </article>
+
+          <article class="research-preview reveal">
+
+            <h3>
+              Crop Diversification and Climate Change Adaptation
+            </h3>
+
+            <p>
+              My master's thesis examines how farmers adjust crop choices in
+              response to climatic conditions using household panel data from
+              Ethiopia.
+            </p>
+
+            <a href="projects.html" aria-label="View Crop Diversification project">
+              View project <span aria-hidden="true">→</span>
+            </a>
+
+          </article>
+
+          <article class="research-preview reveal">
+
+            <h3>
+              Applied Econometrics and Quantitative Policy Analysis
+            </h3>
+
+            <p>
+              My academic and professional projects use econometrics, machine
+              learning, risk modelling, and statistical programming to answer
+              policy-relevant questions.
+            </p>
+
+            <a href="projects.html" aria-label="Explore Applied Econometrics projects">
+              Explore projects <span aria-hidden="true">→</span>
+            </a>
+
+          </article>
+
+        </div>
+
+      </section>
+
+      <!-- ==============================================
+           RECENT NEWS (intégrée avec Read More)
+      ============================================== -->
+
+      <section class="content-section reveal" id="news" aria-labelledby="news-title">
+
+        <h2 id="news-title" class="reveal">Recent News</h2>
+
+        <ul class="news-list">
+
+          <!-- News 1 -->
+          <li class="reveal">
+            <time class="news-date">2026</time>
+            <div class="news-content">
+              <strong>Beginning of the PhD in Economics</strong>
+              <p>Starting doctoral studies in Economics at the Université de Sherbrooke.</p>
+
+              <div class="news-full-content">
+                <p>
+                  I am beginning my doctoral studies in Economics at Université de Sherbrooke,
+                  with research interests in development economics, macroeconomics,
+                  public policy, sovereign debt, climate economics, and applied econometrics.
+                </p>
+                <p>
+                  This new stage builds on my previous training at Paris School of Economics
+                  and ENSEA and on my experience in research, teaching, financial-risk modelling,
+                  and public-policy analysis.
+                </p>
+                <p><strong>Advisor:</strong> To be confirmed</p>
+                <p><strong>Funding:</strong> Faculty scholarship</p>
+              </div>
+
+              <button class="news-read-more" onclick="toggleNews(this)">
+                <i class="fa-regular fa-eye"></i>
+                <span class="toggle-text">Read more</span>
+              </button>
+            </div>
+          </li>
+
+          <!-- News 2 -->
+          <li class="reveal">
+            <time class="news-date">2026</time>
+            <div class="news-content">
+              <strong>Research Project on Structural Transformation</strong>
+              <p>Developing a research project on growth and quality employment in Sub-Saharan Africa.</p>
+
+              <div class="news-full-content">
+                <p>
+                  This research investigates why periods of economic growth do not always
+                  generate sufficient productive and high-quality employment in Sub-Saharan Africa.
+                </p>
+                <p>
+                  The project examines the roles of sectoral transformation, productivity,
+                  firm dynamics, labor-market institutions, education, and the transition
+                  from informal to formal employment.
+                </p>
+                <p><strong>Status:</strong> In development</p>
+                <p><strong>Expected completion:</strong> 2027</p>
+              </div>
+
+              <button class="news-read-more" onclick="toggleNews(this)">
+                <i class="fa-regular fa-eye"></i>
+                <span class="toggle-text">Read more</span>
+              </button>
+            </div>
+          </li>
+
+          <!-- News 3 -->
+          <li class="reveal">
+            <time class="news-date">2025</time>
+            <div class="news-content">
+              <strong>Master's Degree Completed</strong>
+              <p>Graduated from the Master in Public Policy and Development at Paris School of Economics with Honors.</p>
+
+              <div class="news-full-content">
+                <p>
+                  I completed the Master in Public Policy and Development at Paris School of
+                  Economics with Honors.
+                </p>
+                <p>
+                  During the program, I strengthened my training in development economics,
+                  public policy, applied econometrics, impact evaluation, environmental economics,
+                  machine learning, and quantitative methods.
+                </p>
+                <p>
+                  <strong>Master's thesis:</strong>
+                  <em>Crop Diversification and Climate Change Adaptation: Evidence from Ethiopia</em>
+                </p>
+                <p><strong>Supervisor:</strong> Dr. [Name]</p>
+              </div>
+
+              <button class="news-read-more" onclick="toggleNews(this)">
+                <i class="fa-regular fa-eye"></i>
+                <span class="toggle-text">Read more</span>
+              </button>
+            </div>
+          </li>
+
+          <!-- News 4 -->
+          <li class="reveal">
+            <time class="news-date">2025</time>
+            <div class="news-content">
+              <strong>Research Assistant at Sovereignomics</strong>
+              <p>Joined research projects on sovereign debt sustainability and youth employment in Africa.</p>
+
+              <div class="news-full-content">
+                <p>
+                  I joined Sovereignomics as a Research Assistant under the supervision of
+                  Dr. Gomez Agou.
+                </p>
+                <p>
+                  My work includes research on sovereign debt sustainability, economic sovereignty,
+                  macroeconomic resilience, development finance, fiscal capacity, and the
+                  long-term development challenges facing African economies.
+                </p>
+                <p><strong>Topics:</strong> Sovereign debt, HIPC, fiscal sustainability, Africa</p>
+                <p><strong>Status:</strong> Ongoing</p>
+              </div>
+
+              <button class="news-read-more" onclick="toggleNews(this)">
+                <i class="fa-regular fa-eye"></i>
+                <span class="toggle-text">Read more</span>
+              </button>
+            </div>
+          </li>
+
         </ul>
-      </div>
+
+        <div class="section-footer reveal">
+          <a class="text-link" href="news.html">
+            View all news <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+      </section>
+
     </div>
 
-    <!-- Colonne droite -->
-    <div class="right-column">
-      <div class="about">
-        <h2>About Me</h2>
-        <p>
-          I serve as a research assistant for Dr. Gomez Agou (senior Fellow) at the Harvard Center for International Development, on <em>Econometrics (probabilistic models) for post-HIPC sovereign debt distress</em> and <em>political economy of youth employment in Africa</em>. 
-
-I hold a Master’s degree of research in Applied Economics (Public Policy and Development) from the Paris School of Economics, where I developed a strong foundation in impact evaluation, quantitative analysis, and public policy design.
-My academic and research interests lie in applied econometrics, climate change economics, macroeconomic analysis, and development finance and policymaking.
-
-I also graduated with a Master of Science (Diploma of Engineer Statistician Economist) from ENSEA Abidjan, where I gained expertise in data analysis and statistical forecasting.
-        </p>
-<p>
-📄<a href="documents/TANO_Ezékiel_Resume.pdf" target="_blank" style="color:#2c6aa0; font-weight:bold;">View My CV</a> 
-</p>
-      </div>
-
-      <div class="skills">
-        <h2>Technical Skills</h2>
-        <p>
-          I am proficient in <strong>R(R Markdown)</strong> and <strong>LaTeX</strong>. Through my experience in projects and research during my academic training, 
-          I have developed strong analytical skills that enable me to contribute effectively to data-driven policy analysis and decision-making 
-          in areas related to development economics and public policy.
-        </p>
-        <p><strong>Thank you for visiting my site!</strong></p>
-      </div>
-    </div>
   </main>
+
+  <!-- ==================================================
+       FOOTER (style Contact avec centrage)
+  ================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-column">
+
+          <h3>
+            Ezekiel TANO
+          </h3>
+
+          <p>
+            PhD Student in Economics at Université de Sherbrooke.
+          </p>
+
+          <div class="footer-social">
+
+            <a
+              href="https://linkedin.com/in/ezekieltano"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn">
+
+              <i class="fa-brands fa-linkedin-in"></i>
+
+            </a>
+
+            <a
+              href="https://github.com/tanoezekiel"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub">
+
+              <i class="fa-brands fa-github"></i>
+
+            </a>
+
+            <a
+              href="mailto:ezekieltano5@gmail.com"
+              aria-label="Email">
+
+              <i class="fa-regular fa-envelope"></i>
+
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="footer-column">
+
+          <h3>
+            Navigation
+          </h3>
+
+          <div class="footer-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="research.html">Research</a>
+
+            <a href="teaching.html">Teaching</a>
+
+          </div>
+
+        </div>
+
+        <div class="footer-column">
+
+          <h3>
+            More
+          </h3>
+
+          <div class="footer-links">
+           <a href="projects.html">Projects</a>
+
+            <a href="contact.html">Contact</a>
+
+            <a href="documents/TANO_Ezékiel_Resume.pdf" target="_blank">
+              Download CV
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <p>
+          &copy; <span id="current-year">2026</span> Ezekiel TANO.
+          All rights reserved.
+        </p>
+
+        <p>
+          Last updated:
+          <span id="last-updated">2026</span>
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- ==================================================
+       JAVASCRIPT
+  ================================================== -->
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+
+      // Mobile navigation
+      const menuButton = document.getElementById('menuButton');
+      const navigationLinks = document.getElementById('navigationLinks');
+
+      if (menuButton && navigationLinks) {
+
+        menuButton.addEventListener('click', function() {
+
+          const isOpen = navigationLinks.classList.toggle('open');
+
+          document.body.classList.toggle('menu-open', isOpen);
+
+          menuButton.setAttribute('aria-expanded', String(isOpen));
+
+          menuButton.innerHTML = isOpen ?
+            '<i class="fa-solid fa-xmark"></i>' :
+            '<i class="fa-solid fa-bars"></i>';
+
+          menuButton.setAttribute('aria-label', isOpen ?
+            'Close navigation menu' :
+            'Open navigation menu'
+          );
+
+        });
+
+        navigationLinks.querySelectorAll('a').forEach(function(link) {
+
+          link.addEventListener('click', function() {
+
+            navigationLinks.classList.remove('open');
+            document.body.classList.remove('menu-open');
+
+            menuButton.setAttribute('aria-expanded', 'false');
+            menuButton.setAttribute('aria-label', 'Open navigation menu');
+
+            menuButton.innerHTML = '<i class="fa-solid fa-bars"></i>';
+
+          });
+
+        });
+
+      }
+
+      // Mise à jour automatique de l'année
+      const yearElement = document.getElementById('current-year');
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+
+      const updatedElement = document.getElementById('last-updated');
+      if (updatedElement) {
+        updatedElement.textContent = new Date().getFullYear();
+      }
+
+      // ==================================================
+      // SCROLL REVEAL ANIMATIONS (comme sur la page Teaching)
+      // ==================================================
+
+      const revealElements = document.querySelectorAll(".reveal");
+
+      if ("IntersectionObserver" in window) {
+
+        const revealObserver = new IntersectionObserver(
+          function(entries) {
+
+            entries.forEach(function(entry) {
+
+              if (entry.isIntersecting) {
+
+                entry.target.classList.add("visible");
+
+                revealObserver.unobserve(entry.target);
+
+              }
+
+            });
+
+          },
+          {
+            threshold: 0.12
+          }
+        );
+
+        revealElements.forEach(function(element) {
+          revealObserver.observe(element);
+        });
+
+      } else {
+
+        revealElements.forEach(function(element) {
+          element.classList.add("visible");
+        });
+
+      }
+
+    });
+
+    // ==================================================
+    // FONCTION LIRE LA SUITE (News)
+    // ==================================================
+
+    function toggleNews(button) {
+
+      // Trouver l'élément parent
+      const parent = button.closest('.news-content');
+
+      // Trouver le contenu complet
+      const fullContent = parent.querySelector('.news-full-content');
+
+      // Trouver l'icône et le texte du bouton
+      const icon = button.querySelector('i');
+      const textSpan = button.querySelector('.toggle-text');
+
+      if (fullContent.style.display === 'none' || fullContent.style.display === '') {
+
+        // Afficher le contenu
+        fullContent.style.display = 'block';
+
+        // Animer l'ouverture
+        fullContent.style.maxHeight = '0px';
+        fullContent.style.overflow = 'hidden';
+        fullContent.style.transition = 'max-height 0.4s ease';
+
+        requestAnimationFrame(function() {
+          fullContent.style.maxHeight = fullContent.scrollHeight + 'px';
+        });
+
+        // Mettre à jour le bouton
+        icon.className = 'fa-regular fa-eye-slash';
+        textSpan.textContent = 'Read less';
+
+      } else {
+
+        // Masquer le contenu
+        fullContent.style.maxHeight = '0px';
+
+        setTimeout(function() {
+          fullContent.style.display = 'none';
+        }, 400);
+
+        // Mettre à jour le bouton
+        icon.className = 'fa-regular fa-eye';
+        textSpan.textContent = 'Read more';
+
+      }
+
+    }
+
+  </script>
+
 </body>
+
 </html>

@@ -1,0 +1,2823 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Academic publications, research notes, policy briefs, blogs, and professional projects of Ezekiel TANO, PhD student in Economics at Université de Sherbrooke.">
+
+  <meta
+    name="keywords"
+    content="Ezekiel TANO, publications, research notes, policy briefs, blogs, economics, philosophy, society, culture, projects">
+
+  <meta name="author" content="Ezekiel TANO">
+
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="Projects | Ezekiel TANO">
+  <meta property="og:description" content="Academic publications, research notes, policy briefs, blogs, and professional projects by Ezekiel TANO.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ezekieltano.com/projects.html">
+
+  <title>Projects | Ezekiel TANO</title>
+
+  <!-- Font Awesome icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@700&display=swap"
+    rel="stylesheet">
+
+  <style>
+
+    /* ==================================================
+       VARIABLES (style Contact compact)
+    ================================================== */
+
+    :root {
+      --primary: #003366;
+      --primary-dark: #022746;
+      --secondary: #087caf;
+      --secondary-light: #e8f2fa;
+      --accent: #c89b3c;
+      --white: #ffffff;
+      --light: #f4f7fa;
+      --light-blue: #eef5fa;
+      --text: #27323b;
+      --muted: #64727d;
+      --border: #dbe4ea;
+      --shadow: 0 10px 28px rgba(0, 51, 102, 0.08);
+      --shadow-large: 0 20px 50px rgba(0, 51, 102, 0.14);
+      --radius: 12px;
+      --transition: 0.3s ease;
+      --green-color: #2f7d4c;
+      --light-green: #e9f5ed;
+      --orange-color: #9a6500;
+      --light-orange: #fff4df;
+      --purple-color: #6a4c93;
+      --light-purple: #f1ebf8;
+      --red-color: #9d3f3f;
+      --light-red: #fbecec;
+    }
+
+    /* ==================================================
+       RESET & BASE
+    ================================================== */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background-color: var(--light);
+      font-family: "Inter", Arial, sans-serif;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    /* ==================================================
+       ACCESSIBILITY
+    ================================================== */
+
+    .skip-link {
+      position: fixed;
+      top: -100px;
+      left: 20px;
+      z-index: 9999;
+      padding: 11px 16px;
+      color: var(--white);
+      background-color: var(--primary);
+      border-radius: 5px;
+      font-weight: 700;
+      font-size: 13px;
+      transition: top var(--transition);
+    }
+
+    .skip-link:focus {
+      top: 20px;
+    }
+
+    :focus-visible {
+      outline: 3px solid rgba(8, 124, 175, 0.5);
+      outline-offset: 3px;
+    }
+
+    /* ==================================================
+       HEADER (style Contact)
+    ================================================== */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 76px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+    }
+
+    .brand-mark {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 44px;
+      height: 44px;
+      color: var(--white);
+      background:
+        linear-gradient(
+          135deg,
+          var(--primary),
+          var(--secondary)
+        );
+      border-radius: 10px;
+      font-family: "Merriweather", Georgia, serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.3;
+    }
+
+    .brand-name {
+      color: var(--primary);
+      font-size: 17px;
+      font-weight: 800;
+    }
+
+    .brand-title {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .nav-links a {
+      display: inline-flex;
+      padding: 10px 12px;
+      color: #3d4c58;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 700;
+      transition:
+        color var(--transition),
+        background-color var(--transition);
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--primary);
+      background-color: var(--secondary-light);
+    }
+
+    .menu-button {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      width: 44px;
+      height: 44px;
+      color: var(--primary);
+      background-color: var(--secondary-light);
+      border: 0;
+      border-radius: 8px;
+      font-size: 20px;
+    }
+
+    /* ==================================================
+       HERO (compact, aligné à gauche)
+    ================================================== */
+
+    .page-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 35px 0 30px;
+      color: var(--white);
+      background:
+        linear-gradient(
+          125deg,
+          rgba(2, 39, 70, 0.98),
+          rgba(0, 81, 125, 0.95)
+        );
+    }
+
+    .page-hero::before {
+      position: absolute;
+      top: -100px;
+      right: -80px;
+      width: 300px;
+      height: 300px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+      content: "";
+    }
+
+    .page-hero::after {
+      position: absolute;
+      bottom: -150px;
+      left: -80px;
+      width: 350px;
+      height: 350px;
+      border: 70px solid rgba(255, 255, 255, 0.03);
+      border-radius: 50%;
+      content: "";
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      padding: 5px 12px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .hero-title {
+      margin: 0 0 8px;
+      color: var(--white);
+      font-family: "Merriweather", Georgia, serif;
+      font-size: clamp(30px, 3.8vw, 42px);
+      line-height: 1.15;
+    }
+
+    .hero-text {
+      margin: 0 0 14px;
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 14px;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      min-height: 38px;
+      padding: 8px 16px;
+      border: 2px solid transparent;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 800;
+      transition:
+        transform var(--transition),
+        color var(--transition),
+        background-color var(--transition),
+        border-color var(--transition);
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-light {
+      color: var(--primary);
+      background-color: var(--white);
+      border-color: var(--white);
+    }
+
+    .button-light:hover {
+      color: var(--white);
+      background-color: transparent;
+    }
+
+    .button-outline-light {
+      color: var(--white);
+      background-color: transparent;
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .button-outline-light:hover {
+      color: var(--primary);
+      background-color: var(--white);
+      border-color: var(--white);
+    }
+
+    /* ==================================================
+       NAVIGATION INTERNE (comme sur Teaching)
+    ================================================== */
+
+    .pub-navigation {
+      background-color: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .pub-navigation-inner {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 14px 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .pub-navigation a {
+      display: inline-block;
+      padding: 6px 13px;
+      color: var(--primary);
+      background-color: var(--secondary-light);
+      border: 1px solid #cbdfea;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      transition:
+        background-color var(--transition),
+        color var(--transition),
+        transform var(--transition);
+    }
+
+    .pub-navigation a:hover {
+      color: var(--white);
+      background-color: var(--secondary);
+      transform: translateY(-2px);
+    }
+
+    /* ==================================================
+       CARD (style compact)
+    ================================================== */
+
+    .card {
+      background: var(--white);
+      padding: 18px 22px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      margin-bottom: 14px;
+    }
+
+    .card:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ==================================================
+       MAIN CONTENT
+    ================================================== */
+
+    .page-container {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 40px 0 50px;
+    }
+
+    .content-section {
+      margin-bottom: 24px;
+      padding: 24px 26px;
+      background-color: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      scroll-margin-top: 130px;
+    }
+
+    .content-section h2 {
+      margin: 0 0 12px;
+      padding-bottom: 8px;
+      color: var(--primary);
+      font-size: 22px;
+      font-family: "Merriweather", Georgia, serif;
+      border-bottom: 3px solid var(--secondary);
+    }
+
+    .content-section h2 i {
+      margin-right: 8px;
+      color: var(--secondary);
+    }
+
+    .section-description {
+      max-width: 970px;
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: justify;
+    }
+
+    /* ==================================================
+       PUBLICATIONS LIST AVEC SCROLL
+    ================================================== */
+
+    .pub-scroll-container {
+      max-height: 400px;
+      overflow-y: auto;
+      padding-right: 8px;
+      scroll-behavior: smooth;
+    }
+
+    .pub-scroll-container::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .pub-scroll-container::-webkit-scrollbar-track {
+      background: var(--light);
+      border-radius: 10px;
+    }
+
+    .pub-scroll-container::-webkit-scrollbar-thumb {
+      background: var(--secondary);
+      border-radius: 10px;
+    }
+
+    .pub-scroll-container::-webkit-scrollbar-thumb:hover {
+      background: var(--primary);
+    }
+
+    .pub-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .pub-item {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 16px;
+      align-items: start;
+      padding: 14px 18px;
+      background: var(--light);
+      border-radius: var(--radius);
+      border-left: 4px solid var(--secondary);
+      transition: all var(--transition);
+    }
+
+    .pub-item:hover {
+      background: var(--secondary-light);
+      transform: translateX(4px);
+    }
+
+    .pub-item h3 {
+      margin: 0 0 3px;
+      color: var(--primary);
+      font-size: 15px;
+      font-family: "Merriweather", Georgia, serif;
+    }
+
+    .pub-item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: justify;
+    }
+
+    .pub-item .pub-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+    }
+
+    .pub-item .pub-meta span {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .pub-full-content {
+      display: none;
+      margin-top: 12px;
+      padding: 14px 16px;
+      background: var(--white);
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .pub-full-content p {
+      margin-bottom: 8px;
+      text-align: justify;
+    }
+
+    .pub-full-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .pub-full-content strong {
+      color: var(--primary);
+    }
+
+    /* ==================================================
+       BOUTONS D'ACTION DES ARTICLES
+    ================================================== */
+
+    .pub-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-end;
+      align-self: flex-start;
+      margin-top: 4px;
+    }
+
+    .pub-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      color: var(--primary);
+      background: var(--secondary-light);
+      border: 1px solid #cbdfea;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all var(--transition);
+      white-space: nowrap;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .pub-toggle:hover {
+      color: var(--white);
+      background: var(--secondary);
+    }
+
+    .pub-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      color: var(--white);
+      background: var(--green-color);
+      border: 1px solid var(--green-color);
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      transition: all var(--transition);
+      white-space: nowrap;
+      width: 100%;
+      justify-content: center;
+      text-decoration: none;
+    }
+
+    .pub-download:hover {
+      background: #1e5a35;
+      border-color: #1e5a35;
+      transform: translateY(-2px);
+    }
+
+    .pub-download i {
+      font-size: 13px;
+    }
+
+    /* ==================================================
+       STATUS BADGE
+    ================================================== */
+
+    .status-badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .status-published {
+      color: #24633b;
+      background-color: #eaf7ef;
+      border: 1px solid #badfc8;
+    }
+
+    .status-inprogress {
+      color: #815b00;
+      background-color: #fff7dd;
+      border: 1px solid #ead69a;
+    }
+
+    .status-draft {
+      color: #664294;
+      background-color: #f4edfb;
+      border: 1px solid #d8c7eb;
+    }
+
+    /* ==================================================
+       SECTION CATEGORIES
+    ================================================== */
+
+    .category-economics {
+      border-left-color: var(--secondary);
+    }
+
+    .category-philosophy {
+      border-left-color: var(--purple-color);
+    }
+
+    .category-society {
+      border-left-color: var(--orange-color);
+    }
+
+    .category-research {
+      border-left-color: var(--green-color);
+    }
+
+    .category-policy {
+      border-left-color: var(--red-color);
+    }
+
+    .category-professional {
+      border-left-color: var(--secondary);
+    }
+
+    .category-data {
+      border-left-color: var(--purple-color);
+    }
+
+    /* ==================================================
+       PROJECTS GRID (pour les projets professionnels)
+    ================================================== */
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      background-color: #fbfcfd;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition);
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: #b8cfdf;
+      box-shadow: var(--shadow-large);
+    }
+
+    .project-card-header {
+      padding: 18px 20px 14px;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(234, 243, 249, 0.95),
+          rgba(248, 251, 253, 0.95)
+        );
+      border-bottom: 1px solid var(--border);
+    }
+
+    .project-category {
+      display: inline-block;
+      margin-bottom: 8px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .project-card-header h3 {
+      margin: 0;
+      color: var(--primary);
+      font-size: 17px;
+      font-family: "Merriweather", Georgia, serif;
+      line-height: 1.4;
+    }
+
+    .project-card-body {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      padding: 18px 20px 20px;
+    }
+
+    .project-card-body p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: justify;
+    }
+
+    .project-details {
+      margin: 14px 0 0;
+      padding: 12px 0 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .project-detail {
+      display: grid;
+      grid-template-columns: 85px 1fr;
+      gap: 8px;
+      margin-bottom: 6px;
+      font-size: 12px;
+    }
+
+    .project-detail:last-child {
+      margin-bottom: 0;
+    }
+
+    .technology-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 14px;
+    }
+
+    .technology-list span {
+      padding: 4px 9px;
+      color: var(--primary);
+      background-color: var(--secondary-light);
+      border: 1px solid #cbdfea;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: auto;
+      padding-top: 18px;
+    }
+
+    .project-link {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 7px 12px;
+      color: var(--primary);
+      background-color: var(--secondary-light);
+      border: 1px solid #cbdfea;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      transition:
+        color var(--transition),
+        background-color var(--transition);
+    }
+
+    .project-link:hover {
+      color: var(--white);
+      background-color: var(--secondary);
+    }
+
+    /* ==================================================
+       REVEAL ANIMATIONS (style Teaching)
+    ================================================== */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Staggered delay pour les éléments en grille */
+    .pub-list .reveal:nth-child(1) { transition-delay: 0.05s; }
+    .pub-list .reveal:nth-child(2) { transition-delay: 0.10s; }
+    .pub-list .reveal:nth-child(3) { transition-delay: 0.15s; }
+    .pub-list .reveal:nth-child(4) { transition-delay: 0.20s; }
+
+    .projects-grid .reveal:nth-child(1) { transition-delay: 0.05s; }
+    .projects-grid .reveal:nth-child(2) { transition-delay: 0.10s; }
+    .projects-grid .reveal:nth-child(3) { transition-delay: 0.15s; }
+    .projects-grid .reveal:nth-child(4) { transition-delay: 0.20s; }
+
+    /* ==================================================
+       COMMENTAIRES
+    ================================================== */
+
+    .comment-scroll-container {
+      max-height: 200px;
+      overflow-y: auto;
+      padding-right: 8px;
+      margin-bottom: 12px;
+    }
+
+    .comment-scroll-container::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .comment-scroll-container::-webkit-scrollbar-track {
+      background: var(--light);
+      border-radius: 10px;
+    }
+
+    .comment-scroll-container::-webkit-scrollbar-thumb {
+      background: var(--secondary);
+      border-radius: 10px;
+    }
+
+    .comment-box {
+      margin-top: 14px;
+      padding: 14px 16px;
+      background: #fbfcfd;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .comment-box h4 {
+      margin: 0 0 8px;
+      color: var(--primary);
+      font-size: 14px;
+      font-family: "Merriweather", Georgia, serif;
+    }
+
+    .comment-item {
+      padding: 10px 12px;
+      margin-bottom: 8px;
+      background: var(--white);
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+
+    .comment-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .comment-item .comment-author {
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 13px;
+    }
+
+    .comment-item .comment-date {
+      color: var(--muted);
+      font-size: 11px;
+      margin-left: 8px;
+    }
+
+    .comment-item .comment-text {
+      margin: 4px 0 8px;
+      color: var(--text);
+      font-size: 13px;
+      text-align: justify;
+    }
+
+    .comment-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .comment-actions button {
+      background: none;
+      border: none;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 2px 6px;
+      border-radius: 4px;
+      transition: all var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .comment-actions button:hover {
+      color: var(--secondary);
+      background: var(--secondary-light);
+    }
+
+    .comment-actions button.liked {
+      color: var(--red-color);
+    }
+
+    .comment-reply-form {
+      display: none;
+      margin-top: 8px;
+      padding: 10px 12px;
+      background: var(--light);
+      border-radius: 6px;
+      border-left: 3px solid var(--secondary);
+    }
+
+    .comment-reply-form input,
+    .comment-reply-form textarea {
+      width: 100%;
+      padding: 6px 10px;
+      margin-bottom: 6px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-size: 12px;
+      font-family: "Inter", Arial, sans-serif;
+    }
+
+    .comment-reply-form textarea {
+      min-height: 40px;
+      resize: vertical;
+    }
+
+    .comment-reply-form button {
+      padding: 4px 12px;
+      color: var(--white);
+      background: var(--secondary);
+      border: none;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      transition: background var(--transition);
+    }
+
+    .comment-reply-form button:hover {
+      background: var(--primary);
+    }
+
+    .comment-replies {
+      margin-left: 30px;
+      margin-top: 6px;
+      padding-left: 10px;
+      border-left: 2px solid var(--border);
+    }
+
+    .comment-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .comment-form input,
+    .comment-form textarea {
+      padding: 8px 10px;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      font-size: 12px;
+      font-family: "Inter", Arial, sans-serif;
+      background: var(--white);
+      transition: border-color var(--transition);
+    }
+
+    .comment-form input:focus,
+    .comment-form textarea:focus {
+      outline: none;
+      border-color: var(--secondary);
+    }
+
+    .comment-form textarea {
+      grid-column: 1 / -1;
+      min-height: 50px;
+      resize: vertical;
+    }
+
+    .comment-form .comment-submit {
+      grid-column: 1 / -1;
+      padding: 8px 16px;
+      color: var(--white);
+      background: var(--secondary);
+      border: none;
+      border-radius: 5px;
+      font-weight: 700;
+      font-size: 12px;
+      transition: background var(--transition);
+    }
+
+    .comment-form .comment-submit:hover {
+      background: var(--primary);
+    }
+
+    /* ==================================================
+       FOOTER
+    ================================================== */
+
+    .site-footer {
+      padding: 35px 0 16px;
+      color: #dce7ef;
+      background-color: var(--primary-dark);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 0.8fr;
+      gap: 32px;
+      margin-bottom: 24px;
+    }
+
+    .footer-column h3 {
+      margin: 0 0 10px;
+      color: var(--white);
+      font-size: 16px;
+      font-family: "Merriweather", Georgia, serif;
+    }
+
+    .footer-column p {
+      margin: 0;
+      color: #bed0dc;
+      font-size: 13px;
+      text-align: justify;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 6px;
+    }
+
+    .footer-links a {
+      color: #bed0dc;
+      font-size: 13px;
+      transition: color var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--white);
+    }
+
+    .footer-social {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .footer-social a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 34px;
+      height: 34px;
+      color: var(--white);
+      background-color: rgba(255, 255, 255, 0.08);
+      border-radius: 6px;
+      transition: background-color var(--transition);
+    }
+
+    .footer-social a:hover {
+      background-color: var(--secondary);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      padding-top: 14px;
+      color: #91a7b7;
+      border-top: 1px solid rgba(255, 255, 255, 0.13);
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .footer-bottom p {
+      margin: 0;
+    }
+
+    /* ==================================================
+       RESPONSIVE
+    ================================================== */
+
+    @media (max-width: 1050px) {
+
+      .nav-links {
+        position: fixed;
+        top: 76px;
+        right: 0;
+        bottom: 0;
+        width: min(340px, 88%);
+        padding: 25px;
+        background-color: var(--white);
+        box-shadow: -15px 20px 35px rgba(0, 51, 102, 0.14);
+        flex-direction: column;
+        align-items: stretch;
+        transform: translateX(110%);
+        transition: transform var(--transition);
+      }
+
+      .nav-links.open {
+        transform: translateX(0);
+      }
+
+      .nav-links a {
+        width: 100%;
+        padding: 12px 14px;
+      }
+
+      .menu-button {
+        display: inline-flex;
+      }
+
+      .pub-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .pub-actions {
+        flex-direction: row;
+        width: 100%;
+      }
+
+      .pub-toggle,
+      .pub-download {
+        width: auto;
+        flex: 1;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+    }
+
+    @media (max-width: 760px) {
+
+      .page-container {
+        padding: 30px 0 40px;
+      }
+
+      .content-section {
+        padding: 18px 16px;
+      }
+
+      .content-section h2 {
+        font-size: 19px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .comment-form {
+        grid-template-columns: 1fr;
+      }
+
+      .comment-replies {
+        margin-left: 15px;
+      }
+
+      .pub-actions {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .pub-toggle,
+      .pub-download {
+        width: 100%;
+      }
+
+    }
+
+    @media (max-width: 520px) {
+
+      .container {
+        width: min(100% - 24px, 1180px);
+      }
+
+      .brand-title {
+        display: none;
+      }
+
+      .hero-title {
+        font-size: 26px;
+      }
+
+      .hero-text {
+        font-size: 13px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .button {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .pub-item {
+        padding: 12px 14px;
+      }
+
+      .project-card-header,
+      .project-card-body {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .project-detail {
+        grid-template-columns: 1fr;
+        gap: 2px;
+      }
+
+    }
+
+    /* ==================================================
+       ACCESSIBILITÉ
+    ================================================== */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- ==================================================
+       SKIP LINK
+  ================================================== -->
+
+  <a class="skip-link" href="#main-content">
+    Skip to main content
+  </a>
+
+  <!-- ==================================================
+       HEADER (style Contact)
+    ================================================== -->
+
+  <header class="site-header">
+
+    <div class="container">
+
+      <nav class="navbar" aria-label="Main navigation">
+
+        <a class="brand" href="index.html">
+
+          <span class="brand-mark">
+            ET
+          </span>
+
+          <span class="brand-text">
+
+            <span class="brand-name">
+              Ezekiel TANO
+            </span>
+
+            <span class="brand-title">
+              Economist and Researcher
+            </span>
+
+          </span>
+
+        </a>
+
+        <button
+          class="menu-button"
+          id="menuButton"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="navigationLinks">
+
+          <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+        <ul class="nav-links" id="navigationLinks">
+
+          <li>
+            <a href="index.html">
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a href="research.html">
+              Research
+            </a>
+          </li>
+
+          <li>
+            <a href="teaching.html">
+              Teaching
+            </a>
+          </li>
+         
+         <li>
+            <a class="active" href="projects.html" aria-current="page">
+              Projects
+            </a>
+          </li>
+
+          <li>
+            <a href="contact.html">
+              Contact
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+  <main id="main-content">
+
+    <!-- ==================================================
+         HERO
+    ================================================== -->
+
+    <section class="page-hero">
+
+      <div class="container">
+
+        <div class="hero-content">
+
+          <span class="hero-eyebrow">
+
+            <i class="fa-regular fa-folder-open"></i>
+
+            Projects & Publications
+
+          </span>
+
+          <h1 class="hero-title">
+            Projects & Publications
+          </h1>
+
+          <p class="hero-text">
+            Academic publications (peer-reviewed, policy briefs, research notes),
+            blogs (philosophy, society, culture), and professional projects in
+            financial risk, data science, and public policy.
+          </p>
+
+          <div class="hero-actions">
+
+            <a
+              class="button button-light"
+              href="#academic">
+
+              <i class="fa-regular fa-circle-down"></i>
+
+              Explore
+
+            </a>
+
+            <a
+              class="button button-outline-light"
+              href="contact.html">
+
+              <i class="fa-regular fa-envelope"></i>
+
+              Contact
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ==================================================
+       NAVIGATION INTERNE (comme sur Teaching)
+    ================================================== -->
+
+    <nav class="pub-navigation" aria-label="Sections">
+
+      <div class="pub-navigation-inner">
+
+        <a href="#academic">Academic Publications</a>
+
+        <a href="#blogs">Blogs</a>
+
+        <a href="#professional">Professional Projects</a>
+
+      </div>
+
+    </nav>
+
+    <!-- ==================================================
+       MAIN CONTENT
+    ================================================== -->
+
+    <div class="page-container">
+
+      <!-- ==============================================
+           ACADEMIC PUBLICATIONS
+      ============================================== -->
+
+      <section class="content-section reveal" id="academic">
+
+        <h2 class="reveal">
+          <i class="fa-regular fa-file-lines"></i>
+          Academic Publications
+        </h2>
+
+        <p class="section-description reveal">
+          Peer-reviewed articles, policy briefs, and research notes.
+          Comments and feedback are welcome.
+        </p>
+
+        <!-- ==========================================
+             PEER-REVIEWED
+        ========================================== -->
+
+        <div style="margin-bottom:20px;">
+
+          <h3 style="color:var(--primary); font-family:'Merriweather',Georgia,serif; font-size:18px; margin-bottom:10px;" class="reveal">
+            <i class="fa-regular fa-newspaper" style="color:var(--secondary);"></i>
+            Peer-Reviewed Publications
+          </h3>
+
+          <div class="card reveal">
+
+            <div style="text-align:center; padding: 20px;">
+
+              <i class="fa-regular fa-file-lines" style="font-size:36px; color:var(--border); margin-bottom:12px;"></i>
+
+              <h4 style="color:var(--primary); font-family:'Merriweather',Georgia,serif; font-size:17px; margin-bottom:6px;">
+                No peer-reviewed publication yet
+              </h4>
+
+              <p style="color:var(--muted); font-size:13px; max-width:600px; margin:0 auto; text-align:justify;">
+                I am currently developing several research projects that may
+                eventually be submitted to academic journals or policy publications.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- ==========================================
+             POLICY BRIEFS
+        ========================================== -->
+
+        <div style="margin-bottom:20px;">
+
+          <h3 style="color:var(--primary); font-family:'Merriweather',Georgia,serif; font-size:18px; margin-bottom:10px;" class="reveal">
+            <i class="fa-solid fa-landmark" style="color:var(--secondary);"></i>
+            Policy Briefs
+          </h3>
+
+          <div class="pub-scroll-container">
+
+            <div class="pub-list">
+
+              <article class="pub-item category-policy reveal">
+
+                <div>
+
+                  <h3>
+                    Debt-for-Development Financing in Côte d'Ivoire
+                  </h3>
+
+                  <p>
+                    Analysis of debt conversion mechanisms and their potential for
+                    creating fiscal space for development investment.
+                  </p>
+
+                  <div class="pub-meta">
+                    <span><i class="fa-regular fa-calendar"></i> March 2026</span>
+                    <span><i class="fa-regular fa-file"></i> Policy Brief</span>
+                    <span class="status-badge status-published">Published</span>
+                  </div>
+
+                  <div class="pub-full-content">
+                    <p><strong>Context:</strong> Côte d'Ivoire faces significant development financing needs in infrastructure, education, and health. Traditional debt financing has been constrained by fiscal sustainability concerns.</p>
+                    <p><strong>Proposed mechanism:</strong> Debt-for-development swaps could redirect debt service payments toward domestic development priorities while reducing the overall debt burden.</p>
+                    <p><strong>Recommendations:</strong> The government should explore partnerships with bilateral and multilateral creditors to design debt conversion mechanisms that align with national development priorities.</p>
+                  </div>
+
+                </div>
+
+                <div class="pub-actions">
+
+                  <button class="pub-toggle" onclick="toggleContent(this)">
+                    <i class="fa-regular fa-eye"></i>
+                    <span class="toggle-text">Lire</span>
+                  </button>
+
+                  <a class="pub-download" href="documents/debt-for-development.pdf" download>
+                    <i class="fa-solid fa-download"></i>
+                    <span>PDF</span>
+                  </a>
+
+                </div>
+
+              </article>
+
+              <article class="pub-item category-policy reveal">
+
+                <div>
+
+                  <h3>
+                    Renewable Energy and Economic Development in Africa
+                  </h3>
+
+                  <p>
+                    Policy note on the economic implications of renewable energy
+                    investment and the trade-offs with environmental protection.
+                  </p>
+
+                  <div class="pub-meta">
+                    <span><i class="fa-regular fa-calendar"></i> February 2026</span>
+                    <span><i class="fa-regular fa-file"></i> Policy Note</span>
+                    <span class="status-badge status-published">Published</span>
+                  </div>
+
+                  <div class="pub-full-content">
+                    <p><strong>Context:</strong> African countries are increasingly investing in renewable energy to address energy access gaps and climate change concerns. However, these investments often involve complex trade-offs with environmental protection.</p>
+                    <p><strong>Key issues:</strong> This note examines the economic benefits and environmental costs of renewable energy projects, with particular attention to wind farms near protected areas.</p>
+                    <p><strong>Recommendation:</strong> Environmental impact assessments should be integrated into the project planning process from the outset, and compensation mechanisms should be established for affected communities.</p>
+                  </div>
+
+                </div>
+
+                <div class="pub-actions">
+
+                  <button class="pub-toggle" onclick="toggleContent(this)">
+                    <i class="fa-regular fa-eye"></i>
+                    <span class="toggle-text">Lire</span>
+                  </button>
+
+                  <a class="pub-download" href="documents/renewable-energy.pdf" download>
+                    <i class="fa-solid fa-download"></i>
+                    <span>PDF</span>
+                  </a>
+
+                </div>
+
+              </article>
+
+            </div>
+
+          </div>
+
+          <!-- Commentaires Policy Briefs -->
+          <div class="comment-box reveal" data-section="policy-briefs">
+
+            <h4>
+              <i class="fa-regular fa-comment"></i>
+              Comments & Feedback
+            </h4>
+
+            <div class="comment-scroll-container" id="comments-policy-briefs">
+              <div style="color:var(--muted); font-size:13px; padding:10px; text-align:center;">
+                <i class="fa-regular fa-comment"></i> No comments yet. Be the first to comment!
+              </div>
+            </div>
+
+            <form class="comment-form" onsubmit="addComment(event, 'policy-briefs')">
+
+              <input type="text" placeholder="Your name" required>
+
+              <input type="email" placeholder="Your email (optional)">
+
+              <textarea placeholder="Write your comment here..." required></textarea>
+
+              <button class="comment-submit" type="submit">
+                <i class="fa-regular fa-paper-plane"></i> Post Comment
+              </button>
+
+            </form>
+
+          </div>
+
+        </div>
+
+        <!-- ==========================================
+             RESEARCH NOTES
+        ========================================== -->
+
+        <div>
+
+          <h3 style="color:var(--primary); font-family:'Merriweather',Georgia,serif; font-size:18px; margin-bottom:10px;" class="reveal">
+            <i class="fa-regular fa-flask" style="color:var(--secondary);"></i>
+            Research Notes
+          </h3>
+
+          <div class="pub-scroll-container">
+
+            <div class="pub-list">
+
+              <article class="pub-item category-research reveal">
+
+                <div>
+
+                  <h3>
+                    Debt Reaccumulation After HIPC Debt Relief
+                  </h3>
+
+                  <p>
+                    Preliminary findings on the re-emergence of debt vulnerabilities
+                    in post-HIPC countries across Africa.
+                  </p>
+
+                  <div class="pub-meta">
+                    <span><i class="fa-regular fa-calendar"></i> July 2026</span>
+                    <span><i class="fa-regular fa-file"></i> Working Paper</span>
+                    <span class="status-badge status-inprogress">In Progress</span>
+                  </div>
+
+                  <div class="pub-full-content">
+                    <p><strong>Abstract:</strong> This paper examines the re-emergence of public debt vulnerabilities in countries that reached the completion point of the Heavily Indebted Poor Countries initiative. Using a panel dataset of post-HIPC countries, we analyze the roles of economic growth, demographic dynamics, fiscal capacity, and debt-service pressures in driving debt reaccumulation.</p>
+                    <p><strong>Key findings:</strong> Our results suggest that countries with slower population growth and stronger primary balances are better able to maintain debt sustainability after debt relief.</p>
+                  </div>
+
+                </div>
+
+                <div class="pub-actions">
+
+                  <button class="pub-toggle" onclick="toggleContent(this)">
+                    <i class="fa-regular fa-eye"></i>
+                    <span class="toggle-text">Lire</span>
+                  </button>
+
+                  <a class="pub-download" href="documents/debt-reaccumulation.pdf" download>
+                    <i class="fa-solid fa-download"></i>
+                    <span>PDF</span>
+                  </a>
+
+                </div>
+
+              </article>
+
+              <article class="pub-item category-research reveal">
+
+                <div>
+
+                  <h3>
+                    Climate Adaptation and Crop Diversification in Ethiopia
+                  </h3>
+
+                  <p>
+                    Extended analysis of the master's thesis with additional
+                    robustness checks and heterogeneity analysis.
+                  </p>
+
+                  <div class="pub-meta">
+                    <span><i class="fa-regular fa-calendar"></i> June 2026</span>
+                    <span><i class="fa-regular fa-file"></i> Research Note</span>
+                    <span class="status-badge status-draft">Draft</span>
+                  </div>
+
+                  <div class="pub-full-content">
+                    <p><strong>Abstract:</strong> This research note extends the analysis of my master's thesis on crop diversification and climate change adaptation in Ethiopia. We incorporate additional robustness checks, including alternative climate specifications and heterogeneity analysis by crop type and household characteristics.</p>
+                    <p><strong>Main findings:</strong> The results confirm that Ethiopian farmers adjust their crop choices in response to temperature and precipitation changes. However, the magnitude and direction of these responses vary significantly across crops and regions.</p>
+                  </div>
+
+                </div>
+
+                <div class="pub-actions">
+
+                  <button class="pub-toggle" onclick="toggleContent(this)">
+                    <i class="fa-regular fa-eye"></i>
+                    <span class="toggle-text">Lire</span>
+                  </button>
+
+                  <a class="pub-download" href="documents/climate-adaptation.pdf" download>
+                    <i class="fa-solid fa-download"></i>
+                    <span>PDF</span>
+                  </a>
+
+                </div>
+
+              </article>
+
+            </div>
+
+          </div>
+
+          <!-- Commentaires Research Notes -->
+          <div class="comment-box reveal" data-section="research-notes">
+
+            <h4>
+              <i class="fa-regular fa-comment"></i>
+              Comments & Feedback
+            </h4>
+
+            <div class="comment-scroll-container" id="comments-research-notes">
+              <div style="color:var(--muted); font-size:13px; padding:10px; text-align:center;">
+                <i class="fa-regular fa-comment"></i> No comments yet. Be the first to comment!
+              </div>
+            </div>
+
+            <form class="comment-form" onsubmit="addComment(event, 'research-notes')">
+
+              <input type="text" placeholder="Your name" required>
+
+              <input type="email" placeholder="Your email (optional)">
+
+              <textarea placeholder="Write your comment here..." required></textarea>
+
+              <button class="comment-submit" type="submit">
+                <i class="fa-regular fa-paper-plane"></i> Post Comment
+              </button>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- ==============================================
+           BLOGS
+      ============================================== -->
+
+      <section class="content-section reveal" id="blogs">
+
+        <h2 class="reveal">
+          <i class="fa-solid fa-blog"></i>
+          Blogs
+        </h2>
+
+        <p class="section-description reveal">
+          Personal reflections, essays, and writings on philosophy, society,
+          and culture.
+        </p>
+
+        <!-- ==========================================
+             PHILOSOPHIE
+        ========================================== -->
+
+        <div style="margin-bottom:20px;">
+
+          <h3 style="color:var(--primary); font-family:'Merriweather',Georgia,serif; font-size:18px; margin-bottom:10px;" class="reveal">
+            <i class="fa-solid fa-brain" style="color:var(--purple-color);"></i>
+            Philosophie de Vie
+          </h3>
+
+          <div class="pub-scroll-container">
+
+            <div class="pub-list">
+
+              <article class="pub-item category-philosophy reveal">
+
+                <div>
+
+                  <h3>
+                    L'Économie au Service de l'Humain
+                  </h3>
+
+                  <p>
+                    Réflexion sur la finalité de l'économie et sa capacité à servir
+                    le bien-être humain au-delà de la simple croissance.
+                  </p>
+
+                  <div class="pub-meta">
+                    <span><i class="fa-regular fa-calendar"></i> 2026</span>
+                    <span><i class="fa-regular fa-file"></i> Essai</span>
+                    <span class="status-badge status-draft">Brouillon</span>
+                  </div>
+
+                  <div class="pub-full-content">
+                    <p><strong>Résumé :</strong> Cet essai explore la question fondamentale de la finalité de l'économie. Au-delà de la croissance du PIB, l'économie devrait-elle servir le bien-être humain, la justice sociale et la durabilité environnementale ?</p>
+                    <p><strong>Argument central :</strong> L'économie est un outil au service de l'humain, pas une fin en soi. Les politiques économiques devraient être évaluées non seulement sur leur capacité à générer de la croissance, mais aussi sur leur contribution au bien-être des populations.</p>
+                  </div>
+
+                </div>
+
+                <div class="pub-actions">
+
+                  <button class="pub-toggle" onclick="toggleContent(this)">
+                    <i class="fa-regular fa-eye"></i>
+                    <span class="toggle-text">Lire</span>
+                  </button>
+
+                  <a class="pub-download" href="documents/economie-humaine.pdf" download>
+                    <i class="fa-solid fa-download"></i>
+                    <span>PDF</span>
+                  </a>
+
+                </div>
+
+              </article>
+
+              <article class="pub-item category-philosophy reveal">
+
+                <div>
+
+                  <h3>
+                    La Valeur du Savoir dans une Société en Mutation
+                  </h3>
+
+                  <p>
+                    Essai sur l'importance de la connaissance, de l'éducation et
+                    de la pensée critique dans un monde en transformation rapide.
+                  </p>
+
+                  <div class="pub-meta">
+                    <span><i class="fa-regular fa-calendar"></i> 2025</span>
+                    <span><i class="fa-regular fa-file"></i> Essai</span>
+                    <span class="status-badge status-draft">Brouillon</span>
+                  </div>
+
+                  <div class="pub-full-content">
+                    <p><strong>Résumé :</strong> Dans un monde marqué par des transformations rapides, la connaissance et la pensée critique sont plus importantes que jamais. Cet essai examine le rôle de l'éducation et du savoir dans la construction de sociétés résilientes.</p>
+                    <p><strong>Thèse :</strong> La connaissance est un pouvoir, mais c'est aussi une responsabilité. Dans une société en mutation, la capacité à penser de manière critique, à remettre en question les certitudes et à apprendre tout au long de la vie est essentielle.</p>
+                  </div>
+
+                </div>
+
+                <div class="pub-actions">
+
+                  <button class="pub-toggle" onclick="toggleContent(this)">
+                    <i class="fa-regular fa-eye"></i>
+                    <span class="toggle-text">Lire</span>
+                  </button>
+
+                  <a class="pub-download" href="documents/valeur-savoir.pdf" download>
+                    <i class="fa-solid fa-download"></i>
+                    <span>PDF</span>
+                  </a>
+
+                </div>
+
+              </article>
+
+            </div>
+
+          </div>
+
+          <!-- Commentaires Philosophie -->
+          <div class="comment-box reveal" data-section="philosophy">
+
+            <h4>
+              <i class="fa-regular fa-comment"></i>
+              Commentaires & Retours
+            </h4>
+
+            <div class="comment-scroll-container" id="comments-philosophy">
+              <div style="color:var(--muted); font-size:13px; padding:10px; text-align:center;">
+                <i class="fa-regular fa-comment"></i> Aucun commentaire pour le moment.
+              </div>
+            </div>
+
+            <form class="comment-form" onsubmit="addComment(event, 'philosophy')">
+
+              <input type="text" placeholder="Votre nom" required>
+
+              <input type="email" placeholder="Votre email (facultatif)">
+
+              <textarea placeholder="Écrivez votre commentaire ici..." required></textarea>
+
+              <button class="comment-submit" type="submit">
+                <i class="fa-regular fa-paper-plane"></i> Publier le commentaire
+              </button>
+
+            </form>
+
+          </div>
+
+        </div>
+
+        <!-- ==========================================
+             SOCIÉTÉ ET CULTURE
+        ========================================== -->
+
+        <div>
+
+          <h3 style="color:var(--primary); font-family:'Merriweather',Georgia,serif; font-size:18px; margin-bottom:10px;" class="reveal">
+            <i class="fa-solid fa-people-group" style="color:var(--orange-color);"></i>
+            Société et Culture
+          </h3>
+
+          <div class="pub-scroll-container">
+
+            <div class="pub-list">
+
+              <article class="pub-item category-society reveal">
+
+                <div>
+
+                  <h3>
+                    Jeunesse Africaine et Transformation Sociale
+                  </h3>
+
+                  <p>
+                    Analyse du rôle de la jeunesse dans les transformations sociales,
+                    économiques et politiques en Afrique contemporaine.
+                  </p>
+
+                  <div class="pub-meta">
+                    <span><i class="fa-regular fa-calendar"></i> 2026</span>
+                    <span><i class="fa-regular fa-file"></i> Article</span>
+                    <span class="status-badge status-draft">Brouillon</span>
+                  </div>
+
+                  <div class="pub-full-content">
+                    <p><strong>Résumé :</strong> La jeunesse africaine est souvent présentée comme une force de changement. Cet article examine le rôle concret des jeunes dans les transformations sociales, économiques et politiques en Afrique.</p>
+                    <p><strong>Principaux axes :</strong> L'analyse explore comment les jeunes contribuent à l'innovation sociale, à l'entrepreneuriat, à la participation citoyenne et à la transformation des normes culturelles.</p>
+                  </div>
+
+                </div>
+
+                <div class="pub-actions">
+
+                  <button class="pub-toggle" onclick="toggleContent(this)">
+                    <i class="fa-regular fa-eye"></i>
+                    <span class="toggle-text">Lire</span>
+                  </button>
+
+                  <a class="pub-download" href="documents/jeunesse-africaine.pdf" download>
+                    <i class="fa-solid fa-download"></i>
+                    <span>PDF</span>
+                  </a>
+
+                </div>
+
+              </article>
+
+              <article class="pub-item category-society reveal">
+
+                <div>
+
+                  <h3>
+                    Identité et Modernité en Afrique
+                  </h3>
+
+                  <p>
+                    Réflexion sur les tensions et les articulations entre identités
+                    traditionnelles et modernité dans les sociétés africaines.
+                  </p>
+
+                  <div class="pub-meta">
+                    <span><i class="fa-regular fa-calendar"></i> 2025</span>
+                    <span><i class="fa-regular fa-file"></i> Essai</span>
+                    <span class="status-badge status-draft">Brouillon</span>
+                  </div>
+
+                  <div class="pub-full-content">
+                    <p><strong>Résumé :</strong> Les sociétés africaines sont traversées par des tensions entre identités traditionnelles et modernité. Cet essai explore comment ces tensions se manifestent et comment elles peuvent être résolues.</p>
+                    <p><strong>Thèse :</strong> L'identité africaine n'est pas un héritage figé, mais un processus dynamique qui intègre à la fois les héritages culturels et les influences de la modernité.</p>
+                  </div>
+
+                </div>
+
+                <div class="pub-actions">
+
+                  <button class="pub-toggle" onclick="toggleContent(this)">
+                    <i class="fa-regular fa-eye"></i>
+                    <span class="toggle-text">Lire</span>
+                  </button>
+
+                  <a class="pub-download" href="documents/identite-modernite.pdf" download>
+                    <i class="fa-solid fa-download"></i>
+                    <span>PDF</span>
+                  </a>
+
+                </div>
+
+              </article>
+
+            </div>
+
+          </div>
+
+          <!-- Commentaires Société -->
+          <div class="comment-box reveal" data-section="society">
+
+            <h4>
+              <i class="fa-regular fa-comment"></i>
+              Commentaires & Retours
+            </h4>
+
+            <div class="comment-scroll-container" id="comments-society">
+              <div style="color:var(--muted); font-size:13px; padding:10px; text-align:center;">
+                <i class="fa-regular fa-comment"></i> Aucun commentaire pour le moment.
+              </div>
+            </div>
+
+            <form class="comment-form" onsubmit="addComment(event, 'society')">
+
+              <input type="text" placeholder="Votre nom" required>
+
+              <input type="email" placeholder="Votre email (facultatif)">
+
+              <textarea placeholder="Écrivez votre commentaire ici..." required></textarea>
+
+              <button class="comment-submit" type="submit">
+                <i class="fa-regular fa-paper-plane"></i> Publier le commentaire
+              </button>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- ==============================================
+           PROFESSIONAL PROJECTS
+      ============================================== -->
+
+      <section class="content-section reveal" id="professional">
+
+        <h2 class="reveal">
+          <i class="fa-solid fa-briefcase"></i>
+          Professional Projects
+        </h2>
+
+        <p class="section-description reveal">
+          Financial risk modelling, data science, and public policy projects
+          completed in professional contexts.
+        </p>
+
+        <div class="projects-grid">
+
+          <!-- Credit Scoring -->
+          <article class="project-card reveal">
+
+            <div class="project-card-header">
+
+              <span class="project-category category-professional" style="background:var(--secondary-light);">
+                Credit Risk
+              </span>
+
+              <h3>
+                Probability of Default Credit-Scoring Model
+              </h3>
+
+            </div>
+
+            <div class="project-card-body">
+
+              <p>
+                Development of a credit-scoring framework for retail portfolio
+                risk differentiation and scorecard development.
+              </p>
+
+              <div class="project-details">
+                <div class="project-detail">
+                  <strong>Methods</strong>
+                  <span>Logistic regression, scorecards, risk classes</span>
+                </div>
+                <div class="project-detail">
+                  <strong>Validation</strong>
+                  <span>ROC-AUC, Gini, KS, Brier score, PSI</span>
+                </div>
+              </div>
+
+              <div class="technology-list">
+                <span>Python</span>
+                <span>SAS</span>
+                <span>Credit Scoring</span>
+              </div>
+
+            </div>
+
+          </article>
+
+          <!-- LGD -->
+          <article class="project-card reveal">
+
+            <div class="project-card-header">
+
+              <span class="project-category category-professional" style="background:var(--secondary-light);">
+                Regulatory Risk
+              </span>
+
+              <h3>
+                Loss Given Default Modelling
+              </h3>
+
+            </div>
+
+            <div class="project-card-body">
+
+              <p>
+                Analysis of recovery processes following borrower default,
+                including recoveries, costs, and incomplete workouts.
+              </p>
+
+              <div class="project-details">
+                <div class="project-detail">
+                  <strong>Topics</strong>
+                  <span>Recovery curves, discounting, LGD estimation</span>
+                </div>
+                <div class="project-detail">
+                  <strong>Framework</strong>
+                  <span>IRB regulatory modelling</span>
+                </div>
+              </div>
+
+              <div class="technology-list">
+                <span>SAS</span>
+                <span>LGD</span>
+                <span>Basel Framework</span>
+              </div>
+
+            </div>
+
+          </article>
+
+          <!-- NLP -->
+          <article class="project-card reveal">
+
+            <div class="project-card-header">
+
+              <span class="project-category category-data">
+                NLP
+              </span>
+
+              <h3>
+                Legal-Article Relationship Analysis
+              </h3>
+
+            </div>
+
+            <div class="project-card-body">
+
+              <p>
+                Statistical methods and natural language processing applied to
+                analyze relationships between legislative articles.
+              </p>
+
+              <div class="project-details">
+                <div class="project-detail">
+                  <strong>Methods</strong>
+                  <span>Text similarity, classification, network analysis</span>
+                </div>
+                <div class="project-detail">
+                  <strong>Application</strong>
+                  <span>Legal and parliamentary documents</span>
+                </div>
+              </div>
+
+              <div class="technology-list">
+                <span>Python</span>
+                <span>NLP</span>
+                <span>Text Analysis</span>
+              </div>
+
+            </div>
+
+          </article>
+
+          <!-- Geospatial -->
+          <article class="project-card reveal">
+
+            <div class="project-card-header">
+
+              <span class="project-category category-data">
+                Geospatial
+              </span>
+
+              <h3>
+                Integration of Household and Climate Data
+              </h3>
+
+            </div>
+
+            <div class="project-card-body">
+
+              <p>
+                Construction of a panel dataset combining household surveys,
+                agricultural observations, and climate data.
+              </p>
+
+              <div class="project-details">
+                <div class="project-detail">
+                  <strong>Data</strong>
+                  <span>LSMS-ISA, ERA5, CHIRPS</span>
+                </div>
+                <div class="project-detail">
+                  <strong>Operations</strong>
+                  <span>Spatial joins, panel construction</span>
+                </div>
+              </div>
+
+              <div class="technology-list">
+                <span>R</span>
+                <span>Geospatial</span>
+                <span>Panel Data</span>
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- ==================================================
+       FOOTER (style Contact avec centrage)
+  ================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-column">
+
+          <h3>
+            Ezekiel TANO
+          </h3>
+
+          <p>
+            PhD Student in Economics at Université de Sherbrooke.
+                      </p>
+
+          <div class="footer-social">
+
+            <a
+              href="https://linkedin.com/in/ezekieltano"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn">
+
+              <i class="fa-brands fa-linkedin-in"></i>
+
+            </a>
+
+            <a
+              href="https://github.com/tanoezekiel"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub">
+
+              <i class="fa-brands fa-github"></i>
+
+            </a>
+
+            <a
+              href="mailto:ezekieltano5@gmail.com"
+              aria-label="Email">
+
+              <i class="fa-regular fa-envelope"></i>
+
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="footer-column">
+
+          <h3>
+            Navigation
+          </h3>
+
+          <div class="footer-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="research.html">Research</a>
+
+            <a href="teaching.html">Teaching</a>
+
+  
+
+          </div>
+
+        </div>
+
+        <div class="footer-column">
+
+          <h3>
+            More
+          </h3>
+
+          <div class="footer-links">
+       <a href="projects.html">Projects </a>
+        <a href="contact.html">Contact</a>
+            <a href="documents/TANO_Ezékiel_Resume.pdf" target="_blank">
+              Download CV
+            </a>
+         
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <p>
+          &copy; <span id="current-year">2026</span> Ezekiel TANO.
+          All rights reserved.
+        </p>
+
+        <p>
+          Last updated:
+          <span id="last-updated">2026</span>
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- ==================================================
+       JAVASCRIPT
+  ================================================== -->
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+
+      // Mobile navigation
+      const menuButton = document.getElementById('menuButton');
+      const navigationLinks = document.getElementById('navigationLinks');
+
+      if (menuButton && navigationLinks) {
+
+        menuButton.addEventListener('click', function() {
+
+          const isOpen = navigationLinks.classList.toggle('open');
+
+          document.body.classList.toggle('menu-open', isOpen);
+
+          menuButton.setAttribute('aria-expanded', String(isOpen));
+
+          menuButton.innerHTML = isOpen ?
+            '<i class="fa-solid fa-xmark"></i>' :
+            '<i class="fa-solid fa-bars"></i>';
+
+          menuButton.setAttribute('aria-label', isOpen ?
+            'Close navigation menu' :
+            'Open navigation menu'
+          );
+
+        });
+
+        navigationLinks.querySelectorAll('a').forEach(function(link) {
+
+          link.addEventListener('click', function() {
+
+            navigationLinks.classList.remove('open');
+            document.body.classList.remove('menu-open');
+
+            menuButton.setAttribute('aria-expanded', 'false');
+            menuButton.setAttribute('aria-label', 'Open navigation menu');
+
+            menuButton.innerHTML = '<i class="fa-solid fa-bars"></i>';
+
+          });
+
+        });
+
+      }
+
+      // Année automatique
+      const yearElement = document.getElementById('current-year');
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+
+      const updatedElement = document.getElementById('last-updated');
+      if (updatedElement) {
+        updatedElement.textContent = new Date().getFullYear();
+      }
+
+      // ==================================================
+      // SCROLL REVEAL ANIMATIONS (comme sur la page Teaching)
+      // ==================================================
+
+      const revealElements = document.querySelectorAll(".reveal");
+
+      if ("IntersectionObserver" in window) {
+
+        const revealObserver = new IntersectionObserver(
+          function(entries) {
+
+            entries.forEach(function(entry) {
+
+              if (entry.isIntersecting) {
+
+                entry.target.classList.add("visible");
+
+                revealObserver.unobserve(entry.target);
+
+              }
+
+            });
+
+          },
+          {
+            threshold: 0.12
+          }
+        );
+
+        revealElements.forEach(function(element) {
+          revealObserver.observe(element);
+        });
+
+      } else {
+
+        revealElements.forEach(function(element) {
+          element.classList.add("visible");
+        });
+
+      }
+
+    });
+
+    // ==================================================
+    // FONCTION LIRE / MASQUER
+    // ==================================================
+
+    function toggleContent(button) {
+
+      const article = button.closest('.pub-item');
+      const content = article.querySelector('.pub-full-content');
+      const icon = button.querySelector('i');
+      const textSpan = button.querySelector('.toggle-text');
+
+      if (content.style.display === 'none' || content.style.display === '') {
+
+        content.style.display = 'block';
+        content.style.maxHeight = '0px';
+        content.style.overflow = 'hidden';
+        content.style.transition = 'max-height 0.4s ease';
+
+        requestAnimationFrame(function() {
+          content.style.maxHeight = content.scrollHeight + 'px';
+        });
+
+        icon.className = 'fa-regular fa-eye-slash';
+        textSpan.textContent = 'Masquer';
+
+      } else {
+
+        content.style.maxHeight = '0px';
+
+        setTimeout(function() {
+          content.style.display = 'none';
+        }, 400);
+
+        icon.className = 'fa-regular fa-eye';
+        textSpan.textContent = 'Lire';
+
+      }
+
+    }
+
+    // ==================================================
+    // FONCTIONS DES COMMENTAIRES
+    // ==================================================
+
+    function getComments(sectionKey) {
+      const data = localStorage.getItem('comments_' + sectionKey);
+      if (data) {
+        try {
+          return JSON.parse(data);
+        } catch (e) {
+          return [];
+        }
+      }
+      return [];
+    }
+
+    function saveComments(sectionKey, comments) {
+      localStorage.setItem('comments_' + sectionKey, JSON.stringify(comments));
+    }
+
+    function getReplies(sectionKey, commentId) {
+      const replies = localStorage.getItem('replies_' + sectionKey + '_' + commentId);
+      if (replies) {
+        try {
+          return JSON.parse(replies);
+        } catch (e) {
+          return [];
+        }
+      }
+      return [];
+    }
+
+    function saveReplies(sectionKey, commentId, replies) {
+      localStorage.setItem('replies_' + sectionKey + '_' + commentId, JSON.stringify(replies));
+    }
+
+    function getLikes(sectionKey, itemId) {
+      const likes = localStorage.getItem('likes_' + sectionKey + '_' + itemId);
+      return likes ? parseInt(likes) : 0;
+    }
+
+    function saveLikes(sectionKey, itemId, count) {
+      localStorage.setItem('likes_' + sectionKey + '_' + itemId, String(count));
+    }
+
+    function getLiked(sectionKey, itemId) {
+      return localStorage.getItem('liked_' + sectionKey + '_' + itemId) === 'true';
+    }
+
+    function setLiked(sectionKey, itemId, liked) {
+      localStorage.setItem('liked_' + sectionKey + '_' + itemId, String(liked));
+    }
+
+    function addComment(event, sectionKey) {
+
+      event.preventDefault();
+
+      const form = event.target;
+      const nameInput = form.querySelector('input[type="text"]');
+      const textarea = form.querySelector('textarea');
+
+      const name = nameInput.value.trim();
+      const text = textarea.value.trim();
+
+      if (!name || !text) {
+        alert('Veuillez remplir tous les champs.');
+        return;
+      }
+
+      const comments = getComments(sectionKey);
+
+      comments.push({
+        id: Date.now(),
+        name: name,
+        text: text,
+        date: new Date().toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric'
+        }),
+        time: new Date().toLocaleTimeString('en-US', {
+          hour: '2-digit',
+          minute: '2-digit'
+        })
+      });
+
+      saveComments(sectionKey, comments);
+
+      form.reset();
+      renderComments(sectionKey);
+
+      const container = document.getElementById('comments_' + sectionKey);
+      if (container) {
+        container.scrollTop = 0;
+      }
+
+    }
+
+    function addReply(event, sectionKey, parentId) {
+
+      event.preventDefault();
+
+      const form = event.target;
+      const nameInput = form.querySelector('input[type="text"]');
+      const textarea = form.querySelector('textarea');
+
+      const name = nameInput.value.trim();
+      const text = textarea.value.trim();
+
+      if (!name || !text) {
+        alert('Veuillez remplir tous les champs.');
+        return;
+      }
+
+      const replies = getReplies(sectionKey, parentId);
+
+      replies.push({
+        id: Date.now(),
+        name: name,
+        text: text,
+        date: new Date().toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric'
+        }),
+        time: new Date().toLocaleTimeString('en-US', {
+          hour: '2-digit',
+          minute: '2-digit'
+        })
+      });
+
+      saveReplies(sectionKey, parentId, replies);
+
+      form.reset();
+      form.style.display = 'none';
+      renderComments(sectionKey);
+
+    }
+
+    function showReplyForm(sectionKey, parentId) {
+
+      const form = document.getElementById('reply-form-' + sectionKey + '-' + parentId);
+
+      if (form) {
+        if (form.style.display === 'none' || form.style.display === '') {
+          form.style.display = 'block';
+        } else {
+          form.style.display = 'none';
+        }
+      }
+
+    }
+
+    function toggleLike(sectionKey, itemId) {
+
+      const isLiked = getLiked(sectionKey, itemId);
+      let count = getLikes(sectionKey, itemId);
+
+      if (isLiked) {
+        count = Math.max(0, count - 1);
+        setLiked(sectionKey, itemId, false);
+      } else {
+        count = count + 1;
+        setLiked(sectionKey, itemId, true);
+      }
+
+      saveLikes(sectionKey, itemId, count);
+      renderComments(sectionKey);
+
+    }
+
+    function renderComments(sectionKey) {
+
+      const container = document.getElementById('comments_' + sectionKey);
+
+      if (!container) return;
+
+      const comments = getComments(sectionKey);
+
+      if (comments.length === 0) {
+        container.innerHTML = `
+          <div style="color:var(--muted); font-size:13px; padding:10px; text-align:center;">
+            <i class="fa-regular fa-comment"></i> No comments yet. Be the first to comment!
+          </div>
+        `;
+        return;
+      }
+
+      let html = '';
+
+      comments.forEach(function(comment) {
+
+        const replies = getReplies(sectionKey, comment.id);
+        const likeCount = getLikes(sectionKey, comment.id);
+        const isLiked = getLiked(sectionKey, comment.id);
+
+        html += `
+          <div class="comment-item">
+            <div>
+              <span class="comment-author">${escapeHtml(comment.name)}</span>
+              <span class="comment-date">${comment.date} · ${comment.time}</span>
+            </div>
+            <div class="comment-text">${escapeHtml(comment.text)}</div>
+            <div class="comment-actions">
+              <button onclick="toggleLike('${sectionKey}', ${comment.id})" class="${isLiked ? 'liked' : ''}">
+                <i class="fa-regular ${isLiked ? 'fa-heart' : 'fa-heart'}"></i>
+                ${likeCount} ${likeCount === 1 ? 'like' : 'likes'}
+              </button>
+              <button onclick="showReplyForm('${sectionKey}', ${comment.id})">
+                <i class="fa-regular fa-reply"></i> Reply
+              </button>
+            </div>
+
+            <div class="comment-reply-form" id="reply-form-${sectionKey}-${comment.id}" style="display:none;">
+              <form onsubmit="addReply(event, '${sectionKey}', ${comment.id})">
+                <input type="text" placeholder="Your name" required>
+                <textarea placeholder="Write your reply..." required></textarea>
+                <button type="submit"><i class="fa-regular fa-paper-plane"></i> Post Reply</button>
+              </form>
+            </div>
+
+            <div class="comment-replies">
+        `;
+
+        replies.forEach(function(reply) {
+          html += `
+            <div class="comment-item">
+              <div>
+                <span class="comment-author">${escapeHtml(reply.name)}</span>
+                <span class="comment-date">${reply.date} · ${reply.time}</span>
+              </div>
+              <div class="comment-text">${escapeHtml(reply.text)}</div>
+            </div>
+          `;
+        });
+
+        html += `
+            </div>
+          </div>
+        `;
+
+      });
+
+      container.innerHTML = html;
+
+    }
+
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+  </script>
+
+</body>
+
+</html>

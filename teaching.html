@@ -1,139 +1,2673 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <title>Research - Ezekiel TANO</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Teaching experience, courses, competitive examination preparation, tutoring, and teaching philosophy of Ezekiel TANO, PhD student in Economics at Université de Sherbrooke.">
+
+  <meta
+    name="keywords"
+    content="Ezekiel TANO, teaching, economics, mathematics, statistics, tutoring, competitive examinations, higher education">
+
+  <meta name="author" content="Ezekiel TANO">
+
+  <title>Teaching | Ezekiel TANO</title>
+
+  <!-- Font Awesome icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@700&display=swap"
+    rel="stylesheet">
+
   <style>
+
+    /* ==================================================
+       TEACHING PAGE VARIABLES (style Contact)
+    ================================================== */
+
+    :root {
+      --primary: #003366;
+      --primary-dark: #022746;
+      --secondary: #087caf;
+      --secondary-light: #e8f2fa;
+      --accent: #c89b3c;
+      --white: #ffffff;
+      --light: #f4f7fa;
+      --light-blue: #eef5fa;
+      --text: #27323b;
+      --muted: #64727d;
+      --border: #dbe4ea;
+      --success: #237a45;
+      --error: #b42318;
+      --shadow: 0 10px 28px rgba(0, 51, 102, 0.08);
+      --shadow-large: 0 20px 50px rgba(0, 51, 102, 0.14);
+      --radius: 12px;
+      --transition: 0.3s ease;
+      --green-color: #2f7d4c;
+      --orange-color: #9a6500;
+      --purple-color: #6a4c93;
+    }
+
+    /* ==================================================
+       GENERAL RESET
+    ================================================== */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      font-size: 16px;
-      line-height: 1.6;
-      color: #222;
-    }
-    header {
-      background-color: #2c6aa0;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      position: relative;
+      color: var(--text);
+      background-color: var(--light);
+      font-family: "Inter", Arial, sans-serif;
+      line-height: 1.7;
+      font-size: 15px;
     }
 
-    nav {
-      position: absolute;
-      top: 20px;
-      right: 20px;
+    body.menu-open {
+      overflow: hidden;
     }
 
-    nav a {
-      color: white;
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
       text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 60px 0;
+    }
+
+    .section-alt {
+      background-color: var(--light);
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 30px;
+    }
+
+    .section-heading.center {
+      margin-right: auto;
+      margin-left: auto;
+      text-align: center;
+    }
+
+    .section-kicker {
+      display: inline-block;
+      margin-bottom: 6px;
+      color: var(--secondary);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      position: relative;
+      margin: 0 0 14px;
+      color: var(--primary);
+      font-family: "Merriweather", Georgia, serif;
+      font-size: clamp(28px, 3.6vw, 38px);
+      line-height: 1.25;
+    }
+
+    .section-heading.center .section-title::after {
+      display: block;
+      width: 60px;
+      height: 4px;
+      margin: 14px auto 0;
+      background-color: var(--secondary);
+      border-radius: 999px;
+      content: "";
+    }
+
+    .section-heading:not(.center) .section-title::after {
+      display: block;
+      width: 60px;
+      height: 4px;
+      margin-top: 14px;
+      background-color: var(--secondary);
+      border-radius: 999px;
+      content: "";
+    }
+
+    .section-description {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* ==================================================
+       ACCESSIBILITY
+    ================================================== */
+
+    .skip-link {
+      position: fixed;
+      top: -100px;
+      left: 20px;
+      z-index: 9999;
+      padding: 11px 16px;
+      color: var(--white);
+      background-color: var(--primary);
+      border-radius: 5px;
+      font-weight: 700;
+      font-size: 13px;
+      transition: top var(--transition);
+    }
+
+    .skip-link:focus {
+      top: 20px;
+    }
+
+    :focus-visible {
+      outline: 3px solid rgba(8, 124, 175, 0.5);
+      outline-offset: 3px;
+    }
+
+    /* ==================================================
+       HEADER (style Contact)
+    ================================================== */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 76px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+    }
+
+    .brand-mark {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 44px;
+      height: 44px;
+      color: var(--white);
+      background:
+        linear-gradient(
+          135deg,
+          var(--primary),
+          var(--secondary)
+        );
+      border-radius: 10px;
+      font-family: "Merriweather", Georgia, serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.3;
+    }
+
+    .brand-name {
+      color: var(--primary);
+      font-size: 17px;
+      font-weight: 800;
+    }
+
+    .brand-title {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .nav-links a {
+      display: inline-flex;
+      padding: 10px 12px;
+      color: #3d4c58;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 700;
+      transition:
+        color var(--transition),
+        background-color var(--transition);
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--primary);
+      background-color: var(--secondary-light);
+    }
+
+    .menu-button {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      width: 44px;
+      height: 44px;
+      color: var(--primary);
+      background-color: var(--secondary-light);
+      border: 0;
+      border-radius: 8px;
       font-size: 20px;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    /* ==================================================
+       HERO (compact, aligné à gauche, pleine largeur)
+    ================================================== */
+
+    .page-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 40px 0 35px;
+      color: var(--white);
+      background:
+        linear-gradient(
+          125deg,
+          rgba(2, 39, 70, 0.98),
+          rgba(0, 81, 125, 0.95)
+        );
     }
 
-    main {
-      padding: 40px;
-      max-width: 800px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
+    .page-hero::before {
+      position: absolute;
+      top: -100px;
+      right: -80px;
+      width: 300px;
+      height: 300px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+      content: "";
     }
 
-    section {
-      background-color: #ffffff;
-      padding: 20px 25px;
-      border-radius: 10px;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    .page-hero::after {
+      position: absolute;
+      bottom: -150px;
+      left: -80px;
+      width: 350px;
+      height: 350px;
+      border: 70px solid rgba(255, 255, 255, 0.03);
+      border-radius: 50%;
+      content: "";
     }
 
-    h2 {
-      color: #2c6aa0;
-      border-bottom: 2px solid #5aa9e6;
-      padding-bottom: 5px;
-      margin-bottom: 15px;
+    .hero-content {
+      position: relative;
+      z-index: 2;
     }
 
-    p {
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+      padding: 5px 12px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .hero-title {
+      margin: 0 0 10px;
+      color: var(--white);
+      font-family: "Merriweather", Georgia, serif;
+      font-size: clamp(32px, 4vw, 44px);
+      line-height: 1.15;
+    }
+
+    .hero-text {
+      margin: 0 0 18px;
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 15px;
       line-height: 1.6;
       text-align: justify;
     }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      min-height: 40px;
+      padding: 9px 16px;
+      border: 2px solid transparent;
+      border-radius: 7px;
+      font-size: 12px;
+      font-weight: 800;
+      transition:
+        transform var(--transition),
+        color var(--transition),
+        background-color var(--transition),
+        border-color var(--transition);
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-light {
+      color: var(--primary);
+      background-color: var(--white);
+      border-color: var(--white);
+    }
+
+    .button-light:hover {
+      color: var(--white);
+      background-color: transparent;
+    }
+
+    .button-outline-light {
+      color: var(--white);
+      background-color: transparent;
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .button-outline-light:hover {
+      color: var(--primary);
+      background-color: var(--white);
+      border-color: var(--white);
+    }
+
+    /* ==================================================
+       TEACHING NAVIGATION
+    ================================================== */
+
+    .teaching-navigation {
+      background-color: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .teaching-navigation-inner {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 14px 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .teaching-navigation a {
+      display: inline-block;
+      padding: 6px 13px;
+      color: var(--primary);
+      background-color: var(--secondary-light);
+      border: 1px solid #cbdfea;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      transition:
+        background-color var(--transition),
+        color var(--transition),
+        transform var(--transition);
+    }
+
+    .teaching-navigation a:hover {
+      color: var(--white);
+      background-color: var(--secondary);
+      transform: translateY(-2px);
+    }
+
+    /* ==================================================
+       MAIN CONTENT
+    ================================================== */
+
+    .page-container {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 50px 0 65px;
+    }
+
+    .content-section {
+      margin-bottom: 30px;
+      padding: 30px;
+      background-color: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      scroll-margin-top: 130px;
+    }
+
+    .content-section h2 {
+      margin: 0 0 12px;
+      padding-bottom: 10px;
+      color: var(--primary);
+      font-size: 26px;
+      font-family: "Merriweather", Georgia, serif;
+      border-bottom: 3px solid var(--secondary);
+    }
+
+    .section-introduction {
+      max-width: 970px;
+      margin: 0 0 20px;
+      color: var(--muted);
+      font-size: 15px;
+      text-align: justify;
+    }
+
+    /* ==================================================
+       TEACHING PHILOSOPHY
+    ================================================== */
+
+    .philosophy-box {
+      padding: 24px 26px;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(234, 243, 249, 0.98),
+          rgba(248, 251, 253, 0.98)
+        );
+      border-left: 5px solid var(--secondary);
+      border-radius: var(--radius);
+    }
+
+    .philosophy-box p {
+      margin: 0 0 14px;
+      color: #35414c;
+      font-size: 14px;
+      text-align: justify;
+    }
+
+    .philosophy-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ==================================================
+       EXPERIENCE CARDS
+    ================================================== */
+
+    .experience-list {
+      display: grid;
+      gap: 20px;
+    }
+
+    .experience-card {
+      overflow: hidden;
+      background-color: #fbfcfd;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition);
+    }
+
+    .experience-card:hover {
+      transform: translateY(-4px);
+      border-color: #b8cfdf;
+      box-shadow: var(--shadow-large);
+    }
+
+    .experience-header {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: start;
+      padding: 18px 22px 14px;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(234, 243, 249, 0.92),
+          rgba(251, 252, 253, 0.95)
+        );
+      border-bottom: 1px solid var(--border);
+    }
+
+    .experience-header h3 {
+      margin: 0 0 4px;
+      color: var(--primary);
+      font-size: 18px;
+      font-family: "Merriweather", Georgia, serif;
+      line-height: 1.4;
+    }
+
+    .experience-role {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .experience-location {
+      margin: 3px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .experience-date {
+      padding: 5px 10px;
+      color: var(--primary);
+      background-color: var(--white);
+      border: 1px solid #cbdfea;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .experience-body {
+      padding: 18px 22px 22px;
+    }
+
+    .experience-preview {
+      margin: 0 0 6px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: justify;
+    }
+
+    .experience-full-details {
+      display: none;
+      margin-top: 10px;
+      padding: 14px 16px;
+      background: var(--white);
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+
+    .experience-full-details p {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: justify;
+    }
+
+    .experience-full-details p:last-child {
+      margin-bottom: 0;
+    }
+
+    .experience-full-details .course-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .experience-full-details .course-item {
+      padding: 14px 16px;
+      background-color: var(--white);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--secondary);
+      border-radius: 7px;
+    }
+
+    .experience-full-details .course-item h4 {
+      margin: 0 0 3px;
+      color: var(--primary);
+      font-size: 14px;
+    }
+
+    .experience-full-details .course-item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+      text-align: justify;
+    }
+
+    .experience-full-details .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 16px;
+    }
+
+    .experience-full-details .tag-list span {
+      display: inline-block;
+      padding: 4px 10px;
+      color: var(--primary);
+      background-color: var(--secondary-light);
+      border: 1px solid #cbdfea;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .experience-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 6px;
+      padding: 4px 12px;
+      color: var(--secondary);
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+
+    .experience-toggle:hover {
+      background: var(--secondary-light);
+      border-color: var(--secondary);
+    }
+
+    /* ==================================================
+       EXCELLENCE PREPA (avec Read more pour les deux côtés)
+    ================================================== */
+
+    .initiative-card {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 24px;
+      padding: 26px;
+      background:
+        linear-gradient(
+          135deg,
+          #f8fbfd,
+          #eaf3f9
+        );
+      border: 1px solid #caddea;
+      border-left: 5px solid var(--green-color);
+      border-radius: var(--radius);
+    }
+
+    .initiative-left {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .initiative-card h3 {
+      margin: 0 0 6px;
+      color: var(--primary);
+      font-size: 22px;
+      font-family: "Merriweather", Georgia, serif;
+    }
+
+    .initiative-role {
+      margin: 0 0 14px;
+      color: var(--green-color);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .initiative-preview p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: justify;
+    }
+
+    .initiative-full-details {
+      display: none;
+      margin-top: 14px;
+      padding: 16px 18px;
+      background: var(--white);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+
+    .initiative-full-details p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: justify;
+    }
+
+    .initiative-full-details p:last-child {
+      margin-bottom: 0;
+    }
+
+    .initiative-full-details .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 16px;
+    }
+
+    .initiative-full-details .tag-list span {
+      display: inline-block;
+      padding: 4px 10px;
+      color: var(--primary);
+      background-color: var(--secondary-light);
+      border: 1px solid #cbdfea;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .initiative-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 6px;
+      padding: 4px 12px;
+      color: var(--secondary);
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+
+    .initiative-toggle:hover {
+      background: var(--secondary-light);
+      border-color: var(--secondary);
+    }
+
+    /* ==================================================
+       INITIATIVE DETAILS (côté droit avec Read more)
+    ================================================== */
+
+    .initiative-details {
+      padding: 18px 20px;
+      background-color: rgba(255, 255, 255, 0.82);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .initiative-details h4 {
+      margin: 0 0 10px;
+      color: var(--primary);
+      font-size: 15px;
+      font-family: "Merriweather", Georgia, serif;
+    }
+
+    .initiative-details .details-preview {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .initiative-details .details-preview ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .initiative-details .details-preview li {
+      margin-bottom: 4px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: justify;
+    }
+
+    .initiative-details .details-preview li:last-child {
+      margin-bottom: 0;
+    }
+
+    .initiative-details .details-full {
+      display: none;
+      margin-top: 10px;
+    }
+
+    .initiative-details .details-full ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .initiative-details .details-full li {
+      margin-bottom: 4px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: justify;
+    }
+
+    .initiative-details .details-full li:last-child {
+      margin-bottom: 0;
+    }
+
+    .initiative-details-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 6px;
+      padding: 4px 12px;
+      color: var(--secondary);
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+
+    .initiative-details-toggle:hover {
+      background: var(--secondary-light);
+      border-color: var(--secondary);
+    }
+
+    /* ==================================================
+       TEACHING INTERESTS & COURSES (fusionnée)
+    ================================================== */
+
+    .teaching-courses-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .teaching-courses-col {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .course-block {
+      background: var(--light);
+      border-radius: var(--radius);
+      border-left: 4px solid var(--secondary);
+      padding: 16px 20px;
+      transition: all var(--transition);
+    }
+
+    .course-block:hover {
+      background: var(--secondary-light);
+      transform: translateX(4px);
+    }
+
+    .course-block h3 {
+      color: var(--primary);
+      font-size: 15px;
+      font-family: "Merriweather", Georgia, serif;
+      margin-bottom: 4px;
+    }
+
+    .course-block .course-preview {
+      color: var(--muted);
+      font-size: 13px;
+      text-align: justify;
+    }
+
+    .course-full-details {
+      display: none;
+      margin-top: 10px;
+      padding: 12px 14px;
+      background: var(--white);
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+
+    .course-full-details ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .course-full-details li {
+      margin-bottom: 4px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: justify;
+    }
+
+    .course-full-details li:last-child {
+      margin-bottom: 0;
+    }
+
+    .course-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 6px;
+      padding: 3px 10px;
+      color: var(--secondary);
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+
+    .course-toggle:hover {
+      background: var(--secondary-light);
+      border-color: var(--secondary);
+    }
+
+    /* ==================================================
+       TEACHING APPROACH
+    ================================================== */
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .approach-card {
+      padding: 18px 16px;
+      background-color: #fbfcfd;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      text-align: center;
+      transition: all var(--transition);
+    }
+
+    .approach-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .approach-number {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 36px;
+      height: 36px;
+      margin: 0 auto 10px;
+      color: var(--white);
+      background-color: var(--secondary);
+      border-radius: 50%;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    .approach-card h3 {
+      margin: 0 0 6px;
+      color: var(--primary);
+      font-size: 15px;
+      font-family: "Merriweather", Georgia, serif;
+    }
+
+    .approach-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* ==================================================
+       STATISTICS
+    ================================================== */
+
+    .statistics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .statistic-card {
+      padding: 18px 14px;
+      background-color: var(--secondary-light);
+      border: 1px solid #cbdfea;
+      border-radius: var(--radius);
+      text-align: center;
+      transition: all var(--transition);
+    }
+
+    .statistic-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .statistic-card strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--primary);
+      font-size: 26px;
+      font-family: "Merriweather", Georgia, serif;
+      line-height: 1.2;
+    }
+
+    .statistic-card span {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    /* ==================================================
+       MENTORING
+    ================================================== */
+
+    .mentoring-box {
+      padding: 22px 24px;
+      background-color: #f7fafc;
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--purple-color);
+      border-radius: var(--radius);
+    }
+
+    .mentoring-box p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: justify;
+    }
+
+    .mentoring-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ==================================================
+       RESOURCES
+    ================================================== */
+
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .resource-card {
+      padding: 18px 20px;
+      background-color: #fbfcfd;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: all var(--transition);
+    }
+
+    .resource-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .resource-card h3 {
+      margin: 0 0 6px;
+      color: var(--primary);
+      font-size: 16px;
+      font-family: "Merriweather", Georgia, serif;
+    }
+
+    .resource-card p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: justify;
+    }
+
+    .resource-status {
+      display: inline-block;
+      padding: 4px 9px;
+      color: var(--orange-color);
+      background-color: #fff5df;
+      border: 1px solid #edd6a5;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    /* ==================================================
+       REVEAL ANIMATIONS (style Contact)
+    ================================================== */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Staggered delay pour les éléments en grille */
+    .experience-list .reveal:nth-child(1) { transition-delay: 0.05s; }
+    .experience-list .reveal:nth-child(2) { transition-delay: 0.10s; }
+    .experience-list .reveal:nth-child(3) { transition-delay: 0.15s; }
+
+    .resource-grid .reveal:nth-child(1) { transition-delay: 0.05s; }
+    .resource-grid .reveal:nth-child(2) { transition-delay: 0.10s; }
+    .resource-grid .reveal:nth-child(3) { transition-delay: 0.15s; }
+
+    .teaching-courses-col .reveal:nth-child(1) { transition-delay: 0.05s; }
+    .teaching-courses-col .reveal:nth-child(2) { transition-delay: 0.10s; }
+
+    .statistics-grid .reveal:nth-child(1) { transition-delay: 0.05s; }
+    .statistics-grid .reveal:nth-child(2) { transition-delay: 0.10s; }
+    .statistics-grid .reveal:nth-child(3) { transition-delay: 0.15s; }
+    .statistics-grid .reveal:nth-child(4) { transition-delay: 0.20s; }
+    .statistics-grid .reveal:nth-child(5) { transition-delay: 0.25s; }
+    .statistics-grid .reveal:nth-child(6) { transition-delay: 0.30s; }
+    .statistics-grid .reveal:nth-child(7) { transition-delay: 0.35s; }
+    .statistics-grid .reveal:nth-child(8) { transition-delay: 0.40s; }
+
+    /* ==================================================
+       FOOTER (style Contact avec centrage)
+    ================================================== */
+
+    .site-footer {
+      padding: 50px 0 23px;
+      color: #dce7ef;
+      background-color: var(--primary-dark);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 0.8fr;
+      gap: 45px;
+      margin-bottom: 34px;
+    }
+
+    .footer-column h3 {
+      margin: 0 0 15px;
+      color: var(--white);
+      font-size: 18px;
+      font-family: "Merriweather", Georgia, serif;
+    }
+
+    .footer-column p {
+      margin: 0;
+      color: #bed0dc;
+      font-size: 14px;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 9px;
+    }
+
+    .footer-links a {
+      color: #bed0dc;
+      font-size: 14px;
+      transition: color var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--white);
+    }
+
+    .footer-social {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .footer-social a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 38px;
+      height: 38px;
+      color: var(--white);
+      background-color: rgba(255, 255, 255, 0.08);
+      border-radius: 7px;
+      transition: background-color var(--transition);
+    }
+
+    .footer-social a:hover {
+      background-color: var(--secondary);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding-top: 22px;
+      color: #91a7b7;
+      border-top: 1px solid rgba(255, 255, 255, 0.13);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .footer-bottom p {
+      margin: 0;
+    }
+
+    /* ==================================================
+       RESPONSIVE
+    ================================================== */
+
+    @media (max-width: 1050px) {
+
+      .nav-links {
+        position: fixed;
+        top: 76px;
+        right: 0;
+        bottom: 0;
+        width: min(340px, 88%);
+        padding: 25px;
+        background-color: var(--white);
+        box-shadow: -15px 20px 35px rgba(0, 51, 102, 0.14);
+        flex-direction: column;
+        align-items: stretch;
+        transform: translateX(110%);
+        transition: transform var(--transition);
+      }
+
+      .nav-links.open {
+        transform: translateX(0);
+      }
+
+      .nav-links a {
+        width: 100%;
+        padding: 12px 14px;
+      }
+
+      .menu-button {
+        display: inline-flex;
+      }
+
+      .teaching-courses-container {
+        grid-template-columns: 1fr;
+      }
+
+      .approach-grid,
+      .statistics-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .initiative-card {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .experience-full-details .course-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+    @media (max-width: 760px) {
+
+      .section {
+        padding: 50px 0;
+      }
+
+      .page-hero {
+        padding: 35px 0 30px;
+      }
+
+      .page-container {
+        padding: 35px 0 50px;
+      }
+
+      .content-section {
+        padding: 22px;
+      }
+
+      .content-section h2 {
+        font-size: 22px;
+      }
+
+      .approach-grid,
+      .statistics-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .initiative-card {
+        padding: 20px;
+      }
+
+      .experience-header {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .experience-date {
+        justify-self: start;
+      }
+
+      .experience-header,
+      .experience-body {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .experience-full-details .course-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+    @media (max-width: 520px) {
+
+      .container {
+        width: min(100% - 24px, 1180px);
+      }
+
+      .brand-title {
+        display: none;
+      }
+
+      .hero-title {
+        font-size: 28px;
+      }
+
+      .hero-text {
+        font-size: 14px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .button {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .initiative-details {
+        padding: 14px 16px;
+      }
+
+      .course-item {
+        padding: 12px 14px;
+      }
+
+    }
+
+    /* ==================================================
+       ACCESSIBILITÉ
+    ================================================== */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+
+    }
+
   </style>
+
 </head>
+
 <body>
-  <header>
-    <h1>Teaching Experiences</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="research.html">Research Experiences</a>
-      <a href="teaching.html">Teaching Experiences</a>
-      <a href="resources.html">Usefuls Links</a>
-    </nav>
+
+  <!-- ==================================================
+       SKIP LINK
+  ================================================== -->
+
+  <a class="skip-link" href="#main-content">
+    Skip to main content
+  </a>
+
+  <!-- ==================================================
+       HEADER (style Contact)
+  ================================================== -->
+
+  <header class="site-header">
+
+    <div class="container">
+
+      <nav class="navbar" aria-label="Main navigation">
+
+        <a class="brand" href="index.html">
+
+          <span class="brand-mark">
+            ET
+          </span>
+
+          <span class="brand-text">
+
+            <span class="brand-name">
+              Ezekiel TANO
+            </span>
+
+            <span class="brand-title">
+              Economist and Researcher
+            </span>
+
+          </span>
+
+        </a>
+
+        <button
+          class="menu-button"
+          id="menuButton"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="navigationLinks">
+
+          <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+        <ul class="nav-links" id="navigationLinks">
+
+          <li>
+            <a href="index.html">
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a href="research.html">
+              Research
+            </a>
+          </li>
+
+          <li>
+            <a class="active" href="teaching.html" aria-current="page">
+              Teaching
+            </a>
+          </li>
+
+          <li>
+            <a href="projects.html">
+              Projects
+            </a>
+          </li>
+
+          <li>
+            <a href="contact.html">
+              Contact
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
   </header>
 
+  <main id="main-content">
 
-  <main>
+    <!-- ==================================================
+         HERO (compact, aligné à gauche)
+    ================================================== -->
 
-    <section>
-      <h2>University Teaching</h2>
-      <ul>
-<strong>Université Paris 1 Panthéon-Sorbonne –(2025–2026)</strong>
-        <li>Teaching Assistant in <em>Mathematics (Linear Algebra)</em>
-          2nd year undergraduate </li><br>
+    <section class="page-hero">
 
-<strong>Université Paris 1 Panthéon-Sorbonne –(2024–2025)</strong>
-        <li>Teaching Assistant in <em>Mathematics (Linear Algebra)</em>
-          2nd year undergraduate </li>
-        <li>Teaching Assistant in <em>International Monetary Macroeconomics</em> for 3rd year undergraduate </li><br>
+      <div class="container">
 
-<strong>Université Paris Cité (2024–2025)</strong>
-        <li>Teaching Assistant in <em>Economic Policy</em> for
-          2nd year undergraduate</li><br>
-      </ul>
+        <div class="hero-content">
+
+          <span class="hero-eyebrow">
+
+            <i class="fa-solid fa-chalkboard-user"></i>
+
+            Teaching
+
+          </span>
+
+          <h1 class="hero-title">
+            Teaching
+          </h1>
+
+          <p class="hero-text">
+            Teaching is an integral part of my academic career. Since 2018, I have
+            taught university courses, led academic support sessions, prepared
+            students for competitive entrance examinations, and provided
+            individualized tutoring in mathematics, statistics, microeconomics,
+            macroeconomics, and quantitative methods.
+          </p>
+
+          <div class="hero-actions">
+
+            <a
+              class="button button-light"
+              href="#philosophy">
+
+              <i class="fa-regular fa-circle-down"></i>
+
+              Explore Teaching
+
+            </a>
+
+            <a
+              class="button button-outline-light"
+              href="contact.html">
+
+              <i class="fa-regular fa-envelope"></i>
+
+              Contact
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </section>
 
-    <section>
-      <h2>Private Teaching and Support</h2>
-      <ul>
-        <li><strong>Math Tutor (home sessions)</strong> for students from Grade 6 to Grade 9 – <em>Complétude</em></li>
-        <li><strong>Math Tutor</strong> for high school students – <em>Acadomia</em></li>
-        <li><strong>Math Tutor</strong> for high school students – <em>Anacours</em></li>
-      </ul>
-    </section>
+    <!-- ==================================================
+       TEACHING NAVIGATION
+    ================================================== -->
 
-    <section>
-      <h2>Founding Instructor – African Excellence Entry Exams</h2>
-      <p>
-        I had the great honor of founding a preparation structure for students targeting elite African schools.
-        I taught <strong>Mathematics</strong>, <strong>Economics</strong>, and <strong>General Knowledge</strong> for:
-      </p>
-      <ul>
-        <li>INP-HB (Côte d'Ivoire)</li>
-        <li>ENSEA (Côte d'Ivoire)</li>
-        <li>IIA (Cameroon)</li>
-        <li>IFORD (Cameroon)</li>
-        <li>EAMAC (Niger)</li>
-        <li>EAMAU (Togo)</li>
-      </ul>
-      <p>
-       <p>
-  I provide freely accessible materials gathered from various public sources to support students preparing for these competitive exams.
-  <br><br>
-  👉 <a href="https://sites.google.com/view/ezekieltano/teaching/prepavenir" target="_blank" style="color:#2c6aa0; font-weight: bold;">
-    Access here (lien pour document de prepa)
-  </a>
-</p>
-      </p>
-    </section>
+    <nav class="teaching-navigation" aria-label="Teaching sections">
+
+      <div class="teaching-navigation-inner">
+
+        <a href="#philosophy">Philosophy</a>
+
+        <a href="#university-teaching">University</a>
+
+        <a href="#excellence-prepa">Excellence Prépa</a>
+
+        <a href="#tutoring">Tutoring</a>
+
+        <a href="#courses">Courses & Interests</a>
+
+        <a href="#resources">Resources</a>
+
+      </div>
+
+    </nav>
+
+    <!-- ==================================================
+       MAIN CONTENT
+    ================================================== -->
+
+    <div class="page-container">
+
+      <!-- ==============================================
+           TEACHING PHILOSOPHY
+      ============================================== -->
+
+      <section class="content-section reveal" id="philosophy">
+
+        <h2 class="reveal">Teaching Philosophy</h2>
+
+        <div class="philosophy-box reveal">
+
+          <p>
+            I believe that effective teaching combines theoretical rigor,
+            intuition, quantitative reasoning, and practical applications.
+            My objective is not only to help students understand formulas and
+            methods, but also to develop their analytical thinking, autonomy,
+            problem-solving abilities, and intellectual confidence.
+          </p>
+
+          <p>
+            Because students have different academic backgrounds, I adapt my
+            explanations and teaching pace while maintaining clear learning
+            objectives and high academic standards. I also place considerable
+            importance on regular practice, constructive feedback, and active
+            student participation.
+          </p>
+
+        </div>
+
+      </section>
+
+      <!-- ==============================================
+           UNIVERSITY TEACHING
+      ============================================== -->
+
+      <section class="content-section reveal" id="university-teaching">
+
+        <h2 class="reveal">University Teaching Experience</h2>
+
+        <p class="section-introduction reveal">
+          My university teaching experience covers mathematics, economics,
+          statistics, and quantitative methods at undergraduate level in both
+          France and Côte d'Ivoire.
+        </p>
+
+        <div class="experience-list">
+
+          <!-- Paris 1 -->
+
+          <article class="experience-card reveal">
+
+            <div class="experience-header">
+
+              <div>
+                <h3>Université Paris 1 Panthéon-Sorbonne</h3>
+                <p class="experience-role">Teaching Assistant</p>
+                <p class="experience-location">Paris, France</p>
+              </div>
+
+              <span class="experience-date">2024–2025</span>
+
+            </div>
+
+            <div class="experience-body">
+
+              <p class="experience-preview">
+                Led undergraduate tutorials in Linear Algebra and International Macroeconomics.
+              </p>
+
+              <button class="experience-toggle" onclick="toggleExperience(this)">
+                <i class="fa-regular fa-eye"></i>
+                <span class="toggle-text">Read more</span>
+              </button>
+
+              <div class="experience-full-details">
+
+                <p>
+                  Led undergraduate tutorials, explained theoretical and
+                  quantitative concepts, corrected exercises, supported students
+                  in their preparation, and contributed to the implementation of
+                  course objectives.
+                </p>
+
+                <div class="course-grid">
+
+                  <div class="course-item">
+                    <h4>Linear Algebra</h4>
+                    <p>Second-year undergraduate level — Licence 2</p>
+                  </div>
+
+                  <div class="course-item">
+                    <h4>International Monetary Macroeconomics</h4>
+                    <p>Third-year undergraduate level — Licence 3</p>
+                  </div>
+
+                </div>
+
+                <div class="tag-list">
+                  <span>Linear Algebra</span>
+                  <span>Macroeconomics</span>
+                  <span>International Economics</span>
+                  <span>Problem Sets</span>
+                  <span>University Tutorials</span>
+                </div>
+
+              </div>
+
+            </div>
+
+          </article>
+
+          <!-- Paris Cité -->
+
+          <article class="experience-card reveal">
+
+            <div class="experience-header">
+
+              <div>
+                <h3>Université Paris Cité</h3>
+                <p class="experience-role">Teaching Assistant</p>
+                <p class="experience-location">Paris, France</p>
+              </div>
+
+              <span class="experience-date">2024–2025</span>
+
+            </div>
+
+            <div class="experience-body">
+
+              <p class="experience-preview">
+                Conducted undergraduate tutorials in Economic Policies (Licence 2).
+              </p>
+
+              <button class="experience-toggle" onclick="toggleExperience(this)">
+                <i class="fa-regular fa-eye"></i>
+                <span class="toggle-text">Read more</span>
+              </button>
+
+              <div class="experience-full-details">
+
+                <p>
+                  Conducted undergraduate tutorials in economic policy, supported
+                  students in the analysis of macroeconomic policy instruments,
+                  and helped them connect economic theory with contemporary policy
+                  questions.
+                </p>
+
+                <div class="course-grid">
+
+                  <div class="course-item">
+                    <h4>Economic Policies</h4>
+                    <p>Second-year undergraduate level — Licence 2</p>
+                  </div>
+
+                  <div class="course-item">
+                    <h4>Topics Covered</h4>
+                    <p>Fiscal policy, monetary policy, economic stabilization, unemployment, inflation, and policy coordination</p>
+                  </div>
+
+                </div>
+
+                <div class="tag-list">
+                  <span>Economic Policy</span>
+                  <span>Macroeconomics</span>
+                  <span>Fiscal Policy</span>
+                  <span>Monetary Policy</span>
+                  <span>Policy Analysis</span>
+                </div>
+
+              </div>
+
+            </div>
+
+          </article>
+
+          <!-- Alassane Ouattara -->
+
+          <article class="experience-card reveal">
+
+            <div class="experience-header">
+
+              <div>
+                <h3>Université Alassane Ouattara</h3>
+                <p class="experience-role">Academic Support Instructor</p>
+                <p class="experience-location">Bouaké, Côte d'Ivoire</p>
+              </div>
+
+              <span class="experience-date">2018–2020</span>
+
+            </div>
+
+            <div class="experience-body">
+
+              <p class="experience-preview">
+                Provided reinforcement courses in mathematics, statistics, microeconomics, and macroeconomics (L1–L3).
+              </p>
+
+              <button class="experience-toggle" onclick="toggleExperience(this)">
+                <i class="fa-regular fa-eye"></i>
+                <span class="toggle-text">Read more</span>
+              </button>
+
+              <div class="experience-full-details">
+
+                <p>
+                  Provided reinforcement courses and academic support sessions to
+                  undergraduate students from the first to the third year of
+                  university. The objective was to strengthen their mathematical
+                  foundations, economic reasoning, examination preparation, and
+                  ability to solve quantitative exercises independently.
+                </p>
+
+                <div class="course-grid">
+
+                  <div class="course-item">
+                    <h4>Mathematics</h4>
+                    <p>General mathematics and quantitative methods for economics</p>
+                  </div>
+
+                  <div class="course-item">
+                    <h4>Linear Algebra</h4>
+                    <p>Matrices, linear systems, vector spaces, and applications</p>
+                  </div>
+
+                  <div class="course-item">
+                    <h4>Mathematical Analysis</h4>
+                    <p>Functions, limits, derivatives, integrals, and optimization</p>
+                  </div>
+
+                  <div class="course-item">
+                    <h4>Mathematical Statistics</h4>
+                    <p>Probability, distributions, estimation, and statistical tools</p>
+                  </div>
+
+                  <div class="course-item">
+                    <h4>Microeconomics</h4>
+                    <p>Consumer theory, producer theory, markets, and optimization</p>
+                  </div>
+
+                  <div class="course-item">
+                    <h4>Macroeconomics</h4>
+                    <p>National accounts, growth, inflation, unemployment, and policy</p>
+                  </div>
+
+                </div>
+
+                <div class="tag-list">
+                  <span>Licence 1</span>
+                  <span>Licence 2</span>
+                  <span>Licence 3</span>
+                  <span>Mathematics</span>
+                  <span>Statistics</span>
+                  <span>Microeconomics</span>
+                  <span>Macroeconomics</span>
+                </div>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </section>
+
+      <!-- ==============================================
+           EXCELLENCE PREPA (avec Read more pour les deux côtés)
+      ============================================== -->
+
+      <section class="content-section reveal" id="excellence-prepa">
+
+        <h2 class="reveal">Competitive Examination Preparation</h2>
+
+        <article class="initiative-card reveal">
+
+          <!-- CÔTÉ GAUCHE -->
+          <div class="initiative-left">
+
+            <h3>Excellence Prépa</h3>
+
+            <p class="initiative-role">
+              Founder, Coordinator, and Instructor · 2022–2023
+            </p>
+
+            <div class="initiative-preview">
+
+              <p>
+                Academic initiative helping students from public universities prepare
+                for competitive entrance examinations to ENSEA, INP-HB, and IFORD.
+              </p>
+
+            </div>
+
+            <button class="initiative-toggle" onclick="toggleInitiative(this)">
+              <i class="fa-regular fa-eye"></i>
+              <span class="toggle-text">Read more</span>
+            </button>
+
+            <div class="initiative-full-details">
+
+              <p>
+                I founded Excellence Prépa, an academic initiative designed to
+                help students from public universities prepare for highly
+                competitive entrance examinations to leading statistical,
+                economic, demographic, and engineering institutions.
+              </p>
+
+              <p>
+                I taught mathematics and economics and contributed to the
+                organization of intensive preparation sessions, methodological
+                guidance, exercise correction, mock examinations, and personalized
+                academic support.
+              </p>
+
+              <p>
+                The initiative aimed to reduce information and preparation gaps
+                faced by talented students from public universities and to provide
+                them with a structured and demanding learning environment.
+              </p>
+
+              <div class="tag-list">
+                <span>Founder</span>
+                <span>Program Coordination</span>
+                <span>Mathematics</span>
+                <span>Economics</span>
+                <span>Mock Examinations</span>
+                <span>Student Mentoring</span>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- CÔTÉ DROIT -->
+          <div class="initiative-details">
+
+            <h4>Competitive examinations prepared</h4>
+
+            <div class="details-preview">
+              <ul>
+                <li><strong>ENSEA, INPHB & IFORD</strong></li>
+              </ul>
+            </div>
+
+            <button class="initiative-details-toggle" onclick="toggleInitiativeDetails(this)">
+              <i class="fa-regular fa-eye"></i>
+              <span class="toggle-text">Read more</span>
+            </button>
+
+            <div class="details-full">
+
+              <h4 style="margin-top:0;">Competitive examinations prepared</h4>
+
+              <ul>
+                <li>
+                  <strong>ENSEA:</strong>
+                  Assistant Statistician entrance examination
+                </li>
+                <li>
+                  <strong>ENSEA:</strong>
+                  Engineer Statistician Economist entrance examination
+                </li>
+                <li>
+                  <strong>INP-HB:</strong>
+                  Commerce and Business Administration entrance examination
+                </li>
+                <li>
+                  <strong>IFORD:</strong>
+                  Demography training entrance examination
+                </li>
+              </ul>
+
+              <h4 style="margin-top:18px;">Teaching format</h4>
+
+              <ul>
+                <li>Intensive mathematics courses</li>
+                <li>Economics review sessions</li>
+                <li>Competitive-examination methodology</li>
+                <li>Timed practice exercises</li>
+                <li>Mock examinations</li>
+                <li>Individual and group mentoring</li>
+              </ul>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </section>
+
+      <!-- ==============================================
+           PRIVATE TUTORING
+      ============================================== -->
+
+      <section class="content-section reveal" id="tutoring">
+
+        <h2 class="reveal">Private Tutoring and Academic Support</h2>
+
+        <div class="experience-list">
+
+          <article class="experience-card reveal">
+
+            <div class="experience-header">
+
+              <div>
+                <h3>Private Mathematics Tutor</h3>
+                <p class="experience-role">Individualized Academic Support</p>
+                <p class="experience-location">France</p>
+              </div>
+
+              <span class="experience-date">2025–2026</span>
+
+            </div>
+
+            <div class="experience-body">
+
+              <p class="experience-preview">
+                Individualized mathematics tutoring for university and preparatory-class students.
+              </p>
+
+              <button class="experience-toggle" onclick="toggleExperience(this)">
+                <i class="fa-regular fa-eye"></i>
+                <span class="toggle-text">Read more</span>
+              </button>
+
+              <div class="experience-full-details">
+
+                <p>
+                  Provided individualized mathematics tutoring to university and
+                  preparatory-class students. The sessions focused on strengthening
+                  mathematical foundations, clarifying course content, correcting
+                  exercises, preparing examinations, and developing efficient
+                  problem-solving methods.
+                </p>
+
+                <div class="course-grid">
+
+                  <div class="course-item">
+                    <h4>First-Year University Students</h4>
+                    <p>Mathematics support for students enrolled in first-year undergraduate programs</p>
+                  </div>
+
+                  <div class="course-item">
+                    <h4>Preparatory Classes</h4>
+                    <p>Mathematics support for first- and second-year students in French preparatory programs</p>
+                  </div>
+
+                </div>
+
+                <div class="tag-list">
+                  <span>Mathematics</span>
+                  <span>Licence 1</span>
+                  <span>Prépa 1</span>
+                  <span>Prépa 2</span>
+                  <span>Individual Tutoring</span>
+                  <span>Exam Preparation</span>
+                </div>
+
+              </div>
+
+            </div>
+
+          </article>
+
+          <article class="experience-card reveal">
+
+            <div class="experience-header">
+
+              <div>
+                <h3>Academic Tutoring Organizations</h3>
+                <p class="experience-role">Mathematics Tutor</p>
+                <p class="experience-location">France</p>
+              </div>
+
+              <span class="experience-date">2024–2026</span>
+
+            </div>
+
+            <div class="experience-body">
+
+              <p class="experience-preview">
+                Personalized mathematics support through Acadomia, Complétude, and Anacours.
+              </p>
+
+              <button class="experience-toggle" onclick="toggleExperience(this)">
+                <i class="fa-regular fa-eye"></i>
+                <span class="toggle-text">Read more</span>
+              </button>
+
+              <div class="experience-full-details">
+
+                <p>
+                  Delivered personalized mathematics support through established
+                  tutoring organizations, adapting course content and teaching
+                  methods to each student's level, learning difficulties, and
+                  academic objectives.
+                </p>
+
+                <div class="course-grid">
+
+                  <div class="course-item">
+                    <h4>Acadomia</h4>
+                    <p>Individual mathematics tutoring and academic reinforcement</p>
+                  </div>
+
+                  <div class="course-item">
+                    <h4>Complétude</h4>
+                    <p>Personalized mathematics courses and examination preparation</p>
+                  </div>
+
+                  <div class="course-item">
+                    <h4>Anacours</h4>
+                    <p>Academic support and mathematics reinforcement</p>
+                  </div>
+
+                  <div class="course-item">
+                    <h4>Teaching Objectives</h4>
+                    <p>Improve understanding, confidence, autonomy, and performance</p>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </section>
+
+      <!-- ==============================================
+           TEACHING INTERESTS & COURSES
+      ============================================== -->
+
+      <section class="content-section reveal" id="courses">
+
+        <h2 class="reveal">Teaching Interests & Courses</h2>
+
+        <p class="section-introduction reveal">
+          Based on my academic training and teaching experience, I am prepared to
+          teach or support the following courses at undergraduate, graduate, and
+          preparatory levels.
+        </p>
+
+        <div class="teaching-courses-container">
+
+          <div class="teaching-courses-col">
+
+            <div class="course-block reveal">
+              <h3>Undergraduate Economics</h3>
+              <p class="course-preview">
+                Principles of Economics, Microeconomics, Macroeconomics, International Economics...
+              </p>
+              <button class="course-toggle" onclick="toggleCourse(this)">
+                <i class="fa-regular fa-eye"></i>
+                <span class="toggle-text">Read more</span>
+              </button>
+              <div class="course-full-details">
+                <ul>
+                  <li>Principles of Economics</li>
+                  <li>Microeconomics</li>
+                  <li>Macroeconomics</li>
+                  <li>International Economics</li>
+                  <li>Economic Policy</li>
+                  <li>Development Economics</li>
+                  <li>Public Economics</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="course-block reveal">
+              <h3>Mathematics and Statistics</h3>
+              <p class="course-preview">
+                Mathematics for Economists, Linear Algebra, Mathematical Analysis, Probability...
+              </p>
+              <button class="course-toggle" onclick="toggleCourse(this)">
+                <i class="fa-regular fa-eye"></i>
+                <span class="toggle-text">Read more</span>
+              </button>
+              <div class="course-full-details">
+                <ul>
+                  <li>Mathematics for Economists</li>
+                  <li>Linear Algebra</li>
+                  <li>Mathematical Analysis</li>
+                  <li>Probability</li>
+                  <li>Mathematical Statistics</li>
+                  <li>Optimization</li>
+                  <li>Quantitative Methods</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- ==============================================
+           RESOURCES
+      ============================================== -->
+
+      <section class="content-section reveal" id="resources">
+
+        <h2 class="reveal">Teaching Resources</h2>
+
+        <p class="section-introduction reveal">
+          Selected teaching materials will progressively be made available on
+          this page. These resources may include lecture notes, exercise sheets,
+          corrected problem sets, and competitive-examination preparation
+          materials.
+        </p>
+
+        <div class="resource-grid">
+
+          <article class="resource-card reveal">
+            <h3>Lecture Notes</h3>
+            <p>Structured notes in mathematics, economics, statistics, and quantitative methods.</p>
+            <span class="resource-status">Coming soon</span>
+          </article>
+
+          <article class="resource-card reveal">
+            <h3>Problem Sets</h3>
+            <p>Exercises designed to develop understanding, reasoning, and examination skills.</p>
+            <span class="resource-status">Coming soon</span>
+          </article>
+
+          <article class="resource-card reveal">
+            <h3>Competitive Examination Materials</h3>
+            <p>Mathematics and economics resources for ENSEA, INP-HB, and IFORD entrance examinations.</p>
+            <span class="resource-status">Coming soon</span>
+          </article>
+
+        </div>
+
+      </section>
+
+    </div>
 
   </main>
+
+  <!-- ==================================================
+       FOOTER (style Contact avec centrage)
+    ================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-column">
+
+          <h3>
+            Ezekiel TANO
+          </h3>
+
+          <p>
+            PhD Student in Economics at Université de Sherbrooke.
+          </p>
+
+          <div class="footer-social">
+
+            <a
+              href="https://linkedin.com/in/ezekieltano"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn">
+
+              <i class="fa-brands fa-linkedin-in"></i>
+
+            </a>
+
+            <a
+              href="https://github.com/tanoezekiel"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub">
+
+              <i class="fa-brands fa-github"></i>
+
+            </a>
+
+            <a
+              href="mailto:ezekieltano5@gmail.com"
+              aria-label="Email">
+
+              <i class="fa-regular fa-envelope"></i>
+
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="footer-column">
+
+          <h3>
+            Navigation
+          </h3>
+
+          <div class="footer-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="research.html">Research</a>
+
+            <a href="teaching.html">Teaching</a>
+
+          </div>
+
+        </div>
+
+        <div class="footer-column">
+
+          <h3>
+            More
+          </h3>
+
+          <div class="footer-links">
+
+            <a href="projects.html">Projects</a>
+
+            <a href="contact.html">Contact</a>
+
+            <a href="documents/TANO_Ezékiel_Resume.pdf" target="_blank">
+              Download CV
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <p>
+          &copy; <span id="currentYear">2026</span> Ezekiel TANO.
+          All rights reserved.
+        </p>
+
+        <p>
+          Last updated:
+          <span id="lastUpdated">2026</span>
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- ==================================================
+       JAVASCRIPT
+  ================================================== -->
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+
+      // Mobile navigation
+      const menuButton = document.getElementById("menuButton");
+      const navigationLinks = document.getElementById("navigationLinks");
+
+      if (menuButton && navigationLinks) {
+
+        menuButton.addEventListener("click", function() {
+
+          const isOpen = navigationLinks.classList.toggle("open");
+
+          document.body.classList.toggle("menu-open", isOpen);
+
+          menuButton.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+          );
+
+          menuButton.innerHTML = isOpen ?
+            '<i class="fa-solid fa-xmark"></i>' :
+            '<i class="fa-solid fa-bars"></i>';
+
+          menuButton.setAttribute(
+            "aria-label",
+            isOpen ?
+            "Close navigation menu" :
+            "Open navigation menu"
+          );
+
+        });
+
+        navigationLinks.querySelectorAll("a").forEach(function(link) {
+
+          link.addEventListener("click", function() {
+
+            navigationLinks.classList.remove("open");
+            document.body.classList.remove("menu-open");
+
+            menuButton.setAttribute("aria-expanded", "false");
+            menuButton.setAttribute(
+              "aria-label",
+              "Open navigation menu"
+            );
+
+            menuButton.innerHTML =
+              '<i class="fa-solid fa-bars"></i>';
+
+          });
+
+        });
+
+      }
+
+      // Current year
+      const currentYear = new Date().getFullYear();
+
+      const yearEl = document.getElementById("currentYear");
+      if (yearEl) yearEl.textContent = currentYear;
+
+      const updatedEl = document.getElementById("lastUpdated");
+      if (updatedEl) updatedEl.textContent = currentYear;
+
+      // ==================================================
+      // SCROLL REVEAL ANIMATIONS (comme sur la page Contact)
+      // ==================================================
+
+      const revealElements = document.querySelectorAll(".reveal");
+
+      if ("IntersectionObserver" in window) {
+
+        const revealObserver = new IntersectionObserver(
+          function(entries) {
+
+            entries.forEach(function(entry) {
+
+              if (entry.isIntersecting) {
+
+                entry.target.classList.add("visible");
+
+                revealObserver.unobserve(entry.target);
+
+              }
+
+            });
+
+          },
+          {
+            threshold: 0.12
+          }
+        );
+
+        revealElements.forEach(function(element) {
+          revealObserver.observe(element);
+        });
+
+      } else {
+
+        revealElements.forEach(function(element) {
+          element.classList.add("visible");
+        });
+
+      }
+
+    });
+
+    // ==================================================
+    // FONCTION LIRE LA SUITE (Experience)
+    // ==================================================
+
+    function toggleExperience(button) {
+
+      const parent = button.closest('.experience-body');
+      const details = parent.querySelector('.experience-full-details');
+      const icon = button.querySelector('i');
+      const textSpan = button.querySelector('.toggle-text');
+
+      if (details.style.display === 'none' || details.style.display === '') {
+
+        details.style.display = 'block';
+        details.style.maxHeight = '0px';
+        details.style.overflow = 'hidden';
+        details.style.transition = 'max-height 0.4s ease';
+
+        requestAnimationFrame(function() {
+          details.style.maxHeight = details.scrollHeight + 'px';
+        });
+
+        icon.className = 'fa-regular fa-eye-slash';
+        textSpan.textContent = 'Read less';
+
+      } else {
+
+        details.style.maxHeight = '0px';
+
+        setTimeout(function() {
+          details.style.display = 'none';
+        }, 400);
+
+        icon.className = 'fa-regular fa-eye';
+        textSpan.textContent = 'Read more';
+
+      }
+
+    }
+
+    // ==================================================
+    // FONCTION LIRE LA SUITE (Excellence Prépa - côté gauche)
+    // ==================================================
+
+    function toggleInitiative(button) {
+
+      const parent = button.closest('.initiative-left');
+      const details = parent.querySelector('.initiative-full-details');
+      const icon = button.querySelector('i');
+      const textSpan = button.querySelector('.toggle-text');
+
+      if (details.style.display === 'none' || details.style.display === '') {
+
+        details.style.display = 'block';
+        details.style.maxHeight = '0px';
+        details.style.overflow = 'hidden';
+        details.style.transition = 'max-height 0.4s ease';
+
+        requestAnimationFrame(function() {
+          details.style.maxHeight = details.scrollHeight + 'px';
+        });
+
+        icon.className = 'fa-regular fa-eye-slash';
+        textSpan.textContent = 'Read less';
+
+      } else {
+
+        details.style.maxHeight = '0px';
+
+        setTimeout(function() {
+          details.style.display = 'none';
+        }, 400);
+
+        icon.className = 'fa-regular fa-eye';
+        textSpan.textContent = 'Read more';
+
+      }
+
+    }
+
+    // ==================================================
+    // FONCTION LIRE LA SUITE (Excellence Prépa - côté droit)
+    // ==================================================
+
+    function toggleInitiativeDetails(button) {
+
+      const parent = button.closest('.initiative-details');
+      const preview = parent.querySelector('.details-preview');
+      const full = parent.querySelector('.details-full');
+      const icon = button.querySelector('i');
+      const textSpan = button.querySelector('.toggle-text');
+
+      if (full.style.display === 'none' || full.style.display === '') {
+
+        full.style.display = 'block';
+        full.style.maxHeight = '0px';
+        full.style.overflow = 'hidden';
+        full.style.transition = 'max-height 0.4s ease';
+
+        requestAnimationFrame(function() {
+          full.style.maxHeight = full.scrollHeight + 'px';
+        });
+
+        preview.style.display = 'none';
+
+        icon.className = 'fa-regular fa-eye-slash';
+        textSpan.textContent = 'Read less';
+
+      } else {
+
+        full.style.maxHeight = '0px';
+
+        setTimeout(function() {
+          full.style.display = 'none';
+          preview.style.display = 'block';
+        }, 400);
+
+        icon.className = 'fa-regular fa-eye';
+        textSpan.textContent = 'Read more';
+
+      }
+
+    }
+
+    // ==================================================
+    // FONCTION LIRE LA SUITE (Courses)
+    // ==================================================
+
+    function toggleCourse(button) {
+
+      const parent = button.closest('.course-block');
+      const details = parent.querySelector('.course-full-details');
+      const icon = button.querySelector('i');
+      const textSpan = button.querySelector('.toggle-text');
+
+      if (details.style.display === 'none' || details.style.display === '') {
+
+        details.style.display = 'block';
+        details.style.maxHeight = '0px';
+        details.style.overflow = 'hidden';
+        details.style.transition = 'max-height 0.4s ease';
+
+        requestAnimationFrame(function() {
+          details.style.maxHeight = details.scrollHeight + 'px';
+        });
+
+        icon.className = 'fa-regular fa-eye-slash';
+        textSpan.textContent = 'Read less';
+
+      } else {
+
+        details.style.maxHeight = '0px';
+
+        setTimeout(function() {
+          details.style.display = 'none';
+        }, 400);
+
+        icon.className = 'fa-regular fa-eye';
+        textSpan.textContent = 'Read more';
+
+      }
+
+    }
+
+  </script>
+
 </body>
+
 </html>

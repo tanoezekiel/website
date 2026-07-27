@@ -1,109 +1,326 @@
-/* ----- Style général ----- */
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f2f2f2;
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #222;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-/* ----- En-tête ----- */
-header {
-  text-align: center;
-  background-color: #ffffff;
-  padding: 30px 10px;
-  color: #2c6aa0;
-  border-bottom: 3px solid #5aa9e6;
-}
+<head>
 
-h1 {
-  font-size: 2em;
-  margin-bottom: 0;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/* ----- Contenu principal ----- */
-.content {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 40px;
-  gap: 60px;
-}
+  <meta name="description" content="Academic website of Ezekiel TANO, PhD student in Economics at Université de Sherbrooke. Research interests include development economics, applied econometrics, public policy, labor economics, and macroeconomics.">
 
-/* ----- Colonne gauche (photo + contact) ----- */
-.left-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  max-width: 300px;
-  width: 100%;
-}
+  <meta name="keywords" content="Ezekiel TANO, economist, development economics, applied econometrics, PhD economics, Université de Sherbrooke, research, public policy">
 
-/* ----- Photo ----- */
-.photo-container {
-  text-align: center;
-  width: 100%;
-}
+  <meta name="author" content="Ezekiel TANO">
 
-.photo-container img {
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
-}
+  <title>Ezekiel TANO | PhD Student in Economics</title>
 
-.address {
-  margin-top: 10px;
-  font-size: 0.9em;
-  color: #444;
-}
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-/* ----- Colonne droite ----- */
-.right-column {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  width: 600px;
-}
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@700&display=swap" rel="stylesheet">
 
-/* ----- Boîtes de contenu ----- */
-.about, .skills, .contact {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  width: 100%;
-}
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 
-/* ----- Titres secondaires ----- */
-h2 {
-  color: #2c6aa0;
-  border-bottom: 2px solid #5aa9e6;
-  padding-bottom: 5px;
-  margin-bottom: 15px;
-  font-size: 1.4em;
-}
+</head>
 
-/* ----- Responsive pour téléphone ----- */
-@media (max-width: 768px) {
-  .content {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
+<body>
 
-  .left-column, .right-column {
-    width: 90%;
-  }
+  <!-- ==================================================
+       SKIP LINK
+  ================================================== -->
 
-  .top-section {
-    flex-direction: column;
-    align-items: center;
-  }
+  <a class="skip-link" href="#main-content">
+    Skip to main content
+  </a>
 
-  header {
-    padding-bottom: 60px;
-  }
-}
+  <!-- ==================================================
+       HEADER
+  ================================================== -->
+
+  <header class="site-header">
+
+    <div class="container">
+
+      <nav class="navbar" aria-label="Main navigation">
+
+        <a class="brand" href="index.html">
+
+          <span class="brand-mark">ET</span>
+
+          <span class="brand-text">
+
+            <span class="brand-name">Ezekiel TANO</span>
+
+            <span class="brand-title">Economist and Researcher</span>
+
+          </span>
+
+        </a>
+
+        <button class="menu-button" id="menuButton" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navigationLinks">
+
+          <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+        <ul class="nav-links" id="navigationLinks">
+
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="teaching.html">Teaching</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+  <!-- ==================================================
+       INTRODUCTION BANNER
+  ================================================== -->
+
+  <section class="intro-banner" aria-labelledby="banner-title" style="background:linear-gradient(135deg, rgba(0,51,102,0.97), rgba(0,105,153,0.93)); color:var(--white); padding:28px 25px; text-align:center;">
+
+    <p id="banner-title" class="reveal" style="max-width:900px; margin:0 auto; font-size:15px; line-height:1.8; letter-spacing:0.02em;">
+      <i class="fa-solid fa-quote-left" style="opacity:0.5; font-size:14px;"></i>
+      <strong>Bienvenue sur mon site — Welcome to my academic homepage.</strong>
+      <i class="fa-solid fa-quote-right" style="opacity:0.5; font-size:14px;"></i>
+    </p>
+
+  </section>
+
+  <!-- ==================================================
+       MAIN CONTENT
+  ================================================== -->
+
+  <main class="home-container" id="main-content" style="width:min(1180px, calc(100% - 40px)); margin:0 auto; padding:40px 0 50px; display:grid; grid-template-columns:280px minmax(0,1fr); gap:35px; align-items:start;">
+
+    <!-- PROFIL SIDEBAR -->
+    <aside class="profile-sidebar" style="position:sticky; top:130px;">
+
+      <div class="profile-card reveal" style="background-color:var(--white); border:1px solid var(--border); border-radius:var(--radius); padding:20px 22px; text-align:center; box-shadow:var(--shadow);">
+
+        <img class="profile-photo" src="images/photo.jpg" alt="Portrait of Ezekiel TANO" loading="lazy" style="width:180px; height:220px; margin:0 auto 16px; object-fit:cover; border-radius:var(--radius); border:4px solid var(--white); box-shadow:0 8px 22px rgba(0,0,0,0.16);">
+
+        <h2 style="margin:0 0 6px; color:var(--primary); font-size:22px; font-family:'Merriweather',Georgia,serif;">Ezekiel TANO</h2>
+
+        <p style="margin:0; color:var(--text); font-weight:700; font-size:14px;">PhD Student in Economics</p>
+        <p style="margin:4px 0 0; color:var(--muted); font-size:13px;">Université de Sherbrooke</p>
+        <p style="margin:3px 0 16px; color:var(--muted); font-size:13px;">Sherbrooke, Québec, Canada</p>
+
+        <div class="profile-buttons" style="display:grid; gap:8px; margin:16px 0 18px;">
+
+          <a class="button button-primary" href="documents/TANO_Ezékiel_Resume.pdf" target="_blank" style="display:inline-flex; justify-content:center; align-items:center; gap:6px; min-height:38px; padding:8px 14px; border-radius:6px; font-weight:700; font-size:13px; border:2px solid transparent; background-color:var(--secondary); color:var(--white); border-color:var(--secondary); transition:all var(--transition);">
+            <i class="fa-regular fa-file-pdf"></i> Download CV
+          </a>
+
+          <a class="button button-secondary" href="contact.html" style="display:inline-flex; justify-content:center; align-items:center; gap:6px; min-height:38px; padding:8px 14px; border-radius:6px; font-weight:700; font-size:13px; border:2px solid transparent; background-color:var(--secondary-light); color:var(--primary); border-color:#c9ddea; transition:all var(--transition);">
+            <i class="fa-regular fa-envelope"></i> Contact Me
+          </a>
+
+        </div>
+
+        <div class="profile-links" style="padding-top:16px; border-top:1px solid var(--border); text-align:left;">
+
+          <h3 style="margin:0 0 10px; color:var(--primary); font-size:15px; font-family:'Merriweather',Georgia,serif;">Academic profiles</h3>
+
+          <ul style="margin:0; padding:0; list-style:none;">
+            <li style="margin-bottom:8px;"><a href="mailto:ezekieltano5@gmail.com" style="font-weight:600; color:var(--secondary); font-size:13px;"><i class="fa-regular fa-envelope" style="width:18px; color:var(--primary);"></i> Email</a></li>
+            <li style="margin-bottom:8px;"><a href="https://linkedin.com/in/ezekieltano" target="_blank" style="font-weight:600; color:var(--secondary); font-size:13px;"><i class="fa-brands fa-linkedin" style="width:18px; color:var(--primary);"></i> LinkedIn</a></li>
+            <li style="margin-bottom:8px;"><a href="https://github.com/tanoezekiel" target="_blank" style="font-weight:600; color:var(--secondary); font-size:13px;"><i class="fa-brands fa-github" style="width:18px; color:var(--primary);"></i> GitHub</a></li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </aside>
+
+    <!-- CONTENU PRINCIPAL -->
+    <div class="home-content" style="min-width:0;">
+
+      <!-- ABOUT -->
+      <section class="content-section reveal" style="margin-bottom:22px; padding:24px 26px; background-color:var(--white); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow);">
+
+        <h2 id="about-title" style="margin:0 0 14px; padding-bottom:8px; color:var(--primary); font-size:23px; font-family:'Merriweather',Georgia,serif; border-bottom:3px solid var(--secondary);">About Me</h2>
+
+        <p style="font-size:16px; color:#27313a; margin:0 0 12px;">I am a PhD student in Economics at the Université de Sherbrooke. My research interests lie at the intersection of development economics, applied econometrics, labor economics, public policy, macroeconomics, and development finance.</p>
+
+        <p style="margin:0 0 12px; font-size:14px;">Before joining the Université de Sherbrooke, I earned a Master's degree in Public Policy and Development from the Paris School of Economics and an engineering degree in Statistics and Economics from ENSEA Abidjan.</p>
+
+        <p style="margin:0 0 12px; font-size:14px;">I also serve as a Research Assistant to Dr. Gomez Agou, contributing to research on sovereign debt sustainability, post-HIPC debt dynamics, youth employment, structural transformation, and quantitative methods for development policy.</p>
+
+        <p style="margin:0 0 12px; font-size:14px;">My broader research agenda seeks to understand how public policy, institutions, human capital, and structural transformation can support inclusive and sustainable development, particularly in Sub-Saharan Africa.</p>
+
+        <p style="margin:0;"><a class="text-link" href="cv.html" style="color:var(--secondary); font-weight:700; font-size:13px;">Learn more about my academic background →</a></p>
+
+      </section>
+
+      <!-- RESEARCH INTERESTS -->
+      <section class="content-section reveal" style="margin-bottom:22px; padding:24px 26px; background-color:var(--white); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow);">
+
+        <h2 style="margin:0 0 14px; padding-bottom:8px; color:var(--primary); font-size:23px; font-family:'Merriweather',Georgia,serif; border-bottom:3px solid var(--secondary);">Research Interests</h2>
+
+        <div style="display:flex; flex-wrap:wrap; gap:8px;">
+
+          <span style="display:inline-block; padding:6px 14px; background-color:var(--secondary-light); color:var(--primary); border:1px solid #c7ddea; border-radius:999px; font-size:12px; font-weight:700;">Development Economics</span>
+          <span style="display:inline-block; padding:6px 14px; background-color:var(--secondary-light); color:var(--primary); border:1px solid #c7ddea; border-radius:999px; font-size:12px; font-weight:700;">Applied Econometrics</span>
+          <span style="display:inline-block; padding:6px 14px; background-color:var(--secondary-light); color:var(--primary); border:1px solid #c7ddea; border-radius:999px; font-size:12px; font-weight:700;">Labor Economics</span>
+          <span style="display:inline-block; padding:6px 14px; background-color:var(--secondary-light); color:var(--primary); border:1px solid #c7ddea; border-radius:999px; font-size:12px; font-weight:700;">Public Policy</span>
+          <span style="display:inline-block; padding:6px 14px; background-color:var(--secondary-light); color:var(--primary); border:1px solid #c7ddea; border-radius:999px; font-size:12px; font-weight:700;">Macroeconomics</span>
+          <span style="display:inline-block; padding:6px 14px; background-color:var(--secondary-light); color:var(--primary); border:1px solid #c7ddea; border-radius:999px; font-size:12px; font-weight:700;">Development Finance</span>
+          <span style="display:inline-block; padding:6px 14px; background-color:var(--secondary-light); color:var(--primary); border:1px solid #c7ddea; border-radius:999px; font-size:12px; font-weight:700;">Climate Economics</span>
+          <span style="display:inline-block; padding:6px 14px; background-color:var(--secondary-light); color:var(--primary); border:1px solid #c7ddea; border-radius:999px; font-size:12px; font-weight:700;">Impact Evaluation</span>
+          <span style="display:inline-block; padding:6px 14px; background-color:var(--secondary-light); color:var(--primary); border:1px solid #c7ddea; border-radius:999px; font-size:12px; font-weight:700;">Structural Transformation</span>
+          <span style="display:inline-block; padding:6px 14px; background-color:var(--secondary-light); color:var(--primary); border:1px solid #c7ddea; border-radius:999px; font-size:12px; font-weight:700;">Machine Learning</span>
+
+        </div>
+
+      </section>
+
+      <!-- CURRENT POSITIONS -->
+      <section class="content-section reveal" style="margin-bottom:22px; padding:24px 26px; background-color:var(--white); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow);">
+
+        <h2 style="margin:0 0 14px; padding-bottom:8px; color:var(--primary); font-size:23px; font-family:'Merriweather',Georgia,serif; border-bottom:3px solid var(--secondary);">Current Positions</h2>
+
+        <div style="display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:14px;">
+
+          <article style="padding:16px 18px; background-color:#fbfcfd; border:1px solid var(--border); border-left:4px solid var(--secondary); border-radius:8px;">
+            <h3 style="margin:0 0 4px; color:var(--primary); font-size:16px; font-family:'Merriweather',Georgia,serif;">PhD Student in Economics</h3>
+            <p style="margin:2px 0; color:var(--muted); font-size:13px;">Université de Sherbrooke</p>
+            <p style="margin:2px 0; color:var(--muted); font-size:13px;">Sherbrooke, Québec, Canada</p>
+          </article>
+
+          <article style="padding:16px 18px; background-color:#fbfcfd; border:1px solid var(--border); border-left:4px solid var(--secondary); border-radius:8px;">
+            <h3 style="margin:0 0 4px; color:var(--primary); font-size:16px; font-family:'Merriweather',Georgia,serif;">Research Assistant</h3>
+            <p style="margin:2px 0; color:var(--muted); font-size:13px;">Research collaboration with Dr. Gomez Agou</p>
+            <p style="margin:2px 0; color:var(--muted); font-size:13px;">Sovereign debt, youth employment, and development policy</p>
+          </article>
+
+        </div>
+
+      </section>
+
+      <!-- RECENT NEWS -->
+      <section class="content-section reveal" style="margin-bottom:22px; padding:24px 26px; background-color:var(--white); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow);">
+
+        <h2 style="margin:0 0 14px; padding-bottom:8px; color:var(--primary); font-size:23px; font-family:'Merriweather',Georgia,serif; border-bottom:3px solid var(--secondary);">Recent News</h2>
+
+        <ul style="margin:0; padding:0; list-style:none;">
+
+          <li style="display:grid; grid-template-columns:65px 1fr; gap:14px; padding:12px 0; border-bottom:1px solid var(--border);">
+            <span style="color:var(--secondary); font-weight:700; font-size:13px;">2026</span>
+            <span>Beginning doctoral studies in Economics at the Université de Sherbrooke.</span>
+          </li>
+
+          <li style="display:grid; grid-template-columns:65px 1fr; gap:14px; padding:12px 0; border-bottom:1px solid var(--border);">
+            <span style="color:var(--secondary); font-weight:700; font-size:13px;">2026</span>
+            <span>Developing a research project on structural transformation, economic growth, and quality employment in Sub-Saharan Africa.</span>
+          </li>
+
+          <li style="display:grid; grid-template-columns:65px 1fr; gap:14px; padding:12px 0; border-bottom:1px solid var(--border);">
+            <span style="color:var(--secondary); font-weight:700; font-size:13px;">2025</span>
+            <span>Completed a Master's degree in Public Policy and Development at the Paris School of Economics.</span>
+          </li>
+
+          <li style="display:grid; grid-template-columns:65px 1fr; gap:14px; padding:12px 0; border-bottom:none;">
+            <span style="color:var(--secondary); font-weight:700; font-size:13px;">2025</span>
+            <span>Joined research projects on sovereign debt sustainability and youth employment in Africa.</span>
+          </li>
+
+        </ul>
+
+        <div style="margin-top:16px;">
+          <a href="news.html" style="color:var(--secondary); font-weight:700; font-size:13px;">View all news →</a>
+        </div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- ==================================================
+       FOOTER
+  ================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-column">
+
+          <h3>Ezekiel TANO</h3>
+
+          <p>PhD Student in Economics at Université de Sherbrooke. Research interests include development economics, applied econometrics, labor economics, public policy, macroeconomics, and development finance.</p>
+
+          <div class="footer-social">
+
+            <a href="https://linkedin.com/in/ezekieltano" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/tanoezekiel" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:ezekieltano5@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+
+          </div>
+
+        </div>
+
+        <div class="footer-column">
+
+          <h3>Navigation</h3>
+
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="research.html">Research</a>
+            <a href="projects.html">Projects</a>
+            <a href="teaching.html">Teaching</a>
+            <a href="cv.html">CV</a>
+            <a href="contact.html">Contact</a>
+          </div>
+
+        </div>
+
+        <div class="footer-column">
+
+          <h3>More</h3>
+
+          <div class="footer-links">
+            <a href="documents/TANO_Ezékiel_Resume.pdf" target="_blank">Download CV</a>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <p>&copy; <span id="current-year">2026</span> Ezekiel TANO. All rights reserved.</p>
+        <p>Last updated: <span id="last-updated">2026</span></p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>

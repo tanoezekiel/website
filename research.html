@@ -1,177 +1,2675 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <title>Research - Ezekiel TANO</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Research agenda, current research, selected research projects, academic reviews, and methodological expertise of Ezekiel TANO, PhD student in Economics at Université de Sherbrooke.">
+
+  <meta
+    name="keywords"
+    content="Ezekiel TANO, research, economics, development economics, applied econometrics, labor economics, public policy, macroeconomics, development finance">
+
+  <meta name="author" content="Ezekiel TANO">
+
+  <title>Research | Ezekiel TANO</title>
+
+  <!-- Font Awesome icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@700&display=swap"
+    rel="stylesheet">
+
   <style>
+
+    /* ==================================================
+       RESEARCH PAGE VARIABLES (style Contact)
+    ================================================== */
+
+    :root {
+      --primary: #003366;
+      --primary-dark: #022746;
+      --secondary: #087caf;
+      --secondary-light: #e8f2fa;
+      --accent: #c89b3c;
+      --white: #ffffff;
+      --light: #f4f7fa;
+      --light-blue: #eef5fa;
+      --text: #27323b;
+      --muted: #64727d;
+      --border: #dbe4ea;
+      --success: #237a45;
+      --error: #b42318;
+      --shadow: 0 10px 28px rgba(0, 51, 102, 0.08);
+      --shadow-large: 0 20px 50px rgba(0, 51, 102, 0.14);
+      --radius: 12px;
+      --transition: 0.3s ease;
+      --success-color: #2f7d4c;
+      --warning-color: #a56b00;
+    }
+
+    /* ==================================================
+       GENERAL RESET
+    ================================================== */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      font-size: 16px;
-      line-height: 2.5;
-      color: #222;
-    }
-    header {
-      background-color: #2c6aa0;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      position: relative;
+      color: var(--text);
+      background-color: var(--light);
+      font-family: "Inter", Arial, sans-serif;
+      line-height: 1.7;
+      font-size: 15px;
     }
 
-    nav {
-      position: absolute;
-      top: 20px;
-      right: 10px;
+    body.menu-open {
+      overflow: hidden;
     }
 
-    nav a {
-      color: white;
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
       text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 60px 0;
+    }
+
+    .section-alt {
+      background-color: var(--light);
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 30px;
+    }
+
+    .section-heading.center {
+      margin-right: auto;
+      margin-left: auto;
+      text-align: center;
+    }
+
+    .section-kicker {
+      display: inline-block;
+      margin-bottom: 6px;
+      color: var(--secondary);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      position: relative;
+      margin: 0 0 14px;
+      color: var(--primary);
+      font-family: "Merriweather", Georgia, serif;
+      font-size: clamp(28px, 3.6vw, 38px);
+      line-height: 1.25;
+    }
+
+    .section-heading.center .section-title::after {
+      display: block;
+      width: 60px;
+      height: 4px;
+      margin: 14px auto 0;
+      background-color: var(--secondary);
+      border-radius: 999px;
+      content: "";
+    }
+
+    .section-heading:not(.center) .section-title::after {
+      display: block;
+      width: 60px;
+      height: 4px;
+      margin-top: 14px;
+      background-color: var(--secondary);
+      border-radius: 999px;
+      content: "";
+    }
+
+    .section-description {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* ==================================================
+       ACCESSIBILITY
+    ================================================== */
+
+    .skip-link {
+      position: fixed;
+      top: -100px;
+      left: 20px;
+      z-index: 9999;
+      padding: 11px 16px;
+      color: var(--white);
+      background-color: var(--primary);
+      border-radius: 5px;
+      font-weight: 700;
+      font-size: 13px;
+      transition: top var(--transition);
+    }
+
+    .skip-link:focus {
+      top: 20px;
+    }
+
+    :focus-visible {
+      outline: 3px solid rgba(8, 124, 175, 0.5);
+      outline-offset: 3px;
+    }
+
+    /* ==================================================
+       HEADER (style Contact)
+    ================================================== */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 76px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+    }
+
+    .brand-mark {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 44px;
+      height: 44px;
+      color: var(--white);
+      background:
+        linear-gradient(
+          135deg,
+          var(--primary),
+          var(--secondary)
+        );
+      border-radius: 10px;
+      font-family: "Merriweather", Georgia, serif;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.3;
+    }
+
+    .brand-name {
+      color: var(--primary);
+      font-size: 17px;
+      font-weight: 800;
+    }
+
+    .brand-title {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .nav-links a {
+      display: inline-flex;
+      padding: 10px 12px;
+      color: #3d4c58;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 700;
+      transition:
+        color var(--transition),
+        background-color var(--transition);
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--primary);
+      background-color: var(--secondary-light);
+    }
+
+    .menu-button {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      width: 44px;
+      height: 44px;
+      color: var(--primary);
+      background-color: var(--secondary-light);
+      border: 0;
+      border-radius: 8px;
       font-size: 20px;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    /* ==================================================
+       HERO (compact, aligné à gauche, pleine largeur)
+    ================================================== */
+
+    .page-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 40px 0 35px;
+      color: var(--white);
+      background:
+        linear-gradient(
+          125deg,
+          rgba(2, 39, 70, 0.98),
+          rgba(0, 81, 125, 0.95)
+        );
     }
 
-    main {
-      padding: 40px;
-      max-width: 800px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
+    .page-hero::before {
+      position: absolute;
+      top: -100px;
+      right: -80px;
+      width: 300px;
+      height: 300px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+      content: "";
     }
 
-    section {
-      background-color: #ffffff;
-      padding: 20px 25px;
-      border-radius: 10px;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    .page-hero::after {
+      position: absolute;
+      bottom: -150px;
+      left: -80px;
+      width: 350px;
+      height: 350px;
+      border: 70px solid rgba(255, 255, 255, 0.03);
+      border-radius: 50%;
+      content: "";
     }
 
-    h2 {
-      color: #2c6aa0;
-      border-bottom: 2px solid #5aa9e6;
-      padding-bottom: 5px;
-      margin-bottom: 15px;
+    .hero-content {
+      position: relative;
+      z-index: 2;
     }
 
-    p {
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+      padding: 5px 12px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .hero-title {
+      margin: 0 0 10px;
+      color: var(--white);
+      font-family: "Merriweather", Georgia, serif;
+      font-size: clamp(32px, 4vw, 44px);
+      line-height: 1.15;
+    }
+
+    .hero-text {
+      margin: 0 0 18px;
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 15px;
       line-height: 1.6;
       text-align: justify;
     }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      min-height: 40px;
+      padding: 9px 16px;
+      border: 2px solid transparent;
+      border-radius: 7px;
+      font-size: 12px;
+      font-weight: 800;
+      transition:
+        transform var(--transition),
+        color var(--transition),
+        background-color var(--transition),
+        border-color var(--transition);
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-light {
+      color: var(--primary);
+      background-color: var(--white);
+      border-color: var(--white);
+    }
+
+    .button-light:hover {
+      color: var(--white);
+      background-color: transparent;
+    }
+
+    .button-outline-light {
+      color: var(--white);
+      background-color: transparent;
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .button-outline-light:hover {
+      color: var(--primary);
+      background-color: var(--white);
+      border-color: var(--white);
+    }
+
+    /* ==================================================
+       RESEARCH NAVIGATION (comme sur Teaching)
+    ================================================== */
+
+    .research-navigation {
+      background-color: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .research-navigation-inner {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 14px 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .research-navigation a {
+      display: inline-block;
+      padding: 6px 13px;
+      color: var(--primary);
+      background-color: var(--secondary-light);
+      border: 1px solid #cbdfea;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      transition:
+        background-color var(--transition),
+        color var(--transition),
+        transform var(--transition);
+    }
+
+    .research-navigation a:hover {
+      color: var(--white);
+      background-color: var(--secondary);
+      transform: translateY(-2px);
+    }
+
+    /* ==================================================
+       CARD (style Contact)
+    ================================================== */
+
+    .card {
+      background: var(--white);
+      padding: 28px 30px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      margin-bottom: 24px;
+    }
+
+    .card:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ==================================================
+       MAIN CONTENT
+    ================================================== */
+
+    .page-container {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 50px 0 65px;
+    }
+
+    .content-section {
+      margin-bottom: 30px;
+      padding: 30px;
+      background-color: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      scroll-margin-top: 130px;
+    }
+
+    .content-section h2 {
+      margin: 0 0 12px;
+      padding-bottom: 10px;
+      color: var(--primary);
+      font-size: 26px;
+      font-family: "Merriweather", Georgia, serif;
+      border-bottom: 3px solid var(--secondary);
+    }
+
+    .section-introduction {
+      max-width: 970px;
+      margin: 0 0 20px;
+      color: var(--muted);
+      font-size: 15px;
+      text-align: justify;
+    }
+
+    .content-section>p {
+      margin: 0 0 14px;
+      text-align: justify;
+    }
+
+    .content-section>p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ==================================================
+       RESEARCH INTERESTS
+    ================================================== */
+
+    .interest-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .interest-list span {
+      display: inline-block;
+      padding: 7px 14px;
+      background-color: var(--secondary-light);
+      color: var(--primary);
+      border: 1px solid #cbdfea;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      transition: all var(--transition);
+    }
+
+    .interest-list span:hover {
+      background-color: var(--primary);
+      color: var(--white);
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    /* ==================================================
+       RESEARCH CARDS (avec Read more)
+    ================================================== */
+
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .research-card {
+      display: flex;
+      flex-direction: column;
+      padding: 22px;
+      background-color: #fbfcfd;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition);
+    }
+
+    .research-card:hover {
+      transform: translateY(-4px);
+      border-color: #b8cfdf;
+      box-shadow: var(--shadow-large);
+    }
+
+    .card-topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .research-card h3 {
+      margin: 0;
+      color: var(--primary);
+      font-size: 18px;
+      font-family: "Merriweather", Georgia, serif;
+      line-height: 1.4;
+    }
+
+    .research-card .card-content {
+      flex-grow: 1;
+    }
+    
+    .research-card .card-content p {
+      text-align: justify;
+    }
+
+    .status {
+      display: inline-block;
+      flex-shrink: 0;
+      padding: 4px 9px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .status-ongoing {
+      color: var(--success-color);
+      background-color: #eaf6ee;
+      border: 1px solid #c9e6d3;
+    }
+
+    .status-completed {
+      color: var(--primary);
+      background-color: var(--secondary-light);
+      border: 1px solid #cbdfea;
+    }
+
+    .status-development {
+      color: var(--warning-color);
+      background-color: #fff5df;
+      border: 1px solid #edd6a5;
+    }
+
+    .project-meta {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .project-meta strong {
+      color: var(--text);
+    }
+
+    .card-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .card-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 7px 12px;
+      color: var(--primary);
+      background-color: var(--secondary-light);
+      border: 1px solid #cbdfea;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      transition:
+        background-color var(--transition),
+        color var(--transition);
+    }
+
+    .card-link:hover {
+      color: var(--white);
+      background-color: var(--secondary);
+    }
+
+    /* ==================================================
+       RESEARCH THEMES
+    ================================================== */
+
+    .theme-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .theme-card {
+      padding: 20px;
+      background-color: #fbfcfd;
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--secondary);
+      border-radius: var(--radius);
+      transition: all var(--transition);
+    }
+
+    .theme-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .theme-card h3 {
+      margin: 0 0 8px;
+      color: var(--primary);
+      font-size: 17px;
+      font-family: "Merriweather", Georgia, serif;
+    }
+
+    .theme-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: justify;
+    }
+
+    /* ==================================================
+       DOCUMENTS LIST
+    ================================================== */
+
+    .document-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .document-item {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: center;
+      padding: 18px 20px;
+      background-color: #fbfcfd;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: all var(--transition);
+    }
+
+    .document-item:hover {
+      transform: translateX(4px);
+      box-shadow: var(--shadow);
+    }
+
+    .document-item h3 {
+      margin: 0 0 5px;
+      color: var(--primary);
+      font-size: 16px;
+      font-family: "Merriweather", Georgia, serif;
+      line-height: 1.4;
+    }
+
+    .document-item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: justify;
+    }
+
+    .document-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 110px;
+      padding: 7px 13px;
+      color: var(--primary);
+      background-color: var(--secondary-light);
+      border: 1px solid #cbdfea;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      transition:
+        background-color var(--transition),
+        color var(--transition);
+    }
+
+    .document-link:hover {
+      color: var(--white);
+      background-color: var(--secondary);
+    }
+
+    /* ==================================================
+       METHODOLOGICAL EXPERTISE & SKILLS (fusionnée)
+    ================================================== */
+
+    .methods-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .methods-group {
+      padding: 18px 20px;
+      background-color: #fbfcfd;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: all var(--transition);
+    }
+
+    .methods-group:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .methods-group h3 {
+      margin: 0 0 8px;
+      color: var(--primary);
+      font-size: 16px;
+      font-family: "Merriweather", Georgia, serif;
+    }
+
+    .methods-group .method-preview {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 4px;
+      text-align: justify;
+    }
+
+    .methods-group .method-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 10px;
+      color: var(--secondary);
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+
+    .methods-group .method-toggle:hover {
+      background: var(--secondary-light);
+      border-color: var(--secondary);
+    }
+
+    .methods-group .method-full-details {
+      display: none;
+      margin-top: 10px;
+      padding: 12px 14px;
+      background: var(--white);
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+
+    .methods-group .method-full-details ul {
+      margin: 0;
+      padding-left: 17px;
+    }
+
+    .methods-group .method-full-details li {
+      margin-bottom: 5px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: justify;
+    }
+
+    .methods-group .method-full-details li:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ==================================================
+       RESEARCH VISION
+    ================================================== */
+
+    .research-vision {
+      padding: 24px 26px;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(234, 243, 249, 0.95),
+          rgba(246, 248, 251, 0.95)
+        );
+      border-left: 5px solid var(--secondary);
+      border-radius: var(--radius);
+    }
+
+    .research-vision p {
+      margin: 0 0 14px;
+      font-size: 14px;
+      text-align: justify;
+    }
+
+    .research-vision p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ==================================================
+       REVEAL ANIMATIONS (style Teaching)
+    ================================================== */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Staggered delay pour les éléments en grille */
+    .research-grid .reveal:nth-child(1) { transition-delay: 0.05s; }
+    .research-grid .reveal:nth-child(2) { transition-delay: 0.10s; }
+    .research-grid .reveal:nth-child(3) { transition-delay: 0.15s; }
+    .research-grid .reveal:nth-child(4) { transition-delay: 0.20s; }
+    .research-grid .reveal:nth-child(5) { transition-delay: 0.25s; }
+    .research-grid .reveal:nth-child(6) { transition-delay: 0.30s; }
+
+    .document-list .reveal:nth-child(1) { transition-delay: 0.05s; }
+    .document-list .reveal:nth-child(2) { transition-delay: 0.10s; }
+
+    .methods-grid .reveal:nth-child(1) { transition-delay: 0.05s; }
+    .methods-grid .reveal:nth-child(2) { transition-delay: 0.10s; }
+    .methods-grid .reveal:nth-child(3) { transition-delay: 0.15s; }
+    .methods-grid .reveal:nth-child(4) { transition-delay: 0.20s; }
+    .methods-grid .reveal:nth-child(5) { transition-delay: 0.25s; }
+    .methods-grid .reveal:nth-child(6) { transition-delay: 0.30s; }
+
+    .theme-grid .reveal:nth-child(1) { transition-delay: 0.05s; }
+    .theme-grid .reveal:nth-child(2) { transition-delay: 0.10s; }
+    .theme-grid .reveal:nth-child(3) { transition-delay: 0.15s; }
+
+    /* ==================================================
+       FOOTER (style Contact avec centrage)
+    ================================================== */
+
+    .site-footer {
+      padding: 50px 0 23px;
+      color: #dce7ef;
+      background-color: var(--primary-dark);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 0.8fr;
+      gap: 45px;
+      margin-bottom: 34px;
+    }
+
+    .footer-column h3 {
+      margin: 0 0 15px;
+      color: var(--white);
+      font-size: 18px;
+      font-family: "Merriweather", Georgia, serif;
+    }
+
+    .footer-column p {
+      margin: 0;
+      color: #bed0dc;
+      font-size: 14px;
+      text-align: justify;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 9px;
+    }
+
+    .footer-links a {
+      color: #bed0dc;
+      font-size: 14px;
+      transition: color var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--white);
+    }
+
+    .footer-social {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .footer-social a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 38px;
+      height: 38px;
+      color: var(--white);
+      background-color: rgba(255, 255, 255, 0.08);
+      border-radius: 7px;
+      transition: background-color var(--transition);
+    }
+
+    .footer-social a:hover {
+      background-color: var(--secondary);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding-top: 22px;
+      color: #91a7b7;
+      border-top: 1px solid rgba(255, 255, 255, 0.13);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .footer-bottom p {
+      margin: 0;
+    }
+
+    /* ==================================================
+       RESPONSIVE
+    ================================================== */
+
+    @media (max-width: 1050px) {
+
+      .nav-links {
+        position: fixed;
+        top: 76px;
+        right: 0;
+        bottom: 0;
+        width: min(340px, 88%);
+        padding: 25px;
+        background-color: var(--white);
+        box-shadow: -15px 20px 35px rgba(0, 51, 102, 0.14);
+        flex-direction: column;
+        align-items: stretch;
+        transform: translateX(110%);
+        transition: transform var(--transition);
+      }
+
+      .nav-links.open {
+        transform: translateX(0);
+      }
+      .text-justify {
+  text-align: justify;
+}
+      .nav-links a {
+        width: 100%;
+        padding: 12px 14px;
+      }
+
+      .menu-button {
+        display: inline-flex;
+      }
+
+      .research-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .theme-grid,
+      .methods-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+    }
+
+    @media (max-width: 800px) {
+
+      .theme-grid,
+      .methods-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .document-item {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .document-link {
+        justify-self: start;
+      }
+
+    }
+
+    @media (max-width: 760px) {
+
+      .section {
+        padding: 50px 0;
+      }
+
+      .page-hero {
+        padding: 35px 0 30px;
+      }
+
+      .page-container {
+        padding: 35px 0 50px;
+      }
+
+      .content-section {
+        padding: 22px;
+      }
+
+      .content-section h2 {
+        font-size: 22px;
+      }
+
+      .card-topline {
+        flex-direction: column;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+
+    }
+
+    @media (max-width: 520px) {
+
+      .container {
+        width: min(100% - 24px, 1180px);
+      }
+
+      .brand-title {
+        display: none;
+      }
+
+      .hero-title {
+        font-size: 28px;
+      }
+
+      .hero-text {
+        font-size: 14px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .button {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .research-card {
+        padding: 18px;
+      }
+
+      .theme-card {
+        padding: 16px;
+      }
+
+      .methods-group {
+        padding: 15px 16px;
+      }
+
+    }
+
+    /* ==================================================
+       ACCESSIBILITÉ
+    ================================================== */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+
+      html {
+        scroll-behavior: auto;
+      }
+      
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+
+    }
+
   </style>
+
 </head>
+
 <body>
-  <header>
-    <h1>Research Experiences </h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="research.html">Research Experiences </a>
-      <a href="teaching.html">Teaching Experiences </a>
-      <a href="resources.html">Usefuls Links</a>
-    </nav>
+
+  <!-- ==================================================
+       SKIP LINK
+  ================================================== -->
+
+  <a class="skip-link" href="#main-content">
+    Skip to main content
+  </a>
+
+  <!-- ==================================================
+       HEADER (style Contact)
+  ================================================== -->
+
+  <header class="site-header">
+
+    <div class="container">
+
+      <nav class="navbar" aria-label="Main navigation">
+
+        <a class="brand" href="index.html">
+
+          <span class="brand-mark">
+            ET
+          </span>
+
+          <span class="brand-text">
+
+            <span class="brand-name">
+              Ezekiel TANO
+            </span>
+
+            <span class="brand-title">
+              Economist and Researcher
+            </span>
+
+          </span>
+
+        </a>
+
+        <button
+          class="menu-button"
+          id="menuButton"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="navigationLinks">
+
+          <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+        <ul class="nav-links" id="navigationLinks">
+
+          <li>
+            <a href="index.html">
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a class="active" href="research.html" aria-current="page">
+              Research
+            </a>
+          </li>
+
+       <li>
+            <a href="teaching.html">
+              Teaching
+            </a>
+          </li>
+
+
+          <li>
+            <a href="projects.html">
+              Projects
+            </a>
+          </li>
+
+   
+          <li>
+            <a href="contact.html">
+              Contact
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
   </header>
 
-  <main>
+  <main id="main-content">
 
-<section>
-      <h2>  <strong>Master Thesis – Research Proposal – Referee report </strong></h2>
-<p><li> <strong>Master's Thesis – Applied Econometrics(Climate and Adaptation)  </strong></p>
-      <p><strong>Topic:</strong> Crop Diversification and Climate Change Adaptation in Low and Middle-Income Countries</p>
-      <p>
-        <em>My current research focuses on crop diversification as a strategy for climate change adaptation in low- and middle-income countries. 
-        I apply econometric methods to analyze how diversifying crop choices can help farmers reduce vulnerability to climate variability and improve resilience.</em>
-      </p>
-      <p>
-        <strong>Keywords:</strong> <em>Data-driven econometric modeling, agriculture and development economics, panel fixed effect.</em>
-      </p>
-<p>
-📄<a href="documents/Master_Thesis_Ezekiel_TANO.pdf" target="_blank" style="color:#2c6aa0; font-weight:bold;">View My Master Thesis</a> 
-</p>
+    <!-- ==================================================
+         HERO (compact, aligné à gauche)
+    ================================================== -->
 
-<p><li> <strong>Machine learning in Economics  </strong></p>
-       <p>
-        <em> Replicated Brune et al. (2016) and extended the analysis using agricultural input expenditure as a key farm investment outcome, and estimated treatment heterogeneity across households and identified household size as a significant driver of heterogeneity. </em>
-      </p>
-<p>
-📄<a href="documents/Machine_Learnings_Project.pdf" target="_blank" style="color:#2c6aa0; font-weight:bold;">View the Report</a> 
-</p>
+    <section class="page-hero">
 
+      <div class="container">
 
-      <p> <li> <strong> Economics of Climate Change:</strong> (Refree Report) On the paper <em>"Flooding and Firms in Indonesia"</em> by Azhar Hussain.
-</p>
-<p> Here is the 📄<a href="documents/flood-paper.pdf" target="_blank" style="color:#2c6aa0; font-weight:bold;">paper</a> and my 📄<a href="documents/Refree_Report_climate_Tano_Ezékiel.pdf" target="_blank" style="color:#2c6aa0; font-weight:bold;">report</a>.
-</p>
-     <p><li>
-       <strong> Natural resources and development:</strong> (Proposal based on book reading)<em>Based on the reading of ”La Condition Tropicale.” </em> by Francis Hallé
-<p><li> 
-<strong>Proposal Title:</strong> <em>To what extent does photoperiod stability affect GDP growth and sectoral productivity, particularly in agriculture and
-services, in tropical economies?</em> by Azhar Hussain.     </p>
-      
-<p> Find here is the 📄<a href="documents/flood-paper.pdf" target="_blank" style="color:#2c6aa0; font-weight:bold;">paper</a> and my 📄<a href="documents/TANO_Ezékiel_Reading_Proposal_Natural_Ressource.pdf" target="_blank" style="color:#2c6aa0; font-weight:bold;">Proposal</a>.
-</p>
+        <div class="hero-content">
 
-<p><li>
-       <strong> Natural resources and development:</strong> "Harvesting the rain: The adoption of the environmental technologies in the Sahel."</em> by Azhar Hussain.     </p>
-      
-<p> Find here is My 📄<a href="documents/Refree_Report_Natural_Ressources_TANO_Ezékiel.pdf" target="_blank" style="color:#2c6aa0; font-weight:bold;">Report</a>.
-</p>
+          <span class="hero-eyebrow">
+
+            <i class="fa-solid fa-flask"></i>
+
+            Research Agenda
+
+          </span>
+
+          <h1 class="hero-title">
+            Research
+          </h1>
+
+          <p class="hero-text">
+            My research focuses on development economics, applied econometrics,
+            labor economics, public policy, macroeconomics, and development
+            finance, with particular attention to the economic challenges facing
+            Sub-Saharan African countries.
+          </p>
+
+          <div class="hero-actions">
+
+            <a
+              class="button button-light"
+              href="#research-agenda">
+
+              <i class="fa-regular fa-circle-down"></i>
+
+              Explore Research
+
+            </a>
+
+            <a
+              class="button button-outline-light"
+              href="contact.html">
+
+              <i class="fa-regular fa-envelope"></i>
+
+              Contact
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </section>
 
+    <!-- ==================================================
+       RESEARCH NAVIGATION (comme sur Teaching)
+    ================================================== -->
 
-<section>
-      <h2> Policy Note – Report </h2>
-<p><li><strong>Financing Development </strong></p>
-      <p><strong>Topic:</strong> Debt-for-Development in Practice: An Evaluation of Reprofiling and Education-Linked Swaps in Côte d’Ivoire.</p>
-      <p>
-      <em>  In 2025, Côte d’Ivoire faces an exceptional fiscal challenge, with debt service obligations exceeding XOF 4,181
- billion, representing 26% of the national budget. In response, the government adopted a dual strategy to restructure its
- public debt and preserve fiscal space for priority investments. This report assesses Côte d’Ivoire’s debt dynamics, evaluates the short-term effectiveness of its fiscal strategy, and examines how debt instruments can be leveraged for development outcomes. It concludes that while progress is real, long-term success
- will depend on disciplined implementation and stronger domestic resource mobilization.</em>   </p>
-      <p>
-        <strong>Keywords:</strong> <em>Debt dynamics, debt-for-development.</em>
-       </p>
-      <p>
-📄<a href="documents/Article_Financing_Development_TANO.pdf" target="_blank" style="color:#2c6aa0; font-weight:bold;">View My Report</a> 
-</p>
+    <nav class="research-navigation" aria-label="Research sections">
+
+      <div class="research-navigation-inner">
+
+        <a href="#research-agenda">Agenda</a>
+
+        <a href="#current-research">Current Research</a>
+
+        <a href="#selected-projects">Selected Projects</a>
+
+        <a href="#academic-reviews">Reviews</a>
+
+        <a href="#research-proposals">Proposals</a>
+
+        <a href="#methodological-expertise">Expertise</a>
+
+        <a href="#future-research">Future</a>
+
+      </div>
+
+    </nav>
+
+    <!-- ==================================================
+       MAIN CONTENT
+    ================================================== -->
+
+    <div class="page-container">
+
+      <!-- ==============================================
+           RESEARCH AGENDA
+      ============================================== -->
+
+      <section class="content-section reveal" id="research-agenda">
+
+        <h2 class="reveal">Research Agenda</h2>
+
+        <p class="text-justify reveal">
+          My research seeks to understand how public policies, institutions,
+          human capital, financial constraints, and structural transformation
+          shape economic development in low- and middle-income countries.
+          I am particularly interested in the conditions under which economic
+          growth translates into productive employment, improved living
+          standards, stronger fiscal capacity, and sustainable development.
+        </p>
+
+        <p class="text-justify reveal">
+          My work combines applied econometrics, quantitative policy analysis,
+          economic theory, administrative and survey data, climate data, and
+          machine-learning methods. A significant part of my research focuses
+          on Sub-Saharan Africa, although the questions and methods may apply
+          more broadly to developing and emerging economies.
+        </p>
+
+      </section>
 
 
-<p><li><strong>Internship – Applied Econometrics (Discrete Choice Experiment)</strong></p>
-      <p><strong>Topic:</strong> Evaluation of the disutility caused by the installation of wind or photovoltaic infrastructures in the territory of a protected area.</p>
-      <p>
-        <em> The objective of this research is to quantify the effect of wind and solar farm infrastructures on the image that French tourists have of national parks, to determine whether their attractiveness is affected. </em>    </p>
-      <p>
-        <strong>Keywords:</strong> <em>Protected areas, tourism, energy transition.</em>
-      </p>
-<p>
-📄<a href="documents/INTERNSHIP_REPORT_TANO.pdf" target="_blank" style="color:#2c6aa0; font-weight:bold;">View My Internship Report</a> 
-</p>
+      <!-- ==============================================
+           CURRENT RESEARCH (avec Read more)
+      ============================================== -->
 
+      <section class="content-section reveal" id="current-research">
 
-<p> <li><strong> Macroeconomic Policy </strong></p>
-      <p><strong>Topic:</strong> Will renewable energies make electricity prices more or less volatile than in the oil era in Europe?.</p>
-      <p>
-      <em>   In the oil era in Europe, the shift towards renewable energies has the potential to reduce electricity price volatility. Renewable sources like wind and solar
- offer stable, low-cost electricity once infrastructure is established, lessening reliance on volatile oil markets. Regulatory support, including the Paris
- The Agreement and the European Green Deal incentivize renewable energy adoption, promoting market stability. However, integrating intermittent renewables
- into the grid poses challenges, potentially leading to short-term price fluctuations. Additionally, upfront investment costs may temporarily increase prices.
- Despite these challenges, continued investment and supportive policies can pave the way for a more stable and sustainable energy future, potentially reducing electricity price volatility in Europe.</em>   </p>
-      <p>
-        <strong>Keywords:</strong> <em>Renewable energy, electricity prices.</em>
-       </p>
-      <p>
-📄<a href="documents/Macro_Project_Tano_Thomas.pdf" target="_blank" style="color:#2c6aa0; font-weight:bold;">View My Report</a> 
-</p>
-    </section>
+        <h2 class="reveal">Current Research</h2>
 
-  </main>
+        <div class="research-grid">
 
-</body>
+          <article class="research-card reveal">
+
+            <div class="card-content">
+
+              <div class="card-topline">
+
+                <h3>
+                  Economic Growth, Structural Transformation, and Quality
+                  Employment in Sub-Saharan Africa
+                </h3>
+
+                <span class="status status-development">
+                  In development
+                </span>
+
+              </div>
+
+              <p>
+                This research investigates why periods of economic growth do not
+                always generate sufficient productive and high-quality employment
+                in Sub-Saharan Africa.
+              </p>
+
+              <button class="card-toggle" onclick="toggleCardDetails(this)">
+                <i class="fa-regular fa-eye"></i>
+                <span class="toggle-text">Read more</span>
+              </button>
+
+              <div class="card-full-details" style="display:none; margin-top:12px; padding:14px 16px; background:var(--white); border-radius:6px; border:1px solid var(--border);">
+
+                <p style="margin-bottom:10px; font-size:14px; color:var(--text); text-align:justify;">
+                  The project examines the roles of sectoral transformation,
+                  productivity, firm dynamics, labor-market institutions, education,
+                  and the transition from informal to formal employment.
+                </p>
+
+                <div class="project-meta">
+                  <strong>Topics:</strong>
+                  structural transformation, labor markets, productivity,
+                  employment quality, Sub-Saharan Africa
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="card-links">
+              <a class="card-link" href="contact.html">
+                Contact for details
+              </a>
+            </div>
+
+          </article>
+
+          <article class="research-card reveal">
+
+            <div class="card-content">
+
+              <div class="card-topline">
+
+                <h3>
+                  Why Debt Returns After Debt Relief: Growth, Demographics,
+                  and Fiscal Sustainability
+                </h3>
+
+                <span class="status status-ongoing">
+                  Ongoing
+                </span>
+
+              </div>
+
+              <p>
+                This project studies the re-emergence of debt vulnerabilities
+                in countries that benefited from debt relief under the HIPC initiative.
+              </p>
+
+              <button class="card-toggle" onclick="toggleCardDetails(this)">
+                <i class="fa-regular fa-eye"></i>
+                <span class="toggle-text">Read more</span>
+              </button>
+
+              <div class="card-full-details" style="display:none; margin-top:12px; padding:14px 16px; background:var(--white); border-radius:6px; border:1px solid var(--border);">
+
+                <p style="margin-bottom:10px; font-size:14px; color:var(--text); text-align:justify;">
+                  It examines the roles of economic growth, population dynamics,
+                  interest-growth differentials, primary balances, fiscal capacity,
+                  and debt-service burdens in long-term debt sustainability.
+                </p>
+
+                <div class="project-meta">
+                  <strong>Role:</strong> Research Assistant<br>
+                  <strong>Topics:</strong>
+                  sovereign debt, fiscal sustainability, demographics,
+                  post-HIPC countries
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="card-links">
+              <a class="card-link" href="contact.html">
+                Contact for details
+              </a>
+            </div>
+
+          </article>
+
+          <article class="research-card reveal">
+
+            <div class="card-content">
+
+              <div class="card-topline">
+
+                <h3>
+                  Economic Sovereignty, Cooperation, and Development
+                </h3>
+
+                <span class="status status-ongoing">
+                  Ongoing
+                </span>
+
+              </div>
+
+              <p>
+                This research contributes to the development of a conceptual and
+                empirical framework for analyzing economic sovereignty in African
+                countries.
+              </p>
+
+              <button class="card-toggle" onclick="toggleCardDetails(this)">
+                <i class="fa-regular fa-eye"></i>
+                <span class="toggle-text">Read more</span>
+              </button>
+
+              <div class="card-full-details" style="display:none; margin-top:12px; padding:14px 16px; background:var(--white); border-radius:6px; border:1px solid var(--border);">
+
+                <p style="margin-bottom:10px; font-size:14px; color:var(--text); text-align:justify;">
+                  The project studies the relationship between domestic policy
+                  capacity, international cooperation, institutional autonomy,
+                  macroeconomic resilience, and development outcomes.
+                </p>
+
+                <div class="project-meta">
+                  <strong>Topics:</strong>
+                  economic sovereignty, political economy, institutions,
+                  international cooperation, Africa
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="card-links">
+              <a class="card-link" href="contact.html">
+                Contact for details
+              </a>
+            </div>
+
+          </article>
+
+          <article class="research-card reveal">
+
+            <div class="card-content">
+
+              <div class="card-topline">
+
+                <h3>
+                  Credit Risk Modeling and Regulatory Risk Parameters
+                </h3>
+
+                <span class="status status-ongoing">
+                  Ongoing
+                </span>
+
+              </div>
+
+              <p>
+                This work applies statistical and machine-learning methods to
+                credit-risk modeling, borrower classification, default-risk
+                differentiation, and the estimation of regulatory parameters.
+                </p>
+
+              <button class="card-toggle" onclick="toggleCardDetails(this)">
+                <i class="fa-regular fa-eye"></i>
+                <span class="toggle-text">Read more</span>
+              </button>
+
+              <div class="card-full-details" style="display:none; margin-top:12px; padding:14px 16px; background:var(--white); border-radius:6px; border:1px solid var(--border);">
+
+                  <p style="margin-bottom:10px; font-size:14px; color:var(--text); text-align:justify;">
+                    The broader objective is to improve the measurement of credit
+                    risk and examine the consequences of alternative modeling
+                    choices for financial institutions.
+                  </p>
+
+                  <div class="project-meta">
+                    <strong>Topics:</strong>
+                    probability of default, LGD, CCF, scorecards,
+                    model validation, machine learning
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="card-links">
+                <a class="card-link" href="projects.html">
+                  View related projects
+                </a>
+              </div>
+
+            </article>
+
+          </div>
+
+        </section>
+
+        <!-- ==============================================
+             SELECTED RESEARCH PROJECTS (avec Read more)
+        ============================================== -->
+
+        <section class="content-section reveal" id="selected-projects">
+
+          <h2 class="reveal">Selected Research Projects</h2>
+
+          <div class="research-grid">
+
+            <article class="research-card reveal">
+
+              <div class="card-content">
+
+                <div class="card-topline">
+
+                  <h3>
+                    Crop Diversification and Climate Change Adaptation:
+                    Evidence from Ethiopia
+                  </h3>
+
+                  <span class="status status-completed">
+                    Completed
+                  </span>
+
+                </div>
+
+                <p>
+                  My master's thesis studies how Ethiopian farmers adjust crop
+                  choices and agricultural income in response to temperature and
+                  precipitation conditions.
+                </p>
+
+                <button class="card-toggle" onclick="toggleCardDetails(this)">
+                  <i class="fa-regular fa-eye"></i>
+                  <span class="toggle-text">Read more</span>
+                </button>
+
+                <div class="card-full-details" style="display:none; margin-top:12px; padding:14px 16px; background:var(--white); border-radius:6px; border:1px solid var(--border);">
+
+                  <p style="margin-bottom:10px; font-size:14px; color:var(--text); text-align:justify;">
+                    The analysis combines household panel data from the Ethiopia
+                    LSMS-ISA surveys with climate data and applies fixed-effects
+                    models, nonlinear specifications, and machine-learning methods.
+                  </p>
+
+                  <div class="project-meta">
+                    <strong>Institution:</strong>
+                    Paris School of Economics<br>
+                    <strong>Methods:</strong>
+                    panel-data models, fixed effects, interaction models,
+                    LASSO, Ridge, Elastic Net
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="card-links">
+
+                <a
+                  class="card-link"
+                  href="documents/master-thesis.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View thesis
+                </a>
+
+                <a class="card-link" href="projects.html">
+                  Project details
+                </a>
+
+              </div>
+
+            </article>
+
+            <article class="research-card reveal">
+
+              <div class="card-content">
+
+                <div class="card-topline">
+
+                  <h3>
+                    Debt-for-Development and Innovative Financing
+                    in Côte d'Ivoire
+                  </h3>
+
+                  <span class="status status-completed">
+                    Completed
+                  </span>
+
+                </div>
+
+                <p>
+                  This project analyzes the potential of debt-conversion and
+                  debt-for-development mechanisms to create fiscal space.
+                </p>
+
+                <button class="card-toggle" onclick="toggleCardDetails(this)">
+                  <i class="fa-regular fa-eye"></i>
+                  <span class="toggle-text">Read more</span>
+                </button>
+
+                <div class="card-full-details" style="display:none; margin-top:12px; padding:14px 16px; background:var(--white); border-radius:6px; border:1px solid var(--border);">
+
+                  <p style="margin-bottom:10px; font-size:14px; color:var(--text); text-align:justify;">
+                    It discusses implementation conditions, institutional risks,
+                    creditor incentives, project selection, and the measurement of
+                    development outcomes.
+                  </p>
+
+                  <div class="project-meta">
+                    <strong>Topics:</strong>
+                    public debt, development finance, fiscal space,
+                    innovative financing
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="card-links">
+
+                <a
+                  class="card-link"
+                  href="documents/debt-for-development.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View report
+                </a>
+
+              </div>
+
+            </article>
+
+            <article class="research-card reveal">
+
+              <div class="card-content">
+
+                <div class="card-topline">
+
+                  <h3>
+                    Renewable Energy and Electricity-Price Volatility
+                  </h3>
+
+                  <span class="status status-completed">
+                    Completed
+                  </span>
+
+                </div>
+
+                <p>
+                  This project examines the relationship between renewable-energy
+                  production and electricity-price volatility.
+                </p>
+
+                <button class="card-toggle" onclick="toggleCardDetails(this)">
+                  <i class="fa-regular fa-eye"></i>
+                  <span class="toggle-text">Read more</span>
+                </button>
+
+                <div class="card-full-details" style="display:none; margin-top:12px; padding:14px 16px; background:var(--white); border-radius:6px; border:1px solid var(--border);">
+
+                  <p style="margin-bottom:10px; font-size:14px; color:var(--text); text-align:justify;">
+                    It discusses the economic consequences of intermittent energy
+                    production and the role of storage, market integration, and
+                    energy diversification.
+                  </p>
+
+                  <div class="project-meta">
+                    <strong>Topics:</strong>
+                    energy economics, renewable energy, electricity markets,
+                    price volatility
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="card-links">
+
+                <a
+                  class="card-link"
+                  href="documents/renewable-energy.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View report
+                </a>
+
+              </div>
+
+            </article>
+
+            <article class="research-card reveal">
+
+              <div class="card-content">
+
+                <div class="card-topline">
+
+                  <h3>
+                    Machine Learning for Economic and Policy Analysis
+                  </h3>
+
+                  <span class="status status-completed">
+                    Completed
+                  </span>
+
+                </div>
+
+                <p>
+                  This project applies supervised-learning and regularization
+                  methods to economic data to improve prediction and classification.
+                </p>
+
+                <button class="card-toggle" onclick="toggleCardDetails(this)">
+                  <i class="fa-regular fa-eye"></i>
+                  <span class="toggle-text">Read more</span>
+                </button>
+
+                <div class="card-full-details" style="display:none; margin-top:12px; padding:14px 16px; background:var(--white); border-radius:6px; border:1px solid var(--border);">
+
+                  <p style="margin-bottom:10px; font-size:14px; color:var(--text); text-align:justify;">
+                    The work explores the advantages and limitations of predictive
+                    methods when the objective is both statistical performance and
+                    economic interpretation.
+                  </p>
+
+                  <div class="project-meta">
+                    <strong>Methods:</strong>
+                    logistic regression, decision trees, LASSO, Ridge,
+                    Elastic Net, model evaluation
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="card-links">
+                <a class="card-link" href="projects.html">
+                  View project
+                </a>
+              </div>
+
+            </article>
+
+            <article class="research-card reveal">
+
+              <div class="card-content">
+
+                <div class="card-topline">
+
+                  <h3>
+                    Wind Farms, Protected Areas, and Environmental Policy
+                  </h3>
+
+                  <span class="status status-completed">
+                    Completed
+                  </span>
+
+                </div>
+
+                <p>
+                  This project examines the trade-offs between renewable-energy
+                  development, biodiversity protection, and land use.
+                </p>
+
+                <button class="card-toggle" onclick="toggleCardDetails(this)">
+                  <i class="fa-regular fa-eye"></i>
+                  <span class="toggle-text">Read more</span>
+                </button>
+
+                <div class="card-full-details" style="display:none; margin-top:12px; padding:14px 16px; background:var(--white); border-radius:6px; border:1px solid var(--border);">
+
+                  <p style="margin-bottom:10px; font-size:14px; color:var(--text); text-align:justify;">
+                    It considers how spatial constraints and environmental policies
+                    affect the location and development of wind-energy projects.
+                  </p>
+
+                  <div class="project-meta">
+                    <strong>Topics:</strong>
+                    environmental economics, land use, renewable energy,
+                    spatial policy
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="card-links">
+
+                <a
+                  class="card-link"
+                  href="documents/wind-farms-protected-areas.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View report
+                </a>
+
+              </div>
+
+            </article>
+
+            <article class="research-card reveal">
+
+              <div class="card-content">
+
+                <div class="card-topline">
+
+                  <h3>
+                    Macroeconomic Analysis and Policy Assessment
+                  </h3>
+
+                  <span class="status status-completed">
+                    Completed
+                  </span>
+
+                </div>
+
+                <p>
+                  This project develops a macroeconomic diagnosis based on growth,
+                  inflation, employment, and fiscal policy.
+                </p>
+
+                <button class="card-toggle" onclick="toggleCardDetails(this)">
+                  <i class="fa-regular fa-eye"></i>
+                  <span class="toggle-text">Read more</span>
+                </button>
+
+                <div class="card-full-details" style="display:none; margin-top:12px; padding:14px 16px; background:var(--white); border-radius:6px; border:1px solid var(--border);">
+
+                  <p style="margin-bottom:10px; font-size:14px; color:var(--text); text-align:justify;">
+                    The analysis connects macroeconomic indicators to policy
+                    recommendations and medium-term development challenges.
+                  </p>
+
+                  <div class="project-meta">
+                    <strong>Topics:</strong>
+                    macroeconomic policy, fiscal policy, growth,
+                    external balances, economic diagnosis
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="card-links">
+
+                <a
+                  class="card-link"
+                  href="documents/macroeconomic-report.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View report
+                </a>
+
+              </div>
+
+            </article>
+
+          </div>
+
+        </section>
+
+        <!-- ==============================================
+             ACADEMIC REVIEWS
+        ============================================== -->
+
+        <section class="content-section reveal" id="academic-reviews">
+
+          <h2 class="reveal">Academic Reviews and Critical Assessments</h2>
+
+          <p class="section-introduction reveal">
+            The following documents were prepared as academic exercises in research
+            evaluation. They assess research questions, identification strategies,
+            data, empirical methods, interpretation, and contributions to the
+            literature.
+          </p>
+
+          <div class="document-list">
+
+            <article class="document-item reveal">
+
+              <div>
+                <h3>
+                  Critical Assessment of "Flooding and Firms in Indonesia"
+                </h3>
+                <p>
+                  Evaluation of the research design, empirical strategy,
+                  mechanisms, robustness analyses, and policy implications.
+                </p>
+              </div>
+
+              <a
+                class="document-link"
+                href="documents/flooding-and-firms-review.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View review
+              </a>
+
+            </article>
+
+            <article class="document-item reveal">
+
+              <div>
+                <h3>
+                  Critical Assessment of "Harvesting the Rain"
+                </h3>
+                <p>
+                  Review of the paper's theoretical motivation, data construction,
+                  identification approach, results, limitations, and contribution.
+                </p>
+              </div>
+
+              <a
+                class="document-link"
+                href="documents/harvesting-the-rain-review.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View review
+              </a>
+
+            </article>
+
+          </div>
+
+        </section>
+
+        <!-- ==============================================
+             RESEARCH PROPOSALS
+        ============================================== -->
+
+        <section class="content-section reveal" id="research-proposals">
+
+          <h2 class="reveal">Research Proposals</h2>
+
+          <div class="document-list">
+
+            <article class="document-item reveal">
+
+              <div>
+                <h3>
+                  Photoperiod, Agricultural Production, and Economic Behavior
+                </h3>
+                <p>
+                  A research proposal exploring whether variation in daylight
+                  exposure affects agricultural decisions, productivity, labor
+                  allocation, or household outcomes.
+                </p>
+              </div>
+
+              <a
+                class="document-link"
+                href="documents/photoperiod-proposal.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View proposal
+              </a>
+
+            </article>
+
+            <article class="document-item reveal">
+
+              <div>
+                <h3>
+                  Natural Resources, Institutions, and Economic Development
+                </h3>
+                <p>
+                  A proposal examining how natural-resource dependence interacts
+                  with governance, public investment, fiscal policy, and long-term
+                  development outcomes.
+                </p>
+              </div>
+
+              <a
+                class="document-link"
+                href="documents/natural-resources-proposal.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View proposal
+              </a>
+
+            </article>
+
+          </div>
+
+        </section>
+
+        <!-- ==============================================
+             METHODOLOGICAL EXPERTISE & SKILLS (fusionnée)
+        ============================================== -->
+
+        <section class="content-section reveal" id="methodological-expertise">
+
+          <h2 class="reveal">
+            <i class="fa-solid fa-code"></i>
+            Methodological Expertise & Skills
+          </h2>
+
+          <p class="section-introduction reveal">
+            My methodological expertise covers econometrics, statistical learning,
+            programming, data sources, policy analysis, and research communication.
+          </p>
+
+          <div class="methods-grid">
+
+            <!-- Econometrics -->
+            <article class="methods-group reveal">
+
+              <h3>Econometrics</h3>
+
+              <p class="method-preview">
+                Panel-data models, Fixed and random effects, Difference-in-differences...
+              </p>
+
+              <button class="method-toggle" onclick="toggleMethod(this)">
+                <i class="fa-regular fa-eye"></i>
+                <span class="toggle-text">Read more</span>
+              </button>
+
+              <div class="method-full-details">
+                <ul>
+                  <li>Panel-data models</li>
+                  <li>Fixed and random effects</li>
+                  <li>Difference-in-differences</li>
+                  <li>Discrete-choice models</li>
+                  <li>Instrumental variables</li>
+                  <li>Policy evaluation</li>
+                  <li>Survival analysis</li>
+                </ul>
+              </div>
+
+            </article>
+
+            <!-- Statistical Learning -->
+            <article class="methods-group reveal">
+
+              <h3>Statistical Learning</h3>
+
+              <p class="method-preview">
+                Logistic regression, Decision trees, Random forests...
+              </p>
+
+              <button class="method-toggle" onclick="toggleMethod(this)">
+                <i class="fa-regular fa-eye"></i>
+                <span class="toggle-text">Read more</span>
+              </button>
+
+              <div class="method-full-details">
+                <ul>
+                  <li>Logistic regression</li>
+                  <li>Decision trees</li>
+                  <li>Random forests</li>
+                  <li>LASSO regression</li>
+                  <li>Ridge regression</li>
+                  <li>Elastic Net</li>
+                  <li>Model validation</li>
+                </ul>
+              </div>
+
+            </article>
+
+            <!-- Data and Programming -->
+            <article class="methods-group reveal">
+
+              <h3>Data and Programming</h3>
+
+              <p class="method-preview">
+                R, Stata, Python, SAS...
+              </p>
+
+              <button class="method-toggle" onclick="toggleMethod(this)">
+                <i class="fa-regular fa-eye"></i>
+                <span class="toggle-text">Read more</span>
+              </button>
+
+              <div class="method-full-details">
+                <ul>
+                  <li>R</li>
+                  <li>Stata</li>
+                  <li>Python</li>
+                  <li>SAS</li>
+                  <li>EViews</li>
+                  <li>LaTeX</li>
+                  <li>Excel and PowerPoint</li>
+                </ul>
+              </div>
+
+            </article>
+
+            <!-- Data Sources -->
+            <article class="methods-group reveal">
+
+              <h3>Data Sources</h3>
+
+              <p class="method-preview">
+                Household surveys, Administrative data, Firm-level data...
+              </p>
+
+              <button class="method-toggle" onclick="toggleMethod(this)">
+                <i class="fa-regular fa-eye"></i>
+                <span class="toggle-text">Read more</span>
+              </button>
+
+              <div class="method-full-details">
+                <ul>
+                  <li>Household surveys</li>
+                  <li>Administrative data</li>
+                  <li>Firm-level data</li>
+                  <li>Climate and geospatial data</li>
+                  <li>Macroeconomic databases</li>
+                  <li>Financial and credit-risk data</li>
+                </ul>
+              </div>
+
+            </article>
+
+            <!-- Policy Analysis -->
+            <article class="methods-group reveal">
+
+              <h3>Policy Analysis</h3>
+
+              <p class="method-preview">
+                Macroeconomic diagnostics, Public-debt analysis, Fiscal sustainability...
+              </p>
+
+              <button class="method-toggle" onclick="toggleMethod(this)">
+                <i class="fa-regular fa-eye"></i>
+                <span class="toggle-text">Read more</span>
+              </button>
+
+              <div class="method-full-details">
+                <ul>
+                  <li>Macroeconomic diagnostics</li>
+                  <li>Public-debt analysis</li>
+                  <li>Fiscal sustainability</li>
+                  <li>Labor-market analysis</li>
+                  <li>Development-finance analysis</li>
+                  <li>Evidence synthesis</li>
+                </ul>
+              </div>
+
+            </article>
+
+            <!-- Research Communication -->
+            <article class="methods-group reveal">
+
+              <h3>Research Communication</h3>
+
+              <p class="method-preview">
+                Research reports, Policy briefs, Literature reviews...
+              </p>
+
+              <button class="method-toggle" onclick="toggleMethod(this)">
+                <i class="fa-regular fa-eye"></i>
+                <span class="toggle-text">Read more</span>
+              </button>
+
+              <div class="method-full-details">
+                <ul>
+                  <li>Research reports</li>
+                  <li>Policy briefs</li>
+                  <li>Literature reviews</li>
+                  <li>Academic presentations</li>
+                  <li>Data visualization</li>
+                  <li>Teaching materials</li>
+                </ul>
+              </div>
+
+            </article>
+
+          </div>
+
+        </section>
+
+        <!-- ==============================================
+             FUTURE RESEARCH
+        ============================================== -->
+
+        <section class="content-section reveal" id="future-research">
+
+          <h2 class="reveal">Future Research</h2>
+
+          <div class="research-vision reveal">
+
+            <p>
+              During my doctoral studies, I intend to deepen my research on the
+              relationship between structural transformation, productivity,
+              employment, and public policy in developing economies.
+            </p>
+
+            <p>
+              I am also interested in studying how fiscal capacity, development
+              finance, education, labor-market institutions, climate change, and
+              access to credit influence the ability of African countries to
+              achieve inclusive and sustainable growth.
+            </p>
+
+            <p>
+              My long-term objective is to produce rigorous and policy-relevant
+              research that contributes to academic debates while helping
+              governments and development institutions design more effective
+              economic policies.
+            </p>
+
+          </div>
+
+        </section>
+
+      </div>
+
+    </main>
+
+    <!-- ==================================================
+         FOOTER (style Contact avec centrage)
+    ================================================== -->
+
+    <footer class="site-footer">
+
+      <div class="container">
+
+        <div class="footer-grid">
+
+          <div class="footer-column">
+
+            <h3>
+              Ezekiel TANO
+            </h3>
+
+            <p>
+              PhD Student in Economics at Université de Sherbrooke.            </p>
+
+            <div class="footer-social">
+
+              <a
+                href="https://linkedin.com/in/ezekieltano"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn">
+
+                <i class="fa-brands fa-linkedin-in"></i>
+
+              </a>
+
+              <a
+                href="https://github.com/tanoezekiel"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub">
+
+                <i class="fa-brands fa-github"></i>
+
+              </a>
+
+              <a
+                href="mailto:ezekieltano5@gmail.com"
+                aria-label="Email">
+
+                <i class="fa-regular fa-envelope"></i>
+
+              </a>
+
+            </div>
+
+          </div>
+
+          <div class="footer-column">
+
+            <h3>
+              Navigation
+            </h3>
+
+            <div class="footer-links">
+
+              <a href="index.html">Home</a>
+
+              <a href="research.html">Research</a>
+
+              <a href="teaching.html">Teaching</a>
+
+  
+
+             
+
+            </div>
+
+          </div>
+
+          <div class="footer-column">
+
+            <h3>
+              More
+            </h3>
+
+            <div class="footer-links">
+                    <a href="projects.html">Projects</a>
+ <a href="contact.html">Contact</a>
+              <a href="documents/TANO_Ezékiel_Resume.pdf" target="_blank">
+                Download CV
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+          <p>
+            &copy; <span id="currentYear">2026</span> Ezekiel TANO.
+            All rights reserved.
+          </p>
+
+          <p>
+            Last updated:
+            <span id="lastUpdated">2026</span>
+          </p>
+
+        </div>
+
+      </div>
+
+    </footer>
+
+    <!-- ==================================================
+         JAVASCRIPT
+    ================================================== -->
+
+    <script>
+
+      document.addEventListener("DOMContentLoaded", function() {
+
+        // Mobile navigation
+        const menuButton = document.getElementById("menuButton");
+        const navigationLinks = document.getElementById("navigationLinks");
+
+        if (menuButton && navigationLinks) {
+
+          menuButton.addEventListener("click", function() {
+
+            const isOpen = navigationLinks.classList.toggle("open");
+
+            document.body.classList.toggle("menu-open", isOpen);
+
+            menuButton.setAttribute(
+              "aria-expanded",
+              String(isOpen)
+            );
+
+            menuButton.innerHTML = isOpen ?
+              '<i class="fa-solid fa-xmark"></i>' :
+              '<i class="fa-solid fa-bars"></i>';
+
+            menuButton.setAttribute(
+              "aria-label",
+              isOpen ?
+              "Close navigation menu" :
+              "Open navigation menu"
+            );
+
+          });
+
+          navigationLinks.querySelectorAll("a").forEach(function(link) {
+
+            link.addEventListener("click", function() {
+
+              navigationLinks.classList.remove("open");
+              document.body.classList.remove("menu-open");
+
+              menuButton.setAttribute("aria-expanded", "false");
+              menuButton.setAttribute(
+                "aria-label",
+                "Open navigation menu"
+              );
+
+              menuButton.innerHTML =
+                '<i class="fa-solid fa-bars"></i>';
+
+            });
+
+          });
+
+        }
+
+        // Current year
+        const currentYear = new Date().getFullYear();
+
+        const yearEl = document.getElementById("currentYear");
+        if (yearEl) yearEl.textContent = currentYear;
+
+        const updatedEl = document.getElementById("lastUpdated");
+        if (updatedEl) updatedEl.textContent = currentYear;
+        
+        // ==================================================
+        // SCROLL REVEAL ANIMATIONS (comme sur la page Teaching)
+        // ==================================================
+
+        const revealElements = document.querySelectorAll(".reveal");
+
+        if ("IntersectionObserver" in window) {
+
+          const revealObserver = new IntersectionObserver(
+            function(entries) {
+
+              entries.forEach(function(entry) {
+
+                if (entry.isIntersecting) {
+
+                  entry.target.classList.add("visible");
+
+                  revealObserver.unobserve(entry.target);
+
+                }
+
+              });
+
+            },
+            {
+              threshold: 0.12
+            }
+          );
+
+          revealElements.forEach(function(element) {
+            revealObserver.observe(element);
+          });
+
+        } else {
+
+          revealElements.forEach(function(element) {
+            element.classList.add("visible");
+          });
+
+        }
+
+      });
+
+      // ==================================================
+      // FONCTION LIRE LA SUITE (Research Cards)
+      // ==================================================
+
+      function toggleCardDetails(button) {
+
+        const parent = button.closest('.card-content');
+        const details = parent.querySelector('.card-full-details');
+        const icon = button.querySelector('i');
+        const textSpan = button.querySelector('.toggle-text');
+
+        if (details.style.display === 'none' || details.style.display === '') {
+
+          details.style.display = 'block';
+          details.style.maxHeight = '0px';
+          details.style.overflow = 'hidden';
+          details.style.transition = 'max-height 0.4s ease';
+
+          requestAnimationFrame(function() {
+            details.style.maxHeight = details.scrollHeight + 'px';
+          });
+
+          icon.className = 'fa-regular fa-eye-slash';
+          textSpan.textContent = 'Read less';
+
+        } else {
+
+          details.style.maxHeight = '0px';
+
+          setTimeout(function() {
+            details.style.display = 'none';
+          }, 400);
+
+          icon.className = 'fa-regular fa-eye';
+          textSpan.textContent = 'Read more';
+
+        }
+
+      }
+
+      // ==================================================
+      // FONCTION LIRE LA SUITE (Methodological Expertise)
+      // ==================================================
+
+      function toggleMethod(button) {
+
+        const parent = button.closest('.methods-group');
+        const details = parent.querySelector('.method-full-details');
+        const preview = parent.querySelector('.method-preview');
+        const icon = button.querySelector('i');
+        const textSpan = button.querySelector('.toggle-text');
+
+        if (details.style.display === 'none' || details.style.display === '') {
+
+          details.style.display = 'block';
+          details.style.maxHeight = '0px';
+          details.style.overflow = 'hidden';
+          details.style.transition = 'max-height 0.4s ease';
+
+          requestAnimationFrame(function() {
+            details.style.maxHeight = details.scrollHeight + 'px';
+          });
+
+          preview.style.display = 'none';
+
+          icon.className = 'fa-regular fa-eye-slash';
+          textSpan.textContent = 'Read less';
+
+        } else {
+
+          details.style.maxHeight = '0px';
+
+          setTimeout(function() {
+            details.style.display = 'none';
+            preview.style.display = 'block';
+          }, 400);
+
+          icon.className = 'fa-regular fa-eye';
+          textSpan.textContent = 'Read more';
+
+        }
+
+      }
+
+    </script>
+
+  </body>
+
 </html>
